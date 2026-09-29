@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="8e981042ed3eddcf"><![CDATA[
+{
+  "version": 1,
+  "title": "The Fetch Lifecycle",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The Fetch Lifecycle",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Two promises, not one: the first gives you the response, the second gives you the body.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 118.0,
+      "w": 190.0,
+      "h": 44.0,
+      "text": "fetch(url)",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 186.0,
+      "w": 190.0,
+      "h": 52.0,
+      "text": "Request goes out\nover the network",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 262.0,
+      "w": 190.0,
+      "h": 52.0,
+      "text": "Promise 1 resolves\nwith a Response",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f4",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 338.0,
+      "w": 190.0,
+      "h": 44.0,
+      "text": "await res.json()",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f5",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 406.0,
+      "w": 190.0,
+      "h": 52.0,
+      "text": "Promise 2 resolves\nwith the parsed data",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "f1",
+      "to": "f2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "f2",
+      "to": "f3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "f3",
+      "to": "f4",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "f4",
+      "to": "f5",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "why",
+      "kind": "rect",
+      "x": 282.0,
+      "y": 118.0,
+      "w": 330.0,
+      "h": 36.0,
+      "text": "Why two promises?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "why2",
+      "kind": "rect",
+      "x": 282.0,
+      "y": 162.0,
+      "w": 330.0,
+      "h": 96.0,
+      "text": "Headers and status arrive first; the body\nis still streaming in. That is why reading\nit is a second, separate promise, and why\nyou can only read the body ONCE.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "trap",
+      "kind": "rect",
+      "x": 282.0,
+      "y": 278.0,
+      "w": 330.0,
+      "h": 36.0,
+      "text": "The trap: 404 does not throw",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "trap2",
+      "kind": "rect",
+      "x": 282.0,
+      "y": 322.0,
+      "w": 330.0,
+      "h": 76.0,
+      "text": "fetch rejects only on a NETWORK failure.\nA 404 or 500 is a successful round trip,\nso you must check it yourself:",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "trap3",
+      "kind": "rect",
+      "x": 282.0,
+      "y": 406.0,
+      "w": 330.0,
+      "h": 36.0,
+      "text": "if (!res.ok) throw new Error(res.status);",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cors",
+      "kind": "rect",
+      "x": 656.0,
+      "y": 118.0,
+      "w": 304.0,
+      "h": 36.0,
+      "text": "Cross-origin (CORS)",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cors2",
+      "kind": "rect",
+      "x": 656.0,
+      "y": 162.0,
+      "w": 304.0,
+      "h": 148.0,
+      "text": "A different origin means a different\nscheme, host or port. The browser sends\nthe request, but hides the response\nunless the server returns\nAccess-Control-Allow-Origin.\nThe fix is on the SERVER, never in your\nJavaScript.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "abort",
+      "kind": "rect",
+      "x": 656.0,
+      "y": 330.0,
+      "w": 304.0,
+      "h": 36.0,
+      "text": "Canceling",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "abort2",
+      "kind": "rect",
+      "x": 656.0,
+      "y": 374.0,
+      "w": 304.0,
+      "h": 68.0,
+      "text": "const c = new AbortController();\nfetch(url, { signal: c.signal });\nc.abort();   // promise rejects",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "loop",
+      "kind": "note",
+      "x": 48.0,
+      "y": 476.0,
+      "w": 912.0,
+      "h": 88.0,
+      "text": "None of this blocks the page. fetch hands the work to the browser, your function suspends at the await, and the callback\ncomes back as a MICROTASK once the response is ready: the same event-loop rule as every other promise.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 4
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M143 162L143 177" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M143 186L139 176L147 176Z" fill="#2a78d6"/></g>
+<g id="conn2"><path d="M143 238L143 253" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M143 262L139 252L147 252Z" fill="#2a78d6"/></g>
+<g id="conn3"><path d="M143 314L143 329" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M143 338L139 328L147 328Z" fill="#d9541f"/></g>
+<g id="conn4"><path d="M143 382L143 397" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M143 406L139 396L147 396Z" fill="#d9541f"/></g>
+<g id="title"><text x="182.72" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="182.72" dy="0">The Fetch Lifecycle</tspan></text></g>
+<g id="sub"><text x="339.04" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="339.04" dy="0">Two promises, not one: the first gives you the response, the second gives you the body.</tspan></text></g>
+<g id="f1"><path d="M48 118H238V162H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="143" y="145.76" font-family="JetBrains Mono" font-size="16" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="143" dy="0">fetch(url)</tspan></text></g>
+<g id="f2"><path d="M48 186H238V238H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="143" y="208.5" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="143" dy="0">Request goes out</tspan><tspan x="143" dy="17.5">over the network</tspan></text></g>
+<g id="f3"><path d="M48 262H238V314H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="143" y="284.5" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="143" dy="0">Promise 1 resolves</tspan><tspan x="143" dy="17.5">with a Response</tspan></text></g>
+<g id="f4"><path d="M48 338H238V382H48Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="143" y="365.4" font-family="JetBrains Mono" font-size="15" fill="#7a2f0f" text-anchor="middle"><tspan x="143" dy="0">await res.json()</tspan></text></g>
+<g id="f5"><path d="M48 406H238V458H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="143" y="428.5" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="143" dy="0">Promise 2 resolves</tspan><tspan x="143" dy="17.5">with the parsed data</tspan></text></g>
+<g id="why"><path d="M282 118H612V154H282Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="447" y="142" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="447" dy="0">Why two promises?</tspan></text></g>
+<g id="why2"><path d="M282 162H612V258H282Z" fill="#ffffff" stroke="#4a3aa7" stroke-width="1.5"/><text x="292" y="190.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="292" dy="0">Headers and status arrive first; the body</tspan><tspan x="292" dy="16.25">is still streaming in. That is why reading</tspan><tspan x="292" dy="16.25">it is a second, separate promise, and why</tspan><tspan x="292" dy="16.25">you can only read the body ONCE.</tspan></text></g>
+<g id="trap"><path d="M282 278H612V314H282Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="447" y="301.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="447" dy="0">The trap: 404 does not throw</tspan></text></g>
+<g id="trap2"><path d="M282 322H612V398H282Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="292" y="348.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="292" dy="0">fetch rejects only on a NETWORK failure.</tspan><tspan x="292" dy="16.25">A 404 or 500 is a successful round trip,</tspan><tspan x="292" dy="16.25">so you must check it yourself:</tspan></text></g>
+<g id="trap3"><path d="M282 406H612V442H282Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="447" y="428.32" font-family="JetBrains Mono" font-size="12" fill="#7a1d1d" text-anchor="middle"><tspan x="447" dy="0">if (!res.ok) throw new Error(res.status);</tspan></text></g>
+<g id="cors"><path d="M656 118H960V154H656Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="808" y="142" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#5c4100" text-anchor="middle"><tspan x="808" dy="0">Cross-origin (CORS)</tspan></text></g>
+<g id="cors2"><path d="M656 162H960V310H656Z" fill="#ffffff" stroke="#b07d00" stroke-width="1.5"/><text x="666" y="192.13" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="666" dy="0">A different origin means a different</tspan><tspan x="666" dy="16.25">scheme, host or port. The browser sends</tspan><tspan x="666" dy="16.25">the request, but hides the response</tspan><tspan x="666" dy="16.25">unless the server returns</tspan><tspan x="666" dy="16.25">Access-Control-Allow-Origin.</tspan><tspan x="666" dy="16.25">The fix is on the SERVER, never in your</tspan><tspan x="666" dy="16.25">JavaScript.</tspan></text></g>
+<g id="abort"><path d="M656 330H960V366H656Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="808" y="353.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="808" dy="0">Canceling</tspan></text></g>
+<g id="abort2"><path d="M656 374H960V442H656Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="666" y="397.32" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="666" dy="0">const c = new AbortController();</tspan><tspan x="666" dy="15">fetch(url, { signal: c.signal });</tspan><tspan x="666" dy="15">c.abort();   // promise rejects</tspan></text></g>
+<g id="loop"><path d="M48 476L942 476L960 494L960 564L48 564Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 476L942 494L960 494" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="516.5" font-family="IBM Plex Sans" font-size="14" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">None of this blocks the page. fetch hands the work to the browser, your function suspends at the await, and the callback</tspan><tspan x="58" dy="17.5">comes back as a MICROTASK once the response is ready: the same event-loop rule as every other promise.</tspan></text></g>
+</g>
+</svg>

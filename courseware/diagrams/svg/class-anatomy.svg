@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="87ac81630d5db2cf"><![CDATA[
+{
+  "version": 1,
+  "title": "Class Anatomy",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Class Anatomy",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Where each part actually lives: fields on the instance, methods on the prototype, statics on the class itself.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "code",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 112.0,
+      "w": 400.0,
+      "h": 300.0,
+      "text": "class Animal {\n  static kingdom = 'Animalia';\n  #secret = 'hidden';\n  constructor(name) { this.name = name; }\n  speak() { return this.name + ' makes a sound'; }\n  get label() { return this.name.toUpperCase(); }\n}\n\nclass Dog extends Animal {\n  constructor(name, breed) {\n    super(name);\n    this.breed = breed;\n  }\n  speak() { return super.speak() + ' (a bark)'; }\n}",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b1",
+      "kind": "rect",
+      "x": 486.0,
+      "y": 112.0,
+      "w": 236.0,
+      "h": 32.0,
+      "text": "On the INSTANCE",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b1b",
+      "kind": "rect",
+      "x": 486.0,
+      "y": 148.0,
+      "w": 236.0,
+      "h": 84.0,
+      "text": "name, breed\n#secret\nOne copy per object. Anything\nassigned to this in the constructor.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b2",
+      "kind": "rect",
+      "x": 486.0,
+      "y": 244.0,
+      "w": 236.0,
+      "h": 32.0,
+      "text": "On the PROTOTYPE",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b2b",
+      "kind": "rect",
+      "x": 486.0,
+      "y": 280.0,
+      "w": 236.0,
+      "h": 84.0,
+      "text": "speak(), get label\nONE copy, shared by every\ninstance. This is why methods\ncost nothing per object.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b3",
+      "kind": "rect",
+      "x": 486.0,
+      "y": 376.0,
+      "w": 236.0,
+      "h": 32.0,
+      "text": "On the CLASS",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b3b",
+      "kind": "rect",
+      "x": 486.0,
+      "y": 412.0,
+      "w": 236.0,
+      "h": 84.0,
+      "text": "Animal.kingdom\nStatics belong to the class, not\nto any instance. dog.kingdom is\nundefined.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c1",
+      "kind": "rect",
+      "x": 750.0,
+      "y": 112.0,
+      "w": 210.0,
+      "h": 32.0,
+      "text": "What extends actually does",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c2",
+      "kind": "rect",
+      "x": 782.0,
+      "y": 156.0,
+      "w": 146.0,
+      "h": 34.0,
+      "text": "dog",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c3",
+      "kind": "rect",
+      "x": 782.0,
+      "y": 212.0,
+      "w": 146.0,
+      "h": 34.0,
+      "text": "Dog.prototype",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c4",
+      "kind": "rect",
+      "x": 782.0,
+      "y": 268.0,
+      "w": 146.0,
+      "h": 34.0,
+      "text": "Animal.prototype",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c5",
+      "kind": "rect",
+      "x": 782.0,
+      "y": 324.0,
+      "w": 146.0,
+      "h": 34.0,
+      "text": "Object.prototype",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "c2",
+      "to": "c3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "c3",
+      "to": "c4",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "c4",
+      "to": "c5",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "c6",
+      "x": 750.0,
+      "y": 376.0,
+      "text": "extends just links these.\nsuper(name) runs the parent\nconstructor, and you must\ncall it before touching this.",
+      "w": 210.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 440.0,
+      "w": 400.0,
+      "h": 124.0,
+      "text": "class is syntax over the prototype chain, not a new object model: the same lookup rules apply. Two things it does add:\n#private fields are enforced by the language (unlike a leading underscore), and the whole class body runs in strict mode.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 3
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M855 190L855 203" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M855 212L851 202L859 202Z" fill="#4a3aa7"/></g>
+<g id="conn2"><path d="M855 246L855 259" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M855 268L851 258L859 258Z" fill="#4a3aa7"/></g>
+<g id="conn3"><path d="M855 302L855 315" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M855 324L851 314L859 314Z" fill="#4a3aa7"/></g>
+<g id="title"><text x="152.51" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="152.51" dy="0">Class Anatomy</tspan></text></g>
+<g id="sub"><text x="403.36" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="403.36" dy="0">Where each part actually lives: fields on the instance, methods on the prototype, statics on the class itself.</tspan></text></g>
+<g id="code"><path d="M48 112H448V412H48Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="58" y="161.32" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">class Animal {</tspan><tspan x="58" dy="15">  static kingdom = 'Animalia';</tspan><tspan x="58" dy="15">  #secret = 'hidden';</tspan><tspan x="58" dy="15">  constructor(name) { this.name = name; }</tspan><tspan x="58" dy="15">  speak() { return this.name + ' makes a sound'; }</tspan><tspan x="58" dy="15">  get label() { return this.name.toUpperCase(); }</tspan><tspan x="58" dy="15">}</tspan><tspan x="58" dy="15"></tspan><tspan x="58" dy="15">class Dog extends Animal {</tspan><tspan x="58" dy="15">  constructor(name, breed) {</tspan><tspan x="58" dy="15">    super(name);</tspan><tspan x="58" dy="15">    this.breed = breed;</tspan><tspan x="58" dy="15">  }</tspan><tspan x="58" dy="15">  speak() { return super.speak() + ' (a bark)'; }</tspan><tspan x="58" dy="15">}</tspan></text></g>
+<g id="b1"><path d="M486 112H722V144H486Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="604" y="133.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="604" dy="0">On the INSTANCE</tspan></text></g>
+<g id="b1b"><path d="M486 148H722V232H486Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="496" y="172" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="496" dy="0">name, breed</tspan><tspan x="496" dy="15">#secret</tspan><tspan x="496" dy="15">One copy per object. Anything</tspan><tspan x="496" dy="15">assigned to this in the constructor.</tspan></text></g>
+<g id="b2"><path d="M486 244H722V276H486Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="604" y="265.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="604" dy="0">On the PROTOTYPE</tspan></text></g>
+<g id="b2b"><path d="M486 280H722V364H486Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="496" y="304" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="496" dy="0">speak(), get label</tspan><tspan x="496" dy="15">ONE copy, shared by every</tspan><tspan x="496" dy="15">instance. This is why methods</tspan><tspan x="496" dy="15">cost nothing per object.</tspan></text></g>
+<g id="b3"><path d="M486 376H722V408H486Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="604" y="397.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="604" dy="0">On the CLASS</tspan></text></g>
+<g id="b3b"><path d="M486 412H722V496H486Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="496" y="436" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="496" dy="0">Animal.kingdom</tspan><tspan x="496" dy="15">Statics belong to the class, not</tspan><tspan x="496" dy="15">to any instance. dog.kingdom is</tspan><tspan x="496" dy="15">undefined.</tspan></text></g>
+<g id="c1"><path d="M750 112H960V144H750Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="855" y="133.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="855" dy="0">What extends actually does</tspan></text></g>
+<g id="c2"><path d="M782 156H928V190H782Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="855" y="178.04" font-family="JetBrains Mono" font-size="14" fill="#7a2f0f" text-anchor="middle"><tspan x="855" dy="0">dog</tspan></text></g>
+<g id="c3"><path d="M782 212H928V246H782Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="855" y="233.68" font-family="JetBrains Mono" font-size="13" fill="#10386b" text-anchor="middle"><tspan x="855" dy="0">Dog.prototype</tspan></text></g>
+<g id="c4"><path d="M782 268H928V302H782Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="855" y="289.68" font-family="JetBrains Mono" font-size="13" fill="#10386b" text-anchor="middle"><tspan x="855" dy="0">Animal.prototype</tspan></text></g>
+<g id="c5"><path d="M782 324H928V358H782Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="855" y="345.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="855" dy="0">Object.prototype</tspan></text></g>
+<g id="c6"><text x="750" y="388" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="750" dy="0">extends just links these.</tspan><tspan x="750" dy="15">super(name) runs the parent</tspan><tspan x="750" dy="15">constructor, and you must</tspan><tspan x="750" dy="15">call it before touching this.</tspan></text></g>
+<g id="note"><path d="M48 440L430 440L448 458L448 564L48 564Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M430 440L430 458L448 458" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="484" font-family="IBM Plex Sans" font-size="12" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">class is syntax over the prototype chain, not a new object model: the</tspan><tspan x="58" dy="15">same lookup rules apply. Two things it does add:</tspan><tspan x="58" dy="15">#private fields are enforced by the language (unlike a leading</tspan><tspan x="58" dy="15">underscore), and the whole class body runs in strict mode.</tspan></text></g>
+</g>
+</svg>

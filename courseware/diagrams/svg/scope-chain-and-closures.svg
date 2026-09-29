@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="1bf06639585051e3"><![CDATA[
+{
+  "version": 1,
+  "title": "Scope Chain and Closures",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 34.0,
+      "text": "Scope Chain and Closures",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 72.0,
+      "text": "Lookup goes OUTWARD only. A closure is the link that survives after the outer call returns.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 118.0,
+      "w": 430.0,
+      "h": 336.0,
+      "text": "",
+      "style": {
+        "fill": "none",
+        "stroke": "#5b6672",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": 14.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s2",
+      "kind": "rect",
+      "x": 74.0,
+      "y": 158.0,
+      "w": 378.0,
+      "h": 272.0,
+      "text": "",
+      "style": {
+        "fill": "none",
+        "stroke": "#2a78d6",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": 12.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "v2",
+      "kind": "rect",
+      "x": 116.0,
+      "y": 200.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "let count = 0",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s3",
+      "kind": "rect",
+      "x": 100.0,
+      "y": 250.0,
+      "w": 326.0,
+      "h": 158.0,
+      "text": "",
+      "style": {
+        "fill": "none",
+        "stroke": "#d9541f",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": 12.0
+      }
+    },
+    {
+      "type": "shape",
+      "id": "v3",
+      "kind": "rect",
+      "x": 142.0,
+      "y": 292.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "count += 1",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "arrowsnote",
+      "x": 48.0,
+      "y": 466.0,
+      "text": "Lookup never goes inward: the outer scope cannot see anything\ndeclared inside, and two sibling scopes cannot see each other.",
+      "w": 430.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cl",
+      "kind": "rect",
+      "x": 528.0,
+      "y": 122.0,
+      "w": 432.0,
+      "h": 40.0,
+      "text": "After makeCounter() returns",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cl1",
+      "kind": "rect",
+      "x": 528.0,
+      "y": 176.0,
+      "w": 432.0,
+      "h": 90.0,
+      "text": "The makeCounter() frame is gone from the stack,\nbut the returned function still holds its scope link,\nso count is kept alive and stays private.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cl2",
+      "kind": "rect",
+      "x": 528.0,
+      "y": 286.0,
+      "w": 432.0,
+      "h": 106.0,
+      "text": "const a = makeCounter();\nconst b = makeCounter();\na(); a();   // 1, 2\nb();        // 1  - its own count",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cl3",
+      "kind": "note",
+      "x": 528.0,
+      "y": 412.0,
+      "w": 432.0,
+      "h": 92.0,
+      "text": "Every call to the outer function makes a NEW scope, so a and b\ncapture two independent counts. That is how closures give you\nprivate state without a class.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l1",
+      "x": 62.0,
+      "y": 128.0,
+      "text": "Global scope",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l2",
+      "x": 88.0,
+      "y": 168.0,
+      "text": "makeCounter() scope",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l3",
+      "x": 114.0,
+      "y": 260.0,
+      "text": "inner function scope",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "v3",
+      "to": "v2",
+      "from_side": "top",
+      "to_side": "bottom",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "lookup3",
+      "x": 142.0,
+      "y": 344.0,
+      "text": "not found here:\nlook OUTWARD",
+      "w": 150.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 3
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn3"><path d="M247 292L225.91 244.95" fill="none" stroke="#d9541f" stroke-width="2"/><path d="M221 234L231.32 243.99L221.59 248.35Z" fill="#d9541f"/></g>
+<g id="title"><text x="229.98" y="64" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="229.98" dy="0">Scope Chain and Closures</tspan></text></g>
+<g id="sub"><text x="369.51" y="88" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="369.51" dy="0">Lookup goes OUTWARD only. A closure is the link that survives after the outer call returns.</tspan></text></g>
+<g id="s1"><path d="M48 118H478V454H48Z" fill="none" stroke="#5b6672" stroke-width="2"/></g>
+<g id="s2"><path d="M74 158H452V430H74Z" fill="none" stroke="#2a78d6" stroke-width="2"/></g>
+<g id="v2"><path d="M116 200H326V234H116Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="221" y="222.04" font-family="JetBrains Mono" font-size="14" fill="#10386b" text-anchor="middle"><tspan x="221" dy="0">let count = 0</tspan></text></g>
+<g id="s3"><path d="M100 250H426V408H100Z" fill="none" stroke="#d9541f" stroke-width="2"/></g>
+<g id="v3"><path d="M142 292H352V326H142Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="247" y="314.04" font-family="JetBrains Mono" font-size="14" fill="#7a2f0f" text-anchor="middle"><tspan x="247" dy="0">count += 1</tspan></text></g>
+<g id="arrowsnote"><text x="263" y="479" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="middle"><tspan x="263" dy="0">Lookup never goes inward: the outer scope cannot see anything</tspan><tspan x="263" dy="16.25">declared inside, and two sibling scopes cannot see each other.</tspan></text></g>
+<g id="cl"><path d="M528 122H960V162H528Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="744" y="148.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="744" dy="0">After makeCounter() returns</tspan></text></g>
+<g id="cl1"><path d="M528 176H960V266H528Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="538" y="208.75" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="start"><tspan x="538" dy="0">The makeCounter() frame is gone from the stack,</tspan><tspan x="538" dy="17.5">but the returned function still holds its scope link,</tspan><tspan x="538" dy="17.5">so count is kept alive and stays private.</tspan></text></g>
+<g id="cl2"><path d="M528 286H960V392H528Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="538" y="317.79" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="start"><tspan x="538" dy="0">const a = makeCounter();</tspan><tspan x="538" dy="17.5">const b = makeCounter();</tspan><tspan x="538" dy="17.5">a(); a();   // 1, 2</tspan><tspan x="538" dy="17.5">b();        // 1  - its own count</tspan></text></g>
+<g id="cl3"><path d="M528 412L942 412L960 430L960 504L528 504Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 412L942 430L960 430" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="538" y="445.75" font-family="IBM Plex Sans" font-size="14" fill="#5c4100" text-anchor="start"><tspan x="538" dy="0">Every call to the outer function makes a NEW scope, so a and b</tspan><tspan x="538" dy="17.5">capture two independent counts. That is how closures give you</tspan><tspan x="538" dy="17.5">private state without a class.</tspan></text></g>
+<g id="l1"><text x="107.39" y="143" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="107.39" dy="0">Global scope</tspan></text></g>
+<g id="l2"><text x="162.92" y="183" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="162.92" dy="0">makeCounter() scope</tspan></text></g>
+<g id="l3"><text x="185.74" y="275" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="185.74" dy="0">inner function scope</tspan></text></g>
+<g id="lookup3"><text x="142" y="357" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#7a2f0f" text-anchor="start"><tspan x="142" dy="0">not found here:</tspan><tspan x="142" dy="16.25">look OUTWARD</tspan></text></g>
+</g>
+</svg>

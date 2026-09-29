@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="4cc00c042baed116"><![CDATA[
+{
+  "version": 1,
+  "title": "Coercion and Equality",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 34.0,
+      "text": "Coercion and Equality",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 72.0,
+      "text": "== converts before it compares. === never converts. Use === and convert on purpose.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hA",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 120.0,
+      "w": 300.0,
+      "h": 38.0,
+      "text": "a == b",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 20.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a1",
+      "kind": "diamond",
+      "x": 68.0,
+      "y": 176.0,
+      "w": 260.0,
+      "h": 62.0,
+      "text": "Same type?",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a2",
+      "kind": "rect",
+      "x": 68.0,
+      "y": 262.0,
+      "w": 260.0,
+      "h": 58.0,
+      "text": "Convert one side, then\ncompare again",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 344.0,
+      "w": 300.0,
+      "h": 100.0,
+      "text": "'5' == 5   →  true\n0 == false   →  true\nnull == undefined   →  true\n[] == ''   →  true",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "hA",
+      "to": "a1",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "a1",
+      "to": "a2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hB",
+      "kind": "rect",
+      "x": 400.0,
+      "y": 120.0,
+      "w": 300.0,
+      "h": 38.0,
+      "text": "a === b",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 20.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b1",
+      "kind": "diamond",
+      "x": 420.0,
+      "y": 176.0,
+      "w": 260.0,
+      "h": 62.0,
+      "text": "Same type?",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b2",
+      "kind": "rect",
+      "x": 420.0,
+      "y": 262.0,
+      "w": 260.0,
+      "h": 58.0,
+      "text": "false. Full stop.\nNo conversion, ever.",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b3",
+      "kind": "rect",
+      "x": 400.0,
+      "y": 344.0,
+      "w": 300.0,
+      "h": 100.0,
+      "text": "'5' === 5   →  false\n0 === false   →  false\nnull === undefined   →  false\n[] === ''   →  false",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "hB",
+      "to": "b1",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "b1",
+      "to": "b2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hC",
+      "kind": "rect",
+      "x": 752.0,
+      "y": 120.0,
+      "w": 208.0,
+      "h": 38.0,
+      "text": "Falsy values",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c1",
+      "kind": "rect",
+      "x": 752.0,
+      "y": 168.0,
+      "w": 208.0,
+      "h": 158.0,
+      "text": "false\n0    and  -0\n0n\n''   (empty string)\nnull\nundefined\nNaN",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "c2",
+      "x": 752.0,
+      "y": 340.0,
+      "text": "Everything else is truthy,\nincluding '0', 'false', [] and {}.",
+      "w": 208.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "rule",
+      "kind": "note",
+      "x": 48.0,
+      "y": 468.0,
+      "w": 912.0,
+      "h": 92.0,
+      "text": "Rule of thumb: always ===. When you DO want a conversion, write it out: Number(x), String(x), Boolean(x).\nThe one accepted use of == is x == null, which is true for exactly null and undefined and nothing else.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 4
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M198 158L198 167" fill="none" stroke="#c93434" stroke-width="1.5"/><path d="M198 176L194 166L202 166Z" fill="#c93434"/></g>
+<g id="conn2"><path d="M198 238L198 253" fill="none" stroke="#c93434" stroke-width="1.5"/><path d="M198 262L194 252L202 252Z" fill="#c93434"/><rect x="188.23" y="236.5" width="19.54" height="18" rx="2" fill="#ffffff"/><text x="198" y="250" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="198" dy="0">no</tspan></text></g>
+<g id="conn3"><path d="M550 158L550 167" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M550 176L546 166L554 166Z" fill="#2a78d6"/></g>
+<g id="conn4"><path d="M550 238L550 253" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M550 262L546 252L554 252Z" fill="#2a78d6"/><rect x="540.23" y="236.5" width="19.54" height="18" rx="2" fill="#ffffff"/><text x="550" y="250" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="550" dy="0">no</tspan></text></g>
+<g id="title"><text x="201.9" y="64" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="201.9" dy="0">Coercion and Equality</tspan></text></g>
+<g id="sub"><text x="355.45" y="88" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="355.45" dy="0">== converts before it compares. === never converts. Use === and convert on purpose.</tspan></text></g>
+<g id="hA"><path d="M48 120H348V158H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="198" y="146.5" font-family="IBM Plex Sans" font-size="20" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="198" dy="0">a == b</tspan></text></g>
+<g id="a1"><path d="M198 176L328 207L198 238L68 207Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="198" y="212.63" font-family="IBM Plex Sans" font-size="15" fill="#7a1d1d" text-anchor="middle"><tspan x="198" dy="0">Same type?</tspan></text></g>
+<g id="a2"><path d="M68 262H328V320H68Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="198" y="287.5" font-family="IBM Plex Sans" font-size="14" fill="#7a1d1d" text-anchor="middle"><tspan x="198" dy="0">Convert one side, then</tspan><tspan x="198" dy="17.5">compare again</tspan></text></g>
+<g id="a3"><path d="M48 344H348V444H48Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="58" y="373" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">'5' == 5   →  true</tspan><tspan x="58" dy="17.5">0 == false   →  true</tspan><tspan x="58" dy="17.5">null == undefined   →  true</tspan><tspan x="58" dy="17.5">[] == ''   →  true</tspan></text></g>
+<g id="hB"><path d="M400 120H700V158H400Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="550" y="146.5" font-family="IBM Plex Sans" font-size="20" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="550" dy="0">a === b</tspan></text></g>
+<g id="b1"><path d="M550 176L680 207L550 238L420 207Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="550" y="212.63" font-family="IBM Plex Sans" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="550" dy="0">Same type?</tspan></text></g>
+<g id="b2"><path d="M420 262H680V320H420Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="550" y="287.5" font-family="IBM Plex Sans" font-size="14" fill="#10386b" text-anchor="middle"><tspan x="550" dy="0">false. Full stop.</tspan><tspan x="550" dy="17.5">No conversion, ever.</tspan></text></g>
+<g id="b3"><path d="M400 344H700V444H400Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="410" y="373" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="start"><tspan x="410" dy="0">'5' === 5   →  false</tspan><tspan x="410" dy="17.5">0 === false   →  false</tspan><tspan x="410" dy="17.5">null === undefined   →  false</tspan><tspan x="410" dy="17.5">[] === ''   →  false</tspan></text></g>
+<g id="hC"><path d="M752 120H960V158H752Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="856" y="145.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="856" dy="0">Falsy values</tspan></text></g>
+<g id="c1"><path d="M752 168H960V326H752Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="762" y="199.54" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="start"><tspan x="762" dy="0">false</tspan><tspan x="762" dy="17.5">0    and  -0</tspan><tspan x="762" dy="17.5">0n</tspan><tspan x="762" dy="17.5">''   (empty string)</tspan><tspan x="762" dy="17.5">null</tspan><tspan x="762" dy="17.5">undefined</tspan><tspan x="762" dy="17.5">NaN</tspan></text></g>
+<g id="c2"><text x="752" y="353" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="start"><tspan x="752" dy="0">Everything else is truthy,</tspan><tspan x="752" dy="16.25">including '0', 'false', [] and {}.</tspan></text></g>
+<g id="rule"><path d="M48 468L942 468L960 486L960 560L48 560Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 468L942 486L960 486" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="510.25" font-family="IBM Plex Sans" font-size="15" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Rule of thumb: always ===. When you DO want a conversion, write it out: Number(x), String(x), Boolean(x).</tspan><tspan x="58" dy="18.75">The one accepted use of == is x == null, which is true for exactly null and undefined and nothing else.</tspan></text></g>
+</g>
+</svg>

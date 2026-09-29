@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="8660c51493db76ab"><![CDATA[
+{
+  "version": 1,
+  "title": "Narrowing and Discriminated Unions",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Narrowing and Discriminated Unions",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 68.0,
+      "text": "Give every member a shared tag, switch on it, and TypeScript knows exactly which shape you are holding.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "un",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 110.0,
+      "w": 380.0,
+      "h": 96.0,
+      "text": "type Shape =\n  | { kind: 'circle'; radius: number }\n  | { kind: 'square'; side: number }\n  | { kind: 'rect'; w: number; h: number };",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "unl",
+      "x": 48.0,
+      "y": 212.0,
+      "text": "kind is the DISCRIMINANT: a literal type unique to each member.",
+      "w": 380.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sw",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 250.0,
+      "w": 240.0,
+      "h": 40.0,
+      "text": "switch (s.kind)",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b1",
+      "kind": "rect",
+      "x": 372.0,
+      "y": 250.0,
+      "w": 360.0,
+      "h": 62.0,
+      "text": "case 'circle'\ns is narrowed to the circle member.\ns.radius is available; s.side is an error.",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b2",
+      "kind": "rect",
+      "x": 372.0,
+      "y": 324.0,
+      "w": 360.0,
+      "h": 50.0,
+      "text": "case 'square'\ns.side is available, and nothing else.",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b3",
+      "kind": "rect",
+      "x": 372.0,
+      "y": 386.0,
+      "w": 360.0,
+      "h": 50.0,
+      "text": "case 'rect'\ns.w and s.h are available.",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "b4",
+      "kind": "rect",
+      "x": 372.0,
+      "y": 448.0,
+      "w": 360.0,
+      "h": 92.0,
+      "text": "default\nconst check: never = s;\nAll three handled, so s is never here; it compiles.\nAdd a fourth member and THIS LINE fails to compile,\nwhich is how you are told to update the switch.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "sw",
+      "to": "b1",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "sw",
+      "to": "b2",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "sw",
+      "to": "b3",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "sw",
+      "to": "b4",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "nh",
+      "kind": "rect",
+      "x": 776.0,
+      "y": 110.0,
+      "w": 184.0,
+      "h": 32.0,
+      "text": "Everything that narrows",
+      "style": {
+        "fill": "#fbe4ec",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6f2445",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "n1",
+      "kind": "rect",
+      "x": 776.0,
+      "y": 146.0,
+      "w": 184.0,
+      "h": 240.0,
+      "text": "typeof x === 'string'\n    for primitives\nx instanceof Date\n    for class instances\n'radius' in s\n    for plain object shapes\nArray.isArray(x)\n    for arrays\nif (x)  /  if (x === null)\n    truthiness and null\nx.kind === 'circle'\n    the discriminant: the\n    one that scales",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "why",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 314.0,
+      "w": 288.0,
+      "h": 32.0,
+      "text": "Why a tag beats a guess",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "why2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 350.0,
+      "w": 288.0,
+      "h": 186.0,
+      "text": "Without a discriminant you end up probing\nfor properties ('radius' in s), which breaks\nthe moment two members share a field.\nA literal tag is unambiguous, cheap at run\ntime, and survives JSON, so the same union\nworks for data off the network.\nNarrowing is flow analysis: TypeScript tracks\nwhat must be true on each path. Reassigning\nthe variable throws that away.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 4
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M288 270L330 270L330 281L363 281" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M372 281L362 285L362 277Z" fill="#2a78d6"/></g>
+<g id="conn2"><path d="M288 270L330 270L330 349L363 349" fill="none" stroke="#0f8f63" stroke-width="1.5"/><path d="M372 349L362 353L362 345Z" fill="#0f8f63"/></g>
+<g id="conn3"><path d="M288 270L330 270L330 411L363 411" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M372 411L362 415L362 407Z" fill="#d9541f"/></g>
+<g id="conn4"><path d="M288 270L330 270L330 494L363 494" fill="none" stroke="#b07d00" stroke-width="1.5"/><path d="M372 494L362 498L362 490Z" fill="#b07d00"/></g>
+<g id="title"><text x="289.19" y="60" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="289.19" dy="0">Narrowing and Discriminated Unions</tspan></text></g>
+<g id="sub"><text x="400.99" y="83" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="400.99" dy="0">Give every member a shared tag, switch on it, and TypeScript knows exactly which shape you are holding.</tspan></text></g>
+<g id="un"><path d="M48 110H428V206H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="58" y="138.5" font-family="IBM Plex Sans" font-size="13" fill="#2a2160" text-anchor="start"><tspan x="58" dy="0">type Shape =</tspan><tspan x="58" dy="16.25">  | { kind: 'circle'; radius: number }</tspan><tspan x="58" dy="16.25">  | { kind: 'square'; side: number }</tspan><tspan x="58" dy="16.25">  | { kind: 'rect'; w: number; h: number };</tspan></text></g>
+<g id="unl"><text x="48" y="224" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="48" dy="0">kind is the DISCRIMINANT: a literal type unique to each member.</tspan></text></g>
+<g id="sw"><path d="M48 250H288V290H48Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="168" y="275.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="168" dy="0">switch (s.kind)</tspan></text></g>
+<g id="b1"><path d="M372 250H732V312H372Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="382" y="270.5" font-family="IBM Plex Sans" font-size="12" fill="#10386b" text-anchor="start"><tspan x="382" dy="0">case 'circle'</tspan><tspan x="382" dy="15">s is narrowed to the circle member.</tspan><tspan x="382" dy="15">s.radius is available; s.side is an error.</tspan></text></g>
+<g id="b2"><path d="M372 324H732V374H372Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="382" y="346" font-family="IBM Plex Sans" font-size="12" fill="#0a4d36" text-anchor="start"><tspan x="382" dy="0">case 'square'</tspan><tspan x="382" dy="15">s.side is available, and nothing else.</tspan></text></g>
+<g id="b3"><path d="M372 386H732V436H372Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="382" y="408" font-family="IBM Plex Sans" font-size="12" fill="#7a2f0f" text-anchor="start"><tspan x="382" dy="0">case 'rect'</tspan><tspan x="382" dy="15">s.w and s.h are available.</tspan></text></g>
+<g id="b4"><path d="M372 448H732V540H372Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="382" y="468.5" font-family="IBM Plex Sans" font-size="12" fill="#5c4100" text-anchor="start"><tspan x="382" dy="0">default</tspan><tspan x="382" dy="15">const check: never = s;</tspan><tspan x="382" dy="15">All three handled, so s is never here; it compiles.</tspan><tspan x="382" dy="15">Add a fourth member and THIS LINE fails to compile,</tspan><tspan x="382" dy="15">which is how you are told to update the switch.</tspan></text></g>
+<g id="nh"><path d="M776 110H960V142H776Z" fill="#fbe4ec" stroke="#c74d7c" stroke-width="1.5"/><text x="868" y="131.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#6f2445" text-anchor="middle"><tspan x="868" dy="0">Everything that narrows</tspan></text></g>
+<g id="n1"><path d="M776 146H960V386H776Z" fill="#ffffff" stroke="#c74d7c" stroke-width="1.5"/><text x="786" y="180.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="786" dy="0">typeof x === 'string'</tspan><tspan x="786" dy="15">    for primitives</tspan><tspan x="786" dy="15">x instanceof Date</tspan><tspan x="786" dy="15">    for class instances</tspan><tspan x="786" dy="15">'radius' in s</tspan><tspan x="786" dy="15">    for plain object shapes</tspan><tspan x="786" dy="15">Array.isArray(x)</tspan><tspan x="786" dy="15">    for arrays</tspan><tspan x="786" dy="15">if (x)  /  if (x === null)</tspan><tspan x="786" dy="15">    truthiness and null</tspan><tspan x="786" dy="15">x.kind === 'circle'</tspan><tspan x="786" dy="15">    the discriminant: the</tspan><tspan x="786" dy="15">    one that scales</tspan></text></g>
+<g id="why"><path d="M48 314H336V346H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="192" y="335.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="192" dy="0">Why a tag beats a guess</tspan></text></g>
+<g id="why2"><path d="M48 350H336V536H48Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="58" y="387.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">Without a discriminant you end up probing</tspan><tspan x="58" dy="15">for properties ('radius' in s), which breaks</tspan><tspan x="58" dy="15">the moment two members share a field.</tspan><tspan x="58" dy="15">A literal tag is unambiguous, cheap at run</tspan><tspan x="58" dy="15">time, and survives JSON, so the same union</tspan><tspan x="58" dy="15">works for data off the network.</tspan><tspan x="58" dy="15">Narrowing is flow analysis: TypeScript tracks</tspan><tspan x="58" dy="15">what must be true on each path. Reassigning</tspan><tspan x="58" dy="15">the variable throws that away.</tspan></text></g>
+</g>
+</svg>

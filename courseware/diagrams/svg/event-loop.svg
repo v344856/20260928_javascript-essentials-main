@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="a1d785e582ffd76d"><![CDATA[
+{
+  "version": 1,
+  "title": "The Event Loop",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 36.0,
+      "text": "The Event Loop",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 74.0,
+      "text": "One thread. The stack must be empty before anything queued can run.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "stack",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 138.0,
+      "w": 210.0,
+      "h": 44.0,
+      "text": "Call Stack",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 186.0,
+      "w": 210.0,
+      "h": 38.0,
+      "text": "inner()",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 224.0,
+      "w": 210.0,
+      "h": 38.0,
+      "text": "outer()",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 262.0,
+      "w": 210.0,
+      "h": 38.0,
+      "text": "main script",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "stacknote",
+      "x": 48.0,
+      "y": 312.0,
+      "text": "1. Runs to completion.\n    Nothing interrupts it.",
+      "w": 210.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "loop",
+      "kind": "hexagon",
+      "x": 330.0,
+      "y": 176.0,
+      "w": 140.0,
+      "h": 88.0,
+      "text": "Event\nLoop",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "micro",
+      "kind": "rect",
+      "x": 620.0,
+      "y": 130.0,
+      "w": 320.0,
+      "h": 42.0,
+      "text": "Microtask Queue",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "microitems",
+      "kind": "rect",
+      "x": 620.0,
+      "y": 176.0,
+      "w": 320.0,
+      "h": 72.0,
+      "text": ".then / .catch / .finally callbacks\nawait resumptions\nqueueMicrotask()",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "task",
+      "kind": "rect",
+      "x": 620.0,
+      "y": 306.0,
+      "w": 320.0,
+      "h": 42.0,
+      "text": "Task Queue (macrotasks)",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "taskitems",
+      "kind": "rect",
+      "x": 620.0,
+      "y": 352.0,
+      "w": 320.0,
+      "h": 72.0,
+      "text": "setTimeout / setInterval callbacks\nDOM events\nI/O completions",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "loop",
+      "to": "micro",
+      "from_side": "right",
+      "to_side": "left",
+      "label": "2. drain ALL",
+      "label_at": 0.45,
+      "style": {
+        "fill": null,
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "loop",
+      "to": "task",
+      "from_side": "right",
+      "to_side": "left",
+      "label": "3. take ONE",
+      "label_at": 0.45,
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "loop",
+      "to": "stack",
+      "from_side": "left",
+      "to_side": "right",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "pushnote",
+      "x": 268.0,
+      "y": 118.0,
+      "text": "4. push the callback\n    onto the empty stack",
+      "w": 200.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "rule",
+      "kind": "note",
+      "x": 48.0,
+      "y": 462.0,
+      "w": 892.0,
+      "h": 74.0,
+      "text": "Every task is followed by the ENTIRE microtask queue, so a .then() always runs before the next\nsetTimeout callback, even one that was queued earlier with a delay of 0.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "center",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 3
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M470 220L545 220L545 151L611 151" fill="none" stroke="#0f8f63" stroke-width="1.5"/><path d="M620 151L610 155L610 147Z" fill="#0f8f63"/><rect x="502.97" y="190.25" width="84.06" height="20.5" rx="2" fill="#ffffff"/><text x="545" y="205.75" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="545" dy="0">2. drain ALL</tspan></text></g>
+<g id="conn2"><path d="M470 220L545 220L545 327L611 327" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M620 327L610 331L610 323Z" fill="#d9541f"/><rect x="503.56" y="246.35" width="82.87" height="20.5" rx="2" fill="#ffffff"/><text x="545" y="261.85" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="545" dy="0">3. take ONE</tspan></text></g>
+<g id="conn3"><path d="M330 220L264.91 165.76" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M258 160L268.24 163.33L263.12 169.47Z" fill="#4a3aa7"/></g>
+<g id="title"><text x="155.22" y="66" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="155.22" dy="0">The Event Loop</tspan></text></g>
+<g id="sub"><text x="300.16" y="90" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="300.16" dy="0">One thread. The stack must be empty before anything queued can run.</tspan></text></g>
+<g id="stack"><path d="M48 138H258V182H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="153" y="166.75" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="153" dy="0">Call Stack</tspan></text></g>
+<g id="f3"><path d="M48 186H258V224H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="153" y="210.4" font-family="JetBrains Mono" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="153" dy="0">inner()</tspan></text></g>
+<g id="f2"><path d="M48 224H258V262H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="153" y="248.4" font-family="JetBrains Mono" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="153" dy="0">outer()</tspan></text></g>
+<g id="f1"><path d="M48 262H258V300H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="153" y="286.4" font-family="JetBrains Mono" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="153" dy="0">main script</tspan></text></g>
+<g id="stacknote"><text x="153" y="326" font-family="IBM Plex Sans" font-size="14" fill="#6b6a66" text-anchor="middle"><tspan x="153" dy="0">1. Runs to completion.</tspan><tspan x="153" dy="17.5">    Nothing interrupts it.</tspan></text></g>
+<g id="loop"><path d="M360.8 176L439.2 176L470 220L439.2 264L360.8 264L330 220Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="400" y="215.5" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="400" dy="0">Event</tspan><tspan x="400" dy="22.5">Loop</tspan></text></g>
+<g id="micro"><path d="M620 130H940V172H620Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="780" y="157.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="780" dy="0">Microtask Queue</tspan></text></g>
+<g id="microitems"><path d="M620 176H940V248H620Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="780" y="200.43" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="780" dy="0">.then / .catch / .finally callbacks</tspan><tspan x="780" dy="16.25">await resumptions</tspan><tspan x="780" dy="16.25">queueMicrotask()</tspan></text></g>
+<g id="task"><path d="M620 306H940V348H620Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="780" y="333.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="780" dy="0">Task Queue (macrotasks)</tspan></text></g>
+<g id="taskitems"><path d="M620 352H940V424H620Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="780" y="376.43" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="780" dy="0">setTimeout / setInterval callbacks</tspan><tspan x="780" dy="16.25">DOM events</tspan><tspan x="780" dy="16.25">I/O completions</tspan></text></g>
+<g id="pushnote"><text x="368" y="131" font-family="IBM Plex Sans" font-size="13" fill="#2a2160" text-anchor="middle"><tspan x="368" dy="0">4. push the callback</tspan><tspan x="368" dy="16.25">    onto the empty stack</tspan></text></g>
+<g id="rule"><path d="M48 462L923.72 462L940 478.28L940 536L48 536Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M923.72 462L923.72 478.28L940 478.28" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="494" y="495" font-family="IBM Plex Sans" font-size="16" fill="#5c4100" text-anchor="middle"><tspan x="494" dy="0">Every task is followed by the ENTIRE microtask queue, so a .then() always runs before the next</tspan><tspan x="494" dy="20">setTimeout callback, even one that was queued earlier with a delay of 0.</tspan></text></g>
+</g>
+</svg>

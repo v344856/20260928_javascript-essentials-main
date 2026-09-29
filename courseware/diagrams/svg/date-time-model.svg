@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="cbd81ebd0a797bc4"><![CDATA[
+{
+  "version": 1,
+  "title": "The Date and Time Model",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The Date and Time Model",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "A Date is one number. Everything else (the year, the string, the time zone) is presentation.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "core",
+      "kind": "rect",
+      "x": 372.0,
+      "y": 122.0,
+      "w": 264.0,
+      "h": 84.0,
+      "text": "A Date is a single number:\nmilliseconds since\n1 Jan 1970 UTC",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "in1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 128.0,
+      "w": 250.0,
+      "h": 44.0,
+      "text": "new Date()\nright now",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "in2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 182.0,
+      "w": 250.0,
+      "h": 44.0,
+      "text": "new Date('2026-08-11T09:00:00Z')\nfrom an ISO string",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "in3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 236.0,
+      "w": 250.0,
+      "h": 44.0,
+      "text": "new Date(1786518000000)\nfrom a timestamp",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "in1",
+      "to": "core",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "in3",
+      "to": "core",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "out1",
+      "kind": "rect",
+      "x": 710.0,
+      "y": 128.0,
+      "w": 250.0,
+      "h": 44.0,
+      "text": "date.getTime()\nback to a number",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "out2",
+      "kind": "rect",
+      "x": 710.0,
+      "y": 182.0,
+      "w": 250.0,
+      "h": 44.0,
+      "text": "date.toISOString()\nalways UTC, ends in Z",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "out3",
+      "kind": "rect",
+      "x": 710.0,
+      "y": 236.0,
+      "w": 250.0,
+      "h": 44.0,
+      "text": "date.getHours()\nthe VIEWER's local zone",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "core",
+      "to": "out1",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "core",
+      "to": "out3",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "tz",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 314.0,
+      "w": 444.0,
+      "h": 32.0,
+      "text": "The one idea to hold on to",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "tz2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 352.0,
+      "w": 444.0,
+      "h": 124.0,
+      "text": "The stored number never has a time zone.\nA zone appears only when you ASK for a\nhuman-readable part, and it is whatever\nzone the machine reading it is set to.\nSo the same Date shows a different hour in\nLondon and in New York, and that is correct.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "intl",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 314.0,
+      "w": 444.0,
+      "h": 32.0,
+      "text": "Formatting for people: use Intl, not string surgery",
+      "style": {
+        "fill": "#fbe4ec",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6f2445",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "intl2",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 352.0,
+      "w": 444.0,
+      "h": 124.0,
+      "text": "new Intl.DateTimeFormat('en-GB', {\n  dateStyle: 'long', timeStyle: 'short',\n  timeZone: 'Europe/London'\n}).format(date)\nIntl.NumberFormat and Intl.RelativeTimeFormat\nhandle currency and \"3 days ago\" the same way.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 490.0,
+      "w": 912.0,
+      "h": 84.0,
+      "text": "Store and send UTC, an ISO string or a number; convert to local only at the moment you display. Months are ZERO-based\n(0 is January) though days of the month are not. Date has no date-only type and no proper zone support, which is why the\nTemporal API is on the way; until then, reach for a library for anything beyond simple formatting.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 4
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M298 150L335 150L335 164L363 164" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M372 164L362 168L362 160Z" fill="#2a78d6"/></g>
+<g id="conn2"><path d="M298 258L335 258L335 164L363 164" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M372 164L362 168L362 160Z" fill="#2a78d6"/></g>
+<g id="conn3"><path d="M636 164L673 164L673 150L701 150" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M710 150L700 154L700 146Z" fill="#d9541f"/></g>
+<g id="conn4"><path d="M636 164L673 164L673 258L701 258" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M710 258L700 262L700 254Z" fill="#d9541f"/></g>
+<g id="title"><text x="225.63" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="225.63" dy="0">The Date and Time Model</tspan></text></g>
+<g id="sub"><text x="347.39" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="347.39" dy="0">A Date is one number. Everything else (the year, the string, the time zone) is presentation.</tspan></text></g>
+<g id="core"><path d="M372 122H636V206H372Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="504" y="150.88" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="504" dy="0">A Date is a single number:</tspan><tspan x="504" dy="18.75">milliseconds since</tspan><tspan x="504" dy="18.75">1 Jan 1970 UTC</tspan></text></g>
+<g id="in1"><path d="M48 128H298V172H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="173" y="146.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">new Date()</tspan><tspan x="173" dy="16.25">right now</tspan></text></g>
+<g id="in2"><path d="M48 182H298V226H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="173" y="201" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">new Date('2026-08-11T09:00:00Z')</tspan><tspan x="173" dy="15">from an ISO string</tspan></text></g>
+<g id="in3"><path d="M48 236H298V280H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="173" y="255" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">new Date(1786518000000)</tspan><tspan x="173" dy="15">from a timestamp</tspan></text></g>
+<g id="out1"><path d="M710 128H960V172H710Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="835" y="146.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="835" dy="0">date.getTime()</tspan><tspan x="835" dy="16.25">back to a number</tspan></text></g>
+<g id="out2"><path d="M710 182H960V226H710Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="835" y="200.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="835" dy="0">date.toISOString()</tspan><tspan x="835" dy="16.25">always UTC, ends in Z</tspan></text></g>
+<g id="out3"><path d="M710 236H960V280H710Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="835" y="254.75" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="middle"><tspan x="835" dy="0">date.getHours()</tspan><tspan x="835" dy="16.25">the VIEWER's local zone</tspan></text></g>
+<g id="tz"><path d="M48 314H492V346H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="270" y="335.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="270" dy="0">The one idea to hold on to</tspan></text></g>
+<g id="tz2"><path d="M48 352H492V476H48Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="58" y="378.25" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">The stored number never has a time zone.</tspan><tspan x="58" dy="16.25">A zone appears only when you ASK for a</tspan><tspan x="58" dy="16.25">human-readable part, and it is whatever</tspan><tspan x="58" dy="16.25">zone the machine reading it is set to.</tspan><tspan x="58" dy="16.25">So the same Date shows a different hour in</tspan><tspan x="58" dy="16.25">London and in New York, and that is correct.</tspan></text></g>
+<g id="intl"><path d="M516 314H960V346H516Z" fill="#fbe4ec" stroke="#c74d7c" stroke-width="1.5"/><text x="738" y="335.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#6f2445" text-anchor="middle"><tspan x="738" dy="0">Formatting for people: use Intl, not string surgery</tspan></text></g>
+<g id="intl2"><path d="M516 352H960V476H516Z" fill="#ffffff" stroke="#c74d7c" stroke-width="1.5"/><text x="526" y="381" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="526" dy="0">new Intl.DateTimeFormat('en-GB', {</tspan><tspan x="526" dy="15">  dateStyle: 'long', timeStyle: 'short',</tspan><tspan x="526" dy="15">  timeZone: 'Europe/London'</tspan><tspan x="526" dy="15">}).format(date)</tspan><tspan x="526" dy="15">Intl.NumberFormat and Intl.RelativeTimeFormat</tspan><tspan x="526" dy="15">handle currency and "3 days ago" the same way.</tspan></text></g>
+<g id="note"><path d="M48 490L942 490L960 508L960 574L48 574Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 490L942 508L960 508" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="520.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Store and send UTC, an ISO string or a number; convert to local only at the moment you display. Months are ZERO-based</tspan><tspan x="58" dy="16.25">(0 is January) though days of the month are not. Date has no date-only type and no proper zone support, which is why the</tspan><tspan x="58" dy="16.25">Temporal API is on the way; until then, reach for a library for anything beyond simple formatting.</tspan></text></g>
+</g>
+</svg>

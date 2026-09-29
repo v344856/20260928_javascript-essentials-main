@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="d1d83eeefd1fa418"><![CDATA[
+{
+  "version": 1,
+  "title": "Map and Set vs Object and Array",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Map and Set vs Object and Array",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 68.0,
+      "text": "Pick by the KEY you have and the question you ask.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "q",
+      "kind": "diamond",
+      "x": 48.0,
+      "y": 108.0,
+      "w": 250.0,
+      "h": 74.0,
+      "text": "What are your keys?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 202.0,
+      "w": 250.0,
+      "h": 56.0,
+      "text": "Fixed, known field names\n→ a plain object",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 268.0,
+      "w": 250.0,
+      "h": 56.0,
+      "text": "Arbitrary, or added at run time\n→ a Map",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 334.0,
+      "w": 250.0,
+      "h": 56.0,
+      "text": "None: you only ask\n\"have I seen this?\"  → a Set",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a4",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 400.0,
+      "w": 250.0,
+      "h": 56.0,
+      "text": "Position matters, duplicates\nallowed  → an Array",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "q",
+      "to": "a1",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "th",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 108.0,
+      "w": 200.0,
+      "h": 34.0,
+      "text": "Object",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "mh",
+      "kind": "rect",
+      "x": 546.0,
+      "y": 108.0,
+      "w": 200.0,
+      "h": 34.0,
+      "text": "Map",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sh",
+      "kind": "rect",
+      "x": 762.0,
+      "y": 108.0,
+      "w": 198.0,
+      "h": 34.0,
+      "text": "Set",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r1a",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 146.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "Keys are strings and\nsymbols only. A number\nkey becomes '1'.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r1b",
+      "kind": "rect",
+      "x": 546.0,
+      "y": 146.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "ANY value can be a key:\nan object, a function,\na number, NaN.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r1c",
+      "kind": "rect",
+      "x": 762.0,
+      "y": 146.0,
+      "w": 198.0,
+      "h": 74.0,
+      "text": "Values only, and every\none is unique. Adding\na duplicate does nothing.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r2a",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 228.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "Order: integer-like keys\nfirst, in numeric order.\nSurprising.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r2b",
+      "kind": "rect",
+      "x": 546.0,
+      "y": 228.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "Order: exactly the order\nyou inserted. Iterating\nis guaranteed.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r2c",
+      "kind": "rect",
+      "x": 762.0,
+      "y": 228.0,
+      "w": 198.0,
+      "h": 74.0,
+      "text": "Order: insertion order\ntoo. [...new Set(arr)]\nis the idiomatic dedupe.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r3a",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 310.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "Size: count the keys\nyourself with\nObject.keys(o).length",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r3b",
+      "kind": "rect",
+      "x": 546.0,
+      "y": 310.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "Size: a real .size\nproperty. get / set /\nhas / delete.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r3c",
+      "kind": "rect",
+      "x": 762.0,
+      "y": 310.0,
+      "w": 198.0,
+      "h": 74.0,
+      "text": "Size: .size as well.\nadd / has / delete,\nno get.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r4a",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 392.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "Inherits from\nObject.prototype, so it\nalready has toString.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r4b",
+      "kind": "rect",
+      "x": 546.0,
+      "y": 392.0,
+      "w": 200.0,
+      "h": 74.0,
+      "text": "No inherited keys. Faster\nfor frequent add and\ndelete.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r4c",
+      "kind": "rect",
+      "x": 762.0,
+      "y": 392.0,
+      "w": 198.0,
+      "h": 74.0,
+      "text": "Equality is SameValueZero:\nNaN equals NaN, but two\nlook-alike objects do not.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 484.0,
+      "w": 912.0,
+      "h": 88.0,
+      "text": "Only an object serializes with JSON.stringify; a Map or Set turns into {}. Convert first: Object.fromEntries(map), [...set].\nWeakMap and WeakSet hold their keys weakly, so an entry disappears when nothing else refers to the key. Use them to attach\ndata to an object without keeping it alive; they are not iterable and have no .size.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 1
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M173 182L173 193" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M173 202L169 192L177 192Z" fill="#4a3aa7"/></g>
+<g id="title"><text x="260.94" y="60" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="260.94" dy="0">Map and Set vs Object and Array</tspan></text></g>
+<g id="sub"><text x="219.19" y="83" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="219.19" dy="0">Pick by the KEY you have and the question you ask.</tspan></text></g>
+<g id="q"><path d="M173 108L298 145L173 182L48 145Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="173" y="141.25" font-family="IBM Plex Sans" font-size="15" fill="#2a2160" text-anchor="middle"><tspan x="173" dy="0">What are your</tspan><tspan x="173" dy="18.75">keys?</tspan></text></g>
+<g id="a1"><path d="M48 202H298V258H48Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="173" y="226.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">Fixed, known field names</tspan><tspan x="173" dy="16.25">→ a plain object</tspan></text></g>
+<g id="a2"><path d="M48 268H298V324H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="173" y="292.75" font-family="IBM Plex Sans" font-size="13" fill="#10386b" text-anchor="middle"><tspan x="173" dy="0">Arbitrary, or added at run time</tspan><tspan x="173" dy="16.25">→ a Map</tspan></text></g>
+<g id="a3"><path d="M48 334H298V390H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="173" y="358.75" font-family="IBM Plex Sans" font-size="13" fill="#0a4d36" text-anchor="middle"><tspan x="173" dy="0">None: you only ask</tspan><tspan x="173" dy="16.25">"have I seen this?"  → a Set</tspan></text></g>
+<g id="a4"><path d="M48 400H298V456H48Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="173" y="424.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">Position matters, duplicates</tspan><tspan x="173" dy="16.25">allowed  → an Array</tspan></text></g>
+<g id="th"><path d="M330 108H530V142H330Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="430" y="131" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="430" dy="0">Object</tspan></text></g>
+<g id="mh"><path d="M546 108H746V142H546Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="646" y="131" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="646" dy="0">Map</tspan></text></g>
+<g id="sh"><path d="M762 108H960V142H762Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="861" y="131" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="861" dy="0">Set</tspan></text></g>
+<g id="r1a"><path d="M330 146H530V220H330Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="340" y="172.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="340" dy="0">Keys are strings and</tspan><tspan x="340" dy="15">symbols only. A number</tspan><tspan x="340" dy="15">key becomes '1'.</tspan></text></g>
+<g id="r1b"><path d="M546 146H746V220H546Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="556" y="172.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="556" dy="0">ANY value can be a key:</tspan><tspan x="556" dy="15">an object, a function,</tspan><tspan x="556" dy="15">a number, NaN.</tspan></text></g>
+<g id="r1c"><path d="M762 146H960V220H762Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="772" y="172.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="772" dy="0">Values only, and every</tspan><tspan x="772" dy="15">one is unique. Adding</tspan><tspan x="772" dy="15">a duplicate does nothing.</tspan></text></g>
+<g id="r2a"><path d="M330 228H530V302H330Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="340" y="254.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="340" dy="0">Order: integer-like keys</tspan><tspan x="340" dy="15">first, in numeric order.</tspan><tspan x="340" dy="15">Surprising.</tspan></text></g>
+<g id="r2b"><path d="M546 228H746V302H546Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="556" y="254.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="556" dy="0">Order: exactly the order</tspan><tspan x="556" dy="15">you inserted. Iterating</tspan><tspan x="556" dy="15">is guaranteed.</tspan></text></g>
+<g id="r2c"><path d="M762 228H960V302H762Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="772" y="254.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="772" dy="0">Order: insertion order</tspan><tspan x="772" dy="15">too. [...new Set(arr)]</tspan><tspan x="772" dy="15">is the idiomatic dedupe.</tspan></text></g>
+<g id="r3a"><path d="M330 310H530V384H330Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="340" y="336.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="340" dy="0">Size: count the keys</tspan><tspan x="340" dy="15">yourself with</tspan><tspan x="340" dy="15">Object.keys(o).length</tspan></text></g>
+<g id="r3b"><path d="M546 310H746V384H546Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="556" y="336.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="556" dy="0">Size: a real .size</tspan><tspan x="556" dy="15">property. get / set /</tspan><tspan x="556" dy="15">has / delete.</tspan></text></g>
+<g id="r3c"><path d="M762 310H960V384H762Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="772" y="336.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="772" dy="0">Size: .size as well.</tspan><tspan x="772" dy="15">add / has / delete,</tspan><tspan x="772" dy="15">no get.</tspan></text></g>
+<g id="r4a"><path d="M330 392H530V466H330Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="340" y="418.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="340" dy="0">Inherits from</tspan><tspan x="340" dy="15">Object.prototype, so it</tspan><tspan x="340" dy="15">already has toString.</tspan></text></g>
+<g id="r4b"><path d="M546 392H746V466H546Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="556" y="418.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="556" dy="0">No inherited keys. Faster</tspan><tspan x="556" dy="15">for frequent add and</tspan><tspan x="556" dy="15">delete.</tspan></text></g>
+<g id="r4c"><path d="M762 392H960V466H762Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="772" y="418.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="772" dy="0">Equality is SameValueZero:</tspan><tspan x="772" dy="15">NaN equals NaN, but two</tspan><tspan x="772" dy="15">look-alike objects do not.</tspan></text></g>
+<g id="note"><path d="M48 484L942 484L960 502L960 572L48 572Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 484L942 502L960 502" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="516.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Only an object serializes with JSON.stringify; a Map or Set turns into {}. Convert first: Object.fromEntries(map), [...set].</tspan><tspan x="58" dy="16.25">WeakMap and WeakSet hold their keys weakly, so an entry disappears when nothing else refers to the key. Use them to attach</tspan><tspan x="58" dy="16.25">data to an object without keeping it alive; they are not iterable and have no .size.</tspan></text></g>
+</g>
+</svg>

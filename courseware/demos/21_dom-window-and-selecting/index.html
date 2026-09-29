@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The window, the location, and Selecting Elements</title>
+</head>
+<body>
+  <h1>window, location, and Selecting Elements</h1>
+  <p>
+    Open DevTools (F12) &rarr; Console to see the output. Try adding
+    <code>?tab=books&amp;sort=title</code> to the URL and reloading.
+  </p>
+
+  <div id="output"></div>
+
+  <ul id="color-list" class="fav-colors">
+    <li>red</li>
+    <li>green</li>
+    <li>blue</li>
+  </ul>
+
+  <p>
+    <button id="locate">Where am I?</button>
+    <span id="where"></span>
+  </p>
+
+  <script>
+    // =====================================================================
+    // Part 1: window: the global object in the browser
+    // =====================================================================
+    // Globals, the Browser Object Model, timers, and storage all hang off
+    // `window`: so `window.` is usually optional (setTimeout === window.setTimeout).
+
+    // 1. The window describes the viewport it occupies.
+    console.log('innerWidth x innerHeight:', window.innerWidth, 'x', window.innerHeight);
+
+    // 2. A top-level `var` IS a property of window. (let and const are not.)
+    var greeting = 'hello';
+    console.log('window.greeting:', window.greeting); // "hello"
+
+    // 3. window.navigator: information about the browser/environment.
+    console.log('online?', window.navigator.onLine);
+
+    // 4. window.localStorage: simple string key/value storage that persists.
+    window.localStorage.setItem('visits', '1');
+    console.log('stored visits:', window.localStorage.getItem('visits'));
+
+    // 5. Timers are methods of window and run on the event loop, later.
+    window.setTimeout(() => {
+      console.log('ran later, via window.setTimeout');
+    }, 50);
+
+    // =====================================================================
+    // Part 2: location: the current URL, in parts
+    // =====================================================================
+    // `location` describes the current URL and can also navigate the page.
+    // Here we only READ it: navigating would reload and interrupt the demo.
+
+    console.log('href:', location.href);
+    console.log('protocol:', location.protocol);
+    console.log('host:', location.host);
+    console.log('pathname:', location.pathname);
+    console.log('search (query string):', location.search);
+
+    // Parse the query string into key/value pairs with URLSearchParams.
+    const params = new URLSearchParams(location.search);
+    console.log('tab param:', params.get('tab')); // null when not present
+
+    // Navigating (commented out so the demo stays on this page):
+    // location.assign('https://example.com'); // go to a new page
+    // location.reload();                      // reload the current page
+
+    // =====================================================================
+    // Part 3: document: finding and creating elements
+    // =====================================================================
+
+    // The three classic getters. getElementById returns ONE element...
+    const colorList = document.getElementById('color-list');
+    console.log('by id:', colorList);
+
+    // ...while getElementsBy* return a live HTMLCollection, so you index it.
+    console.log('by tag:', document.getElementsByTagName('ul')[0]);
+    console.log('by class:', document.getElementsByClassName('fav-colors')[0]);
+
+    // querySelector / querySelectorAll take any CSS selector and are the
+    // modern default. querySelectorAll returns a static NodeList.
+    console.log('querySelector:', document.querySelector('#color-list li'));
+    console.log('querySelectorAll count:', document.querySelectorAll('.fav-colors li').length);
+
+    // Create, fill, and attach a new element.
+    const newColorListItem = document.createElement('li');
+    newColorListItem.textContent = 'yellow';
+    colorList.appendChild(newColorListItem);
+    console.log('after append, count:', colorList.children.length);
+
+    // Write text into an element we selected earlier.
+    document.getElementById('output').textContent =
+      `Viewport: ${window.innerWidth} x ${window.innerHeight}, you are at ${location.pathname}`;
+
+    // =====================================================================
+    // Part 4: navigator.geolocation: another window API, but asynchronous
+    // =====================================================================
+    // Geolocation hangs off window.navigator like the rest of the BOM, but it
+    // cannot answer immediately: the browser must prompt the user. So instead
+    // of returning a value it takes a SUCCESS and an ERROR callback, an older
+    // callback-style API that predates promises.
+    //
+    // It also requires a secure context (https, or localhost) and will not
+    // hand out a position without the user's explicit permission.
+
+    const where = document.getElementById('where');
+
+    document.getElementById('locate').addEventListener('click', () => {
+      where.textContent = 'Locating…';
+
+      navigator.geolocation.getCurrentPosition(
+        // Success callback: receives a GeolocationPosition.
+        (position) => {
+          const { latitude, longitude, accuracy } = position.coords;
+          console.log('latitude:', latitude, 'longitude:', longitude);
+          where.textContent =
+            `lat ${latitude.toFixed(4)}, lon ${longitude.toFixed(4)} (±${Math.round(accuracy)}m)`;
+        },
+        // Error callback: the user may refuse, so ALWAYS supply this.
+        (error) => {
+          // Use warn, not error: a declined prompt is an expected outcome.
+          console.warn('geolocation failed:', error.code, error.message);
+          where.textContent = `unavailable (${error.message})`;
+        },
+        { enableHighAccuracy: false, timeout: 10000, maximumAge: 0 },
+      );
+    });
+  </script>
+</body>
+</html>

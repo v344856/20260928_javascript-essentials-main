@@ -1,0 +1,4 @@
+# build.sh runs under bash on macOS/Linux and MUST keep LF line endings even
+# when the repo is checked out on Windows. CRLF would make the shebang read as
+# `#!/usr/bin/env bash\r`, which fails with "bad interpreter".
+build.sh   text eol=lf

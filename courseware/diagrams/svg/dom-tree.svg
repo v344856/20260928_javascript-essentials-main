@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="ccdb5bbcf53839dc"><![CDATA[
+{
+  "version": 1,
+  "title": "The DOM Tree",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The DOM Tree",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "The browser parses your HTML into a tree of objects. JavaScript changes the tree, not the file.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "win",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 112.0,
+      "w": 190.0,
+      "h": 40.0,
+      "text": "window",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "doc",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 190.0,
+      "w": 190.0,
+      "h": 40.0,
+      "text": "document",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "html",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 268.0,
+      "w": 190.0,
+      "h": 38.0,
+      "text": "html",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "head",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 346.0,
+      "w": 190.0,
+      "h": 38.0,
+      "text": "head",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "body",
+      "kind": "rect",
+      "x": 290.0,
+      "y": 346.0,
+      "w": 190.0,
+      "h": 38.0,
+      "text": "body",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h1",
+      "kind": "rect",
+      "x": 290.0,
+      "y": 424.0,
+      "w": 190.0,
+      "h": 38.0,
+      "text": "h1",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ul",
+      "kind": "rect",
+      "x": 520.0,
+      "y": 424.0,
+      "w": 190.0,
+      "h": 38.0,
+      "text": "ul  id=\"list\"",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "txt",
+      "kind": "rect",
+      "x": 290.0,
+      "y": 500.0,
+      "w": 190.0,
+      "h": 36.0,
+      "text": "text node",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": true,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "li",
+      "kind": "rect",
+      "x": 520.0,
+      "y": 500.0,
+      "w": 190.0,
+      "h": 36.0,
+      "text": "li  × many",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "win",
+      "to": "doc",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "doc",
+      "to": "html",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "documentElement",
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "html",
+      "to": "head",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "html",
+      "to": "body",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn5",
+      "from": "body",
+      "to": "h1",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn6",
+      "from": "body",
+      "to": "ul",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn7",
+      "from": "h1",
+      "to": "txt",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn8",
+      "from": "ul",
+      "to": "li",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sel",
+      "kind": "rect",
+      "x": 750.0,
+      "y": 112.0,
+      "w": 210.0,
+      "h": 36.0,
+      "text": "Reaching into the tree",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sel2",
+      "kind": "rect",
+      "x": 750.0,
+      "y": 156.0,
+      "w": 210.0,
+      "h": 96.0,
+      "text": "getElementById('list')\nquerySelector('#list li')\nquerySelectorAll('li')\nclosest('ul')",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "seln",
+      "x": 750.0,
+      "y": 260.0,
+      "text": "querySelectorAll returns a static\nNodeList: a snapshot, not live.",
+      "w": 210.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "wn",
+      "kind": "rect",
+      "x": 750.0,
+      "y": 314.0,
+      "w": 210.0,
+      "h": 36.0,
+      "text": "window is the global object",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "wn2",
+      "kind": "rect",
+      "x": 750.0,
+      "y": 358.0,
+      "w": 210.0,
+      "h": 96.0,
+      "text": "window.document\nwindow.location\nwindow.navigator\nwindow.localStorage",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "wn3",
+      "x": 750.0,
+      "y": 462.0,
+      "text": "Everything global hangs off it,\nso window. is usually optional.",
+      "w": 210.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 8
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M155 152L155 181" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M155 190L151 180L159 180Z" fill="#5b6672"/></g>
+<g id="conn2"><path d="M155 230L155 259" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M155 268L151 258L159 258Z" fill="#4a3aa7"/><rect x="102.22" y="235.5" width="105.56" height="18" rx="2" fill="#ffffff"/><text x="155" y="249" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="155" dy="0">documentElement</tspan></text></g>
+<g id="conn3"><path d="M155 306L155 337" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M155 346L151 336L159 336Z" fill="#2a78d6"/></g>
+<g id="conn4"><path d="M155 306L155 326L385 326L385 337" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M385 346L381 336L389 336Z" fill="#2a78d6"/></g>
+<g id="conn5"><path d="M385 384L385 415" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M385 424L381 414L389 414Z" fill="#2a78d6"/></g>
+<g id="conn6"><path d="M385 384L385 404L615 404L615 415" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M615 424L611 414L619 414Z" fill="#2a78d6"/></g>
+<g id="conn7"><path d="M385 462L385 491" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M385 500L381 490L389 490Z" fill="#5b6672"/></g>
+<g id="conn8"><path d="M615 462L615 491" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M615 500L611 490L619 490Z" fill="#d9541f"/></g>
+<g id="title"><text x="145.59" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="145.59" dy="0">The DOM Tree</tspan></text></g>
+<g id="sub"><text x="361.04" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="361.04" dy="0">The browser parses your HTML into a tree of objects. JavaScript changes the tree, not the file.</tspan></text></g>
+<g id="win"><path d="M60 112H250V152H60Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="155" y="138.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="155" dy="0">window</tspan></text></g>
+<g id="doc"><path d="M60 190H250V230H60Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="155" y="216.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="155" dy="0">document</tspan></text></g>
+<g id="html"><path d="M60 268H250V306H60Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="155" y="292.4" font-family="JetBrains Mono" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="155" dy="0">html</tspan></text></g>
+<g id="head"><path d="M60 346H250V384H60Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="155" y="370.4" font-family="JetBrains Mono" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="155" dy="0">head</tspan></text></g>
+<g id="body"><path d="M290 346H480V384H290Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="385" y="370.4" font-family="JetBrains Mono" font-size="15" fill="#10386b" text-anchor="middle"><tspan x="385" dy="0">body</tspan></text></g>
+<g id="h1"><path d="M290 424H480V462H290Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="385" y="448.4" font-family="JetBrains Mono" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="385" dy="0">h1</tspan></text></g>
+<g id="ul"><path d="M520 424H710V462H520Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="615" y="448.4" font-family="JetBrains Mono" font-size="15" fill="#7a2f0f" text-anchor="middle"><tspan x="615" dy="0">ul  id="list"</tspan></text></g>
+<g id="txt"><path d="M290 500H480V536H290Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="385" y="523.25" font-family="IBM Plex Sans" font-size="14" font-style="italic" fill="#1a1a1a" text-anchor="middle"><tspan x="385" dy="0">text node</tspan></text></g>
+<g id="li"><path d="M520 500H710V536H520Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="615" y="523.4" font-family="JetBrains Mono" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="615" dy="0">li  × many</tspan></text></g>
+<g id="sel"><path d="M750 112H960V148H750Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="855" y="136" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="855" dy="0">Reaching into the tree</tspan></text></g>
+<g id="sel2"><path d="M750 156H960V252H750Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="760" y="185.82" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="760" dy="0">getElementById('list')</tspan><tspan x="760" dy="15">querySelector('#list li')</tspan><tspan x="760" dy="15">querySelectorAll('li')</tspan><tspan x="760" dy="15">closest('ul')</tspan></text></g>
+<g id="seln"><text x="750" y="272" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="750" dy="0">querySelectorAll returns a static</tspan><tspan x="750" dy="15">NodeList: a snapshot, not live.</tspan></text></g>
+<g id="wn"><path d="M750 314H960V350H750Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="855" y="337.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="855" dy="0">window is the global object</tspan></text></g>
+<g id="wn2"><path d="M750 358H960V454H750Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="760" y="387.82" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="760" dy="0">window.document</tspan><tspan x="760" dy="15">window.location</tspan><tspan x="760" dy="15">window.navigator</tspan><tspan x="760" dy="15">window.localStorage</tspan></text></g>
+<g id="wn3"><text x="750" y="474" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="750" dy="0">Everything global hangs off it,</tspan><tspan x="750" dy="15">so window. is usually optional.</tspan></text></g>
+</g>
+</svg>

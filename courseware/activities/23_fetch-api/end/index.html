@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Library</title>
+</head>
+<body>
+  <h1>Book Library</h1>
+  <ul id="book-list"></ul>
+
+  <script>
+    // Activity: Fetch a Book Library
+
+    const BASE_URL = 'http://localhost:3000';
+    const bookList = document.getElementById('book-list');
+
+    // TODO Task 1: GET the books.
+    // Fetch `${BASE_URL}/books`, await res.json(), and return the array.
+    async function getBooks() {
+
+    }
+
+    // TODO Task 2: Render the list.
+    // Clear bookList, then append one <li> per book: "<title> - <author>".
+    function render(books) {
+
+    }
+
+    // TODO Task 3: POST a new book.
+    // Send `book` as JSON with a 'Content-Type: application/json' header,
+    // then await and return res.json().
+    async function addBook(book) {
+
+    }
+
+    // Startup: read + render, add a book, then re-read + re-render.
+    async function main() {
+      render(await getBooks());
+      await addBook({ title: 'The Left Hand of Darkness', author: 'Ursula K. Le Guin' });
+      render(await getBooks());
+    }
+
+    main().catch(err => console.error('Error:', err));
+  </script>
+</body>
+</html>

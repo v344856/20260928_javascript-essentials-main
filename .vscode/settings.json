@@ -1,0 +1,10 @@
+{
+    "editor.minimap.enabled": false,
+    "explorer.compactFolders": false,
+    "scm.compactFolders": false,
+    "editor.hover.sticky": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.stickyScroll.scrollWithEditor": false,
+    "workbench.tree.enableStickyScroll": false,
+    "terminal.integrated.stickyScroll.enabled": false
+}

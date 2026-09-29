@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="da61afa1835a4f25"><![CDATA[
+{
+  "version": 1,
+  "title": "Page and Script Lifecycle",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Page and Script Lifecycle",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Why the element was null: your script ran before the browser had parsed it.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "e1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 112.0,
+      "w": 168.0,
+      "h": 44.0,
+      "text": "HTML arrives",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "e2",
+      "kind": "rect",
+      "x": 244.0,
+      "y": 112.0,
+      "w": 168.0,
+      "h": 44.0,
+      "text": "Parser builds\nthe DOM",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "e3",
+      "kind": "rect",
+      "x": 440.0,
+      "y": 112.0,
+      "w": 200.0,
+      "h": 44.0,
+      "text": "DOMContentLoaded",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "e4",
+      "kind": "rect",
+      "x": 668.0,
+      "y": 112.0,
+      "w": 140.0,
+      "h": 44.0,
+      "text": "Images and CSS\nfinish",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "e5",
+      "kind": "rect",
+      "x": 836.0,
+      "y": 112.0,
+      "w": 124.0,
+      "h": 44.0,
+      "text": "load",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "e1",
+      "to": "e2",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "e2",
+      "to": "e3",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "e3",
+      "to": "e4",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "e4",
+      "to": "e5",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hs",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 208.0,
+      "w": 912.0,
+      "h": 34.0,
+      "text": "Where a <script> runs",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 252.0,
+      "w": 222.0,
+      "h": 36.0,
+      "text": "<script> in <head>",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s1b",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 292.0,
+      "w": 222.0,
+      "h": 92.0,
+      "text": "Blocks parsing and runs at once.\nThe body does not exist yet, so\ngetElementById returns null.\nThis is the classic trap.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s2",
+      "kind": "rect",
+      "x": 278.0,
+      "y": 252.0,
+      "w": 222.0,
+      "h": 36.0,
+      "text": "<script> at end of <body>",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s2b",
+      "kind": "rect",
+      "x": 278.0,
+      "y": 292.0,
+      "w": 222.0,
+      "h": 92.0,
+      "text": "Everything above it is parsed,\nso selectors work. Still blocks\nwhatever came after it.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s3",
+      "kind": "rect",
+      "x": 508.0,
+      "y": 252.0,
+      "w": 222.0,
+      "h": 36.0,
+      "text": "<script defer>",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s3b",
+      "kind": "rect",
+      "x": 508.0,
+      "y": 292.0,
+      "w": 222.0,
+      "h": 92.0,
+      "text": "Downloads in parallel, runs\nafter parsing, in document\norder, just before\nDOMContentLoaded.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s4",
+      "kind": "rect",
+      "x": 738.0,
+      "y": 252.0,
+      "w": 222.0,
+      "h": 36.0,
+      "text": "<script async>",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s4b",
+      "kind": "rect",
+      "x": 738.0,
+      "y": 292.0,
+      "w": 222.0,
+      "h": 92.0,
+      "text": "Runs the moment it lands:\nany time, any order. Only for\nindependent scripts such as\nanalytics.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "mod",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 400.0,
+      "w": 912.0,
+      "h": 40.0,
+      "text": "<script type=\"module\"> is deferred automatically: that is one reason module code just works.",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "fix",
+      "kind": "note",
+      "x": 48.0,
+      "y": 458.0,
+      "w": 912.0,
+      "h": 108.0,
+      "text": "So there are two fixes for a null element, and defer is the better one:\ndefer (or type=\"module\") on the tag, or wrap the code in document.addEventListener('DOMContentLoaded', ...).\nDOMContentLoaded fires when the DOM is ready; load waits for every image and stylesheet, which is usually much later.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "rs0",
+      "x": 48.0,
+      "y": 166.0,
+      "text": "document.readyState:",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "rs1",
+      "x": 262.0,
+      "y": 166.0,
+      "text": "loading",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "rs2",
+      "x": 560.0,
+      "y": 166.0,
+      "text": "interactive",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "rs3",
+      "x": 872.0,
+      "y": 166.0,
+      "text": "complete",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 4
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M216 134L235 134" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M244 134L234 138L234 130Z" fill="#5b6672"/></g>
+<g id="conn2"><path d="M412 134L431 134" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M440 134L430 138L430 130Z" fill="#5b6672"/></g>
+<g id="conn3"><path d="M640 134L659 134" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M668 134L658 138L658 130Z" fill="#5b6672"/></g>
+<g id="conn4"><path d="M808 134L827 134" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M836 134L826 138L826 130Z" fill="#5b6672"/></g>
+<g id="title"><text x="224.63" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="224.63" dy="0">Page and Script Lifecycle</tspan></text></g>
+<g id="sub"><text x="300.27" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="300.27" dy="0">Why the element was null: your script ran before the browser had parsed it.</tspan></text></g>
+<g id="e1"><path d="M48 112H216V156H48Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="132" y="139.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="132" dy="0">HTML arrives</tspan></text></g>
+<g id="e2"><path d="M244 112H412V156H244Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="328" y="130.25" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="328" dy="0">Parser builds</tspan><tspan x="328" dy="18.75">the DOM</tspan></text></g>
+<g id="e3"><path d="M440 112H640V156H440Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="540" y="139.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="540" dy="0">DOMContentLoaded</tspan></text></g>
+<g id="e4"><path d="M668 112H808V156H668Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="738" y="130.5" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="738" dy="0">Images and CSS</tspan><tspan x="738" dy="17.5">finish</tspan></text></g>
+<g id="e5"><path d="M836 112H960V156H836Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="898" y="139.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="898" dy="0">load</tspan></text></g>
+<g id="hs"><path d="M48 208H960V242H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="504" y="231" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="504" dy="0">Where a &lt;script&gt; runs</tspan></text></g>
+<g id="s1"><path d="M48 252H270V288H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="159" y="274.68" font-family="JetBrains Mono" font-size="13" fill="#7a1d1d" text-anchor="middle"><tspan x="159" dy="0">&lt;script&gt; in &lt;head&gt;</tspan></text></g>
+<g id="s1b"><path d="M48 292H270V384H48Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="58" y="318.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">Blocks parsing and runs at once.</tspan><tspan x="58" dy="16.25">The body does not exist yet, so</tspan><tspan x="58" dy="16.25">getElementById returns null.</tspan><tspan x="58" dy="16.25">This is the classic trap.</tspan></text></g>
+<g id="s2"><path d="M278 252H500V288H278Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="389" y="274.68" font-family="JetBrains Mono" font-size="13" fill="#5c4100" text-anchor="middle"><tspan x="389" dy="0">&lt;script&gt; at end of &lt;body&gt;</tspan></text></g>
+<g id="s2b"><path d="M278 292H500V384H278Z" fill="#ffffff" stroke="#b07d00" stroke-width="1.5"/><text x="288" y="326.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="288" dy="0">Everything above it is parsed,</tspan><tspan x="288" dy="16.25">so selectors work. Still blocks</tspan><tspan x="288" dy="16.25">whatever came after it.</tspan></text></g>
+<g id="s3"><path d="M508 252H730V288H508Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="619" y="274.68" font-family="JetBrains Mono" font-size="13" fill="#0a4d36" text-anchor="middle"><tspan x="619" dy="0">&lt;script defer&gt;</tspan></text></g>
+<g id="s3b"><path d="M508 292H730V384H508Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="518" y="318.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="518" dy="0">Downloads in parallel, runs</tspan><tspan x="518" dy="16.25">after parsing, in document</tspan><tspan x="518" dy="16.25">order, just before</tspan><tspan x="518" dy="16.25">DOMContentLoaded.</tspan></text></g>
+<g id="s4"><path d="M738 252H960V288H738Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="849" y="274.68" font-family="JetBrains Mono" font-size="13" fill="#7a2f0f" text-anchor="middle"><tspan x="849" dy="0">&lt;script async&gt;</tspan></text></g>
+<g id="s4b"><path d="M738 292H960V384H738Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="748" y="318.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="748" dy="0">Runs the moment it lands:</tspan><tspan x="748" dy="16.25">any time, any order. Only for</tspan><tspan x="748" dy="16.25">independent scripts such as</tspan><tspan x="748" dy="16.25">analytics.</tspan></text></g>
+<g id="mod"><path d="M48 400H960V440H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="504" y="425.63" font-family="IBM Plex Sans" font-size="15" fill="#2a2160" text-anchor="middle"><tspan x="504" dy="0">&lt;script type="module"&gt; is deferred automatically: that is one reason module code just works.</tspan></text></g>
+<g id="fix"><path d="M48 458L942 458L960 476L960 566L48 566Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 458L942 476L960 476" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="499.75" font-family="IBM Plex Sans" font-size="14" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">So there are two fixes for a null element, and defer is the better one:</tspan><tspan x="58" dy="17.5">defer (or type="module") on the tag, or wrap the code in document.addEventListener('DOMContentLoaded', ...).</tspan><tspan x="58" dy="17.5">DOMContentLoaded fires when the DOM is ready; load waits for every image and stylesheet, which is usually much later.</tspan></text></g>
+<g id="rs0"><text x="111.23" y="178" font-family="IBM Plex Sans" font-size="12" font-weight="700" fill="#6b6a66" text-anchor="middle"><tspan x="111.23" dy="0">document.readyState:</tspan></text></g>
+<g id="rs1"><text x="281.75" y="178" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="281.75" dy="0">loading</tspan></text></g>
+<g id="rs2"><text x="588.49" y="178" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="588.49" dy="0">interactive</tspan></text></g>
+<g id="rs3"><text x="897.36" y="178" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="897.36" dy="0">complete</tspan></text></g>
+</g>
+</svg>

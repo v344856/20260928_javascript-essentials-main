@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reading List Dashboard</title>
+</head>
+<body>
+  <h1>My Reading List</h1>
+  <p>
+    Open DevTools (F12) &rarr; Console. Then add
+    <code>?view=unread&amp;year=2026</code> to the URL and reload so there is a
+    query string to read.
+  </p>
+
+  <div id="status"></div>
+
+  <p>
+    <button id="locate">Find my nearest library</button>
+    <span id="distance"></span>
+  </p>
+
+  <ol id="reading-list">
+    <li class="book finished">The Pragmatic Programmer</li>
+    <li class="book">Clean Code</li>
+    <li class="book">You Don't Know JS</li>
+  </ol>
+
+  <script>
+    // Activity: Reading List Dashboard
+
+    // TODO Task 1: log the viewport with window.innerWidth and
+    // window.innerHeight. Then declare a top-level `var siteName` and log
+    // window.siteName - a top-level var becomes a property of window.
+
+    // TODO Task 2: store 'visitCount' as '1' with window.localStorage.setItem,
+    // then read it back with getItem and log it.
+
+    // TODO Task 3: log location.pathname. Then build a URLSearchParams from
+    // location.search and log params.get('view') and params.has('debug').
+
+    // TODO Task 4: select the <ol> by its id 'reading-list' and log it.
+    // Then log how many <li> elements the page has, via getElementsByTagName.
+
+    // TODO Task 5: count the finished books with getElementsByClassName,
+    // then count them again with querySelectorAll('#reading-list .finished').
+
+    // TODO Task 6: create a new <li>, give it className 'book', set its
+    // textContent to 'Refactoring', append it to the list, then re-count.
+
+    // Already wired up for you: write a summary into the page.
+    document.getElementById('status').textContent =
+      `${document.querySelectorAll('#reading-list li').length} books on the list`;
+
+    // The library you are measuring the distance to, and the helper that
+    // does the math - both already written for you.
+    const LIBRARY = { name: 'Central Library', lat: 47.6067, lon: -122.3325 };
+    const distanceEl = document.getElementById('distance');
+
+    // Great-circle distance between two lat/lon points, in km.
+    function kmBetween(lat1, lon1, lat2, lon2) {
+      const toRad = (d) => (d * Math.PI) / 180;
+      const R = 6371;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+      const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+      return 2 * R * Math.asin(Math.sqrt(a));
+    }
+
+    // TODO Task 7: on click of #locate, set distanceEl.textContent to
+    // 'Locating…', then call navigator.geolocation.getCurrentPosition with:
+    //   - a SUCCESS callback that reads position.coords.latitude/longitude,
+    //     calls kmBetween(...) against LIBRARY, and writes
+    //     "<name> is <km> km away" (one decimal) into distanceEl;
+    //   - an ERROR callback that console.warn's and writes
+    //     "unavailable (<message>)" - a declined prompt is expected, so warn
+    //     rather than error;
+    //   - an options object with a timeout of 10000.
+  </script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="0a04a6f3bf1f3b5c"><![CDATA[
+{
+  "version": 1,
+  "title": "Hoisting and the Temporal Dead Zone",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Hoisting and the Temporal Dead Zone",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 68.0,
+      "text": "Declarations are registered before the code runs. What differs is whether you may touch them yet.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hv",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 110.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "var",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "v1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 152.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "console.log(x);   // undefined",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "v2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 190.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "var x = 1;",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "v3",
+      "x": 48.0,
+      "y": 236.0,
+      "text": "Hoisted AND pre-initialized to undefined.\nNo error, just a confusing value, which is\nwhy modern code does not use var.",
+      "w": 288.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hl",
+      "kind": "rect",
+      "x": 360.0,
+      "y": 110.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "let  /  const",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "l1",
+      "kind": "rect",
+      "x": 360.0,
+      "y": 152.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "console.log(y);   // ReferenceError",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "l2",
+      "kind": "rect",
+      "x": 360.0,
+      "y": 190.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "let y = 1;",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l3",
+      "x": 360.0,
+      "y": 236.0,
+      "text": "Hoisted but NOT initialized. The gap between\nthe two is the Temporal Dead Zone: the name\nexists, using it throws.",
+      "w": 288.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hf",
+      "kind": "rect",
+      "x": 672.0,
+      "y": 110.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "function declaration",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f1",
+      "kind": "rect",
+      "x": 672.0,
+      "y": 152.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "greet();          // works",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "f2",
+      "kind": "rect",
+      "x": 672.0,
+      "y": 190.0,
+      "w": 288.0,
+      "h": 34.0,
+      "text": "function greet() { }",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "f3",
+      "x": 672.0,
+      "y": 236.0,
+      "text": "Fully hoisted, body and all. A function stored\nin a let or const follows that variable's rules\ninstead, so it is NOT callable early.",
+      "w": 288.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "tl",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 314.0,
+      "w": 912.0,
+      "h": 32.0,
+      "text": "The TDZ on a timeline",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "z1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 358.0,
+      "w": 250.0,
+      "h": 52.0,
+      "text": "Scope entered\nname registered",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "z2",
+      "kind": "rect",
+      "x": 322.0,
+      "y": 358.0,
+      "w": 364.0,
+      "h": 52.0,
+      "text": "TEMPORAL DEAD ZONE\nany use throws ReferenceError",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "z3",
+      "kind": "rect",
+      "x": 710.0,
+      "y": 358.0,
+      "w": 250.0,
+      "h": 52.0,
+      "text": "let y = 1 runs\nusable from here on",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "z1",
+      "to": "z2",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "z2",
+      "to": "z3",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 442.0,
+      "w": 912.0,
+      "h": 96.0,
+      "text": "The practical rule is simple: const by default, let when you must reassign, var never. Declare things before you use them and\nthe TDZ never fires. Note that const freezes the BINDING, not the value: the contents of a const object can still change.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 2
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M298 384L313 384" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M322 384L312 388L312 380Z" fill="#5b6672"/></g>
+<g id="conn2"><path d="M686 384L701 384" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M710 384L700 388L700 380Z" fill="#5b6672"/></g>
+<g id="title"><text x="293.7" y="60" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="293.7" dy="0">Hoisting and the Temporal Dead Zone</tspan></text></g>
+<g id="sub"><text x="376.26" y="83" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="376.26" dy="0">Declarations are registered before the code runs. What differs is whether you may touch them yet.</tspan></text></g>
+<g id="hv"><path d="M48 110H336V144H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="192" y="132.76" font-family="JetBrains Mono" font-size="16" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="192" dy="0">var</tspan></text></g>
+<g id="v1"><path d="M48 152H336V186H48Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="173.32" font-family="JetBrains Mono" font-size="12" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">console.log(x);   // undefined</tspan></text></g>
+<g id="v2"><path d="M48 190H336V224H48Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="58" y="211.32" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">var x = 1;</tspan></text></g>
+<g id="v3"><text x="48" y="248" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="48" dy="0">Hoisted AND pre-initialized to undefined.</tspan><tspan x="48" dy="15">No error, just a confusing value, which is</tspan><tspan x="48" dy="15">why modern code does not use var.</tspan></text></g>
+<g id="hl"><path d="M360 110H648V144H360Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="504" y="132.76" font-family="JetBrains Mono" font-size="16" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="504" dy="0">let  /  const</tspan></text></g>
+<g id="l1"><path d="M360 152H648V186H360Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="370" y="173.32" font-family="JetBrains Mono" font-size="12" fill="#7a1d1d" text-anchor="start"><tspan x="370" dy="0">console.log(y);   // ReferenceError</tspan></text></g>
+<g id="l2"><path d="M360 190H648V224H360Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="370" y="211.32" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="370" dy="0">let y = 1;</tspan></text></g>
+<g id="l3"><text x="360" y="248" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="360" dy="0">Hoisted but NOT initialized. The gap between</tspan><tspan x="360" dy="15">the two is the Temporal Dead Zone: the name</tspan><tspan x="360" dy="15">exists, using it throws.</tspan></text></g>
+<g id="hf"><path d="M672 110H960V144H672Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="816" y="133" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="816" dy="0">function declaration</tspan></text></g>
+<g id="f1"><path d="M672 152H960V186H672Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="682" y="173.32" font-family="JetBrains Mono" font-size="12" fill="#0a4d36" text-anchor="start"><tspan x="682" dy="0">greet();          // works</tspan></text></g>
+<g id="f2"><path d="M672 190H960V224H672Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="682" y="211.32" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="682" dy="0">function greet() { }</tspan></text></g>
+<g id="f3"><text x="672" y="248" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="672" dy="0">Fully hoisted, body and all. A function stored</tspan><tspan x="672" dy="15">in a let or const follows that variable's rules</tspan><tspan x="672" dy="15">instead, so it is NOT callable early.</tspan></text></g>
+<g id="tl"><path d="M48 314H960V346H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="504" y="336" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="504" dy="0">The TDZ on a timeline</tspan></text></g>
+<g id="z1"><path d="M48 358H298V410H48Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="173" y="380.75" font-family="IBM Plex Sans" font-size="13" fill="#25303a" text-anchor="middle"><tspan x="173" dy="0">Scope entered</tspan><tspan x="173" dy="16.25">name registered</tspan></text></g>
+<g id="z2"><path d="M322 358H686V410H322Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="504" y="380.75" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="504" dy="0">TEMPORAL DEAD ZONE</tspan><tspan x="504" dy="16.25">any use throws ReferenceError</tspan></text></g>
+<g id="z3"><path d="M710 358H960V410H710Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="835" y="380.75" font-family="IBM Plex Sans" font-size="13" fill="#0a4d36" text-anchor="middle"><tspan x="835" dy="0">let y = 1 runs</tspan><tspan x="835" dy="16.25">usable from here on</tspan></text></g>
+<g id="note"><path d="M48 442L942 442L960 460L960 538L48 538Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 442L942 460L960 460" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="486.5" font-family="IBM Plex Sans" font-size="14" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">The practical rule is simple: const by default, let when you must reassign, var never. Declare things before you use them and</tspan><tspan x="58" dy="17.5">the TDZ never fires. Note that const freezes the BINDING, not the value: the contents of a const object can still change.</tspan></text></g>
+</g>
+</svg>

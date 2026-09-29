@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="581c982839b9f0ae"><![CDATA[
+{
+  "version": 1,
+  "title": "The TypeScript Pipeline",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The TypeScript Pipeline",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Types are checked, then ERASED. Nothing you write in a type annotation survives to run time.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 118.0,
+      "w": 190.0,
+      "h": 40.0,
+      "text": "app.ts",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p2",
+      "kind": "rect",
+      "x": 290.0,
+      "y": 112.0,
+      "w": 160.0,
+      "h": 52.0,
+      "text": "tsc\ntype-check",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p3",
+      "kind": "rect",
+      "x": 502.0,
+      "y": 118.0,
+      "w": 190.0,
+      "h": 40.0,
+      "text": "app.js",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p4",
+      "kind": "rect",
+      "x": 744.0,
+      "y": 112.0,
+      "w": 190.0,
+      "h": 52.0,
+      "text": "Node or\nthe browser",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "p1",
+      "to": "p2",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "p2",
+      "to": "p3",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "emit",
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "p3",
+      "to": "p4",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l1",
+      "x": 48.0,
+      "y": 176.0,
+      "text": "COMPILE TIME: types exist here",
+      "w": 402.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "l2",
+      "x": 502.0,
+      "y": 176.0,
+      "text": "RUN TIME: types are gone",
+      "w": 432.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "in",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 212.0,
+      "w": 402.0,
+      "h": 32.0,
+      "text": "What you write",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "in2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 248.0,
+      "w": 402.0,
+      "h": 128.0,
+      "text": "interface User { id: number; name: string }\n\nfunction greet(u: User): string {\n  return 'Hi ' + u.name;\n}",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "out",
+      "kind": "rect",
+      "x": 502.0,
+      "y": 212.0,
+      "w": 432.0,
+      "h": 32.0,
+      "text": "What actually runs",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "out2",
+      "kind": "rect",
+      "x": 502.0,
+      "y": 248.0,
+      "w": 432.0,
+      "h": 128.0,
+      "text": "function greet(u) {\n  return 'Hi ' + u.name;\n}",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "n1",
+      "x": 48.0,
+      "y": 392.0,
+      "text": "The interface vanished entirely: an interface is a compile-time shape, not an object.\nSo you cannot test a type with typeof or instanceof, and data crossing the boundary\n(JSON from a server, a form field, localStorage) is NOT checked. Validate it yourself.",
+      "w": 886.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "why",
+      "kind": "note",
+      "x": 48.0,
+      "y": 462.0,
+      "w": 886.0,
+      "h": 104.0,
+      "text": "Why bother, then? Because the check happens BEFORE you ship: a typo, a wrong argument order, or a forgotten null is a red\nsquiggle in the editor instead of a bug in production. TypeScript is a superset: every valid .js file is already valid .ts.\nIn this course we run .ts straight through tsx, which strips the types without type-checking; tsc --noEmit does the checking.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 3
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M238 138L281 138" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M290 138L280 142L280 134Z" fill="#2a78d6"/></g>
+<g id="conn2"><path d="M450 138L493 138" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M502 138L492 142L492 134Z" fill="#4a3aa7"/><rect x="456.36" y="129" width="30.28" height="18" rx="2" fill="#ffffff"/><text x="471.5" y="142.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="471.5" dy="0">emit</tspan></text></g>
+<g id="conn3"><path d="M692 138L735 138" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M744 138L734 142L734 134Z" fill="#d9541f"/></g>
+<g id="title"><text x="215.06" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="215.06" dy="0">The TypeScript Pipeline</tspan></text></g>
+<g id="sub"><text x="360.24" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="360.24" dy="0">Types are checked, then ERASED. Nothing you write in a type annotation survives to run time.</tspan></text></g>
+<g id="p1"><path d="M48 118H238V158H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="143" y="143.76" font-family="JetBrains Mono" font-size="16" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="143" dy="0">app.ts</tspan></text></g>
+<g id="p2"><path d="M290 112H450V164H290Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="370" y="134.25" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="370" dy="0">tsc</tspan><tspan x="370" dy="18.75">type-check</tspan></text></g>
+<g id="p3"><path d="M502 118H692V158H502Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="597" y="143.76" font-family="JetBrains Mono" font-size="16" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="597" dy="0">app.js</tspan></text></g>
+<g id="p4"><path d="M744 112H934V164H744Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="839" y="134.25" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="839" dy="0">Node or</tspan><tspan x="839" dy="18.75">the browser</tspan></text></g>
+<g id="l1"><text x="249" y="189" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="249" dy="0">COMPILE TIME: types exist here</tspan></text></g>
+<g id="l2"><text x="718" y="189" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="718" dy="0">RUN TIME: types are gone</tspan></text></g>
+<g id="in"><path d="M48 212H450V244H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="249" y="233.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="249" dy="0">What you write</tspan></text></g>
+<g id="in2"><path d="M48 248H450V376H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="58" y="284.18" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">interface User { id: number; name: string }</tspan><tspan x="58" dy="16.25"></tspan><tspan x="58" dy="16.25">function greet(u: User): string {</tspan><tspan x="58" dy="16.25">  return 'Hi ' + u.name;</tspan><tspan x="58" dy="16.25">}</tspan></text></g>
+<g id="out"><path d="M502 212H934V244H502Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="718" y="233.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="718" dy="0">What actually runs</tspan></text></g>
+<g id="out2"><path d="M502 248H934V376H502Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="512" y="300.43" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="512" dy="0">function greet(u) {</tspan><tspan x="512" dy="16.25">  return 'Hi ' + u.name;</tspan><tspan x="512" dy="16.25">}</tspan></text></g>
+<g id="n1"><text x="48" y="405" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="start"><tspan x="48" dy="0">The interface vanished entirely: an interface is a compile-time shape, not an object.</tspan><tspan x="48" dy="16.25">So you cannot test a type with typeof or instanceof, and data crossing the boundary</tspan><tspan x="48" dy="16.25">(JSON from a server, a form field, localStorage) is NOT checked. Validate it yourself.</tspan></text></g>
+<g id="why"><path d="M48 462L916 462L934 480L934 566L48 566Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M916 462L916 480L934 480" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="502.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Why bother, then? Because the check happens BEFORE you ship: a typo, a wrong argument order, or a forgotten null is a red</tspan><tspan x="58" dy="16.25">squiggle in the editor instead of a bug in production. TypeScript is a superset: every valid .js file is already valid .ts.</tspan><tspan x="58" dy="16.25">In this course we run .ts straight through tsx, which strips the types without type-checking; tsc --noEmit does the checking.</tspan></text></g>
+</g>
+</svg>

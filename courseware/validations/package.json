@@ -1,0 +1,30 @@
+{
+  "name": "courseware-validations",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated validation harness for the JavaScript & TypeScript Essentials demos and activities. Also carries the repo's ESLint + Prettier setup, which lints this harness only; the course repo root stays bare so students see nothing but the course.",
+  "scripts": {
+    "validate": "vitest run",
+    "validate:watch": "vitest",
+    "validate:e2e": "playwright test",
+    "validate:full": "vitest run && playwright test",
+    "e2e:install": "playwright install chromium",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
+    "eslint": "^10.8.1",
+    "globals": "^17.9.0",
+    "http-server": "^14.1.1",
+    "json-server": "^1.0.0-beta.15",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.11",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  },
+  "license": "MIT"
+}

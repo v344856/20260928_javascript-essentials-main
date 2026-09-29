@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Events, Delegation, and Styling</title>
+  <style>
+    #color-list { list-style: none; padding: 0; }
+    #color-list li { padding: 6px; cursor: pointer; }
+    .selected { outline: 3px solid gold; }
+    .rounded { border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <h1>DOM Events, Delegation, and Styling</h1>
+  <p>Open DevTools (F12) &rarr; Console, then click a color and submit the form.</p>
+
+  <div id="panel">
+    <ul id="color-list"></ul>
+  </div>
+
+  <form>
+    <label>
+      Color:
+      <input type="text" name="color">
+    </label>
+    <button>Add Color</button>
+  </form>
+
+  <script>
+    // =====================================================================
+    // Part 1: Render a list from data
+    // =====================================================================
+
+    const colors = [
+      { id: 1, name: 'Red' },
+      { id: 2, name: 'Green' },
+      { id: 3, name: 'Blue' },
+    ];
+
+    const colorList = document.getElementById('color-list');
+
+    function addColorItem(name, id) {
+      const listItem = document.createElement('li');
+      listItem.textContent = name;
+      // dataset writes a data-* attribute, so each element carries its own id.
+      listItem.dataset.id = id;
+      colorList.appendChild(listItem);
+    }
+
+    colors.forEach((color) => addColorItem(color.name, color.id));
+
+    // =====================================================================
+    // Part 2: Handling a form submit
+    // =====================================================================
+
+    const colorForm = document.getElementsByTagName('form')[0];
+
+    colorForm.addEventListener('submit', (event) => {
+      // Stop the browser's default submit (which would reload the page) so we
+      // can handle it in JavaScript instead.
+      event.preventDefault();
+
+      const colorInput = colorForm.elements['color'];
+      const newColor = colorInput.value.trim();
+
+      if (newColor) {
+        const nextId = Math.max(...colors.map((c) => c.id), 0) + 1;
+        colors.push({ id: nextId, name: newColor });
+        addColorItem(newColor, nextId);
+        colorInput.value = '';
+      }
+    });
+
+    // =====================================================================
+    // Part 3: Event delegation: ONE listener for every item, present or future
+    // =====================================================================
+
+    const panel = document.getElementById('panel');
+
+    // An event travels DOWN to the target (capture) and back UP (bubble).
+    panel.addEventListener('click', () => {
+      console.log('Capture: panel');
+    }, { capture: true });
+
+    colorList.addEventListener('click', (evt) => {
+      console.log('Capture: list');
+
+      // target = what was actually clicked. currentTarget = what the listener
+      // is attached to. That difference is what makes delegation work.
+      console.log('target:', evt.target.tagName, '| currentTarget:', evt.currentTarget.tagName);
+
+      if (evt.target.tagName === 'LI') {
+        console.log('clicked color:', evt.target.textContent, '| id:', evt.target.dataset.id);
+
+        // =============================================================
+        // Part 4: Styling from JavaScript
+        // =============================================================
+
+        // classList is the preferred way to restyle: the rules stay in CSS.
+        for (const li of colorList.querySelectorAll('li')) {
+          li.classList.remove('selected');
+        }
+        evt.target.classList.add('selected', 'rounded');
+        console.log('has selected?', evt.target.classList.contains('selected'));
+
+        // The .style object sets INLINE styles. CSS property names become
+        // camelCase: background-color -> backgroundColor.
+        evt.target.style.backgroundColor = '#eeeeee';
+        console.log('inline background:', evt.target.style.backgroundColor);
+
+        // getComputedStyle reports the FINAL values the browser applied,
+        // from your stylesheet plus any inline styles. It is read-only.
+        console.log('computed padding:', getComputedStyle(evt.target).padding);
+      }
+    }, { capture: true });
+
+    // The same click comes back up through the bubble phase.
+    colorList.addEventListener('click', () => {
+      console.log('Bubble: list');
+    });
+
+    panel.addEventListener('click', () => {
+      console.log('Bubble: panel');
+    });
+  </script>
+</body>
+</html>

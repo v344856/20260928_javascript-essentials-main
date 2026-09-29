@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="9a26b5c40c8d1321"><![CDATA[
+{
+  "version": 1,
+  "title": "Anatomy of a Regular Expression",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Anatomy of a Regular Expression",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 68.0,
+      "text": "One pattern, every part labeled. Read it left to right, the way the engine does.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "pat",
+      "kind": "rect",
+      "x": 260.0,
+      "y": 110.0,
+      "w": 488.0,
+      "h": 58.0,
+      "text": "/^[A-Z]{2}-\\d{3,4}$/i",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 24.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 244.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "Anchor: must match from the\nvery START of the string.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p2",
+      "kind": "rect",
+      "x": 272.0,
+      "y": 244.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "Character class: any ONE\ncharacter from the set.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p3",
+      "kind": "rect",
+      "x": 496.0,
+      "y": 244.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "Quantifier: exactly two of\nthe thing before it.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p4",
+      "kind": "rect",
+      "x": 720.0,
+      "y": 244.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "A literal hyphen. Most\ncharacters just mean themselves.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p5",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 352.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "Shorthand for [0-9]. Also \\w word\nand \\s space; \\D \\W \\S negate.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p6",
+      "kind": "rect",
+      "x": 272.0,
+      "y": 352.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "Between three and four. Also\n* zero or more, + one or more,\n? optional.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p7",
+      "kind": "rect",
+      "x": 496.0,
+      "y": 352.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "Anchor: must reach the END.\n^ and $ together mean the\nWHOLE string must match.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p8",
+      "kind": "rect",
+      "x": 720.0,
+      "y": 352.0,
+      "w": 210.0,
+      "h": 58.0,
+      "text": "A flag, after the closing slash.\ni ignore case, g find all,\nm multiline.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ok",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 428.0,
+      "w": 442.0,
+      "h": 36.0,
+      "text": "Matches:   AB-123  ·  ab-4567  ·  ZZ-999",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "no",
+      "kind": "rect",
+      "x": 512.0,
+      "y": 428.0,
+      "w": 418.0,
+      "h": 36.0,
+      "text": "Does not:   A-123  ·  AB-12  ·  AB-12345  ·  xAB-123",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 480.0,
+      "w": 882.0,
+      "h": 92.0,
+      "text": "Use a regex to check the SHAPE of a short string. Do not use one to parse HTML, and do not invent your own for email;\ntype=\"email\" already does it. A pattern with a g flag keeps lastIndex between calls, so reusing one across a loop can skip\nmatches; make a fresh regex, or use String.matchAll.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 210.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "^",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h2",
+      "kind": "rect",
+      "x": 272.0,
+      "y": 210.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "[A-Z]",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h3",
+      "kind": "rect",
+      "x": 496.0,
+      "y": 210.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "{2}",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h4",
+      "kind": "rect",
+      "x": 720.0,
+      "y": 210.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "-",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h5",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 318.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "\\d",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h6",
+      "kind": "rect",
+      "x": 272.0,
+      "y": 318.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "{3,4}",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h7",
+      "kind": "rect",
+      "x": 496.0,
+      "y": 318.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "$",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h8",
+      "kind": "rect",
+      "x": 720.0,
+      "y": 318.0,
+      "w": 210.0,
+      "h": 34.0,
+      "text": "i",
+      "style": {
+        "fill": "#fbe4ec",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6f2445",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="title"><text x="264.48" y="60" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="264.48" dy="0">Anatomy of a Regular Expression</tspan></text></g>
+<g id="sub"><text x="305.91" y="83" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="305.91" dy="0">One pattern, every part labeled. Read it left to right, the way the engine does.</tspan></text></g>
+<g id="pat"><path d="M260 110H748V168H260Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="504" y="147.64" font-family="JetBrains Mono" font-size="24" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="504" dy="0">/^[A-Z]{2}-\d{3,4}$/i</tspan></text></g>
+<g id="p1"><path d="M48 244H258V302H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="153" y="269.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="153" dy="0">Anchor: must match from the</tspan><tspan x="153" dy="16.25">very START of the string.</tspan></text></g>
+<g id="p2"><path d="M272 244H482V302H272Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="377" y="269.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="377" dy="0">Character class: any ONE</tspan><tspan x="377" dy="16.25">character from the set.</tspan></text></g>
+<g id="p3"><path d="M496 244H706V302H496Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="601" y="269.75" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="601" dy="0">Quantifier: exactly two of</tspan><tspan x="601" dy="16.25">the thing before it.</tspan></text></g>
+<g id="p4"><path d="M720 244H930V302H720Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="825" y="261.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="825" dy="0">A literal hyphen. Most</tspan><tspan x="825" dy="16.25">characters just mean</tspan><tspan x="825" dy="16.25">themselves.</tspan></text></g>
+<g id="p5"><path d="M48 352H258V410H48Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="153" y="369.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="153" dy="0">Shorthand for [0-9]. Also \w</tspan><tspan x="153" dy="16.25">word</tspan><tspan x="153" dy="16.25">and \s space; \D \W \S negate.</tspan></text></g>
+<g id="p6"><path d="M272 352H482V410H272Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="377" y="370.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="377" dy="0">Between three and four. Also</tspan><tspan x="377" dy="15">* zero or more, + one or more,</tspan><tspan x="377" dy="15">? optional.</tspan></text></g>
+<g id="p7"><path d="M496 352H706V410H496Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="601" y="370.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="601" dy="0">Anchor: must reach the END.</tspan><tspan x="601" dy="15">^ and $ together mean the</tspan><tspan x="601" dy="15">WHOLE string must match.</tspan></text></g>
+<g id="p8"><path d="M720 352H930V410H720Z" fill="#ffffff" stroke="#c74d7c" stroke-width="1.5"/><text x="825" y="369.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="825" dy="0">A flag, after the closing slash.</tspan><tspan x="825" dy="16.25">i ignore case, g find all,</tspan><tspan x="825" dy="16.25">m multiline.</tspan></text></g>
+<g id="ok"><path d="M48 428H490V464H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="269" y="451.25" font-family="IBM Plex Sans" font-size="14" fill="#0a4d36" text-anchor="middle"><tspan x="269" dy="0">Matches:   AB-123  ·  ab-4567  ·  ZZ-999</tspan></text></g>
+<g id="no"><path d="M512 428H930V464H512Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="721" y="451.25" font-family="IBM Plex Sans" font-size="14" fill="#7a1d1d" text-anchor="middle"><tspan x="721" dy="0">Does not:   A-123  ·  AB-12  ·  AB-12345  ·  xAB-123</tspan></text></g>
+<g id="note"><path d="M48 480L912 480L930 498L930 572L48 572Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M912 480L912 498L930 498" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="514.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Use a regex to check the SHAPE of a short string. Do not use one to parse HTML, and do not invent your own for email;</tspan><tspan x="58" dy="16.25">type="email" already does it. A pattern with a g flag keeps lastIndex between calls, so reusing one across a loop can skip</tspan><tspan x="58" dy="16.25">matches; make a fresh regex, or use String.matchAll.</tspan></text></g>
+<g id="h1"><path d="M48 210H258V244H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="153" y="233.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="153" dy="0">^</tspan></text></g>
+<g id="h2"><path d="M272 210H482V244H272Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="377" y="233.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="377" dy="0">[A-Z]</tspan></text></g>
+<g id="h3"><path d="M496 210H706V244H496Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="601" y="233.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="601" dy="0">{2}</tspan></text></g>
+<g id="h4"><path d="M720 210H930V244H720Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="825" y="233.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="825" dy="0">-</tspan></text></g>
+<g id="h5"><path d="M48 318H258V352H48Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="153" y="341.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="153" dy="0">\d</tspan></text></g>
+<g id="h6"><path d="M272 318H482V352H272Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="377" y="341.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="377" dy="0">{3,4}</tspan></text></g>
+<g id="h7"><path d="M496 318H706V352H496Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="601" y="341.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="601" dy="0">$</tspan></text></g>
+<g id="h8"><path d="M720 318H930V352H720Z" fill="#fbe4ec" stroke="#c74d7c" stroke-width="1.5"/><text x="825" y="341.12" font-family="JetBrains Mono" font-size="17" font-weight="700" fill="#6f2445" text-anchor="middle"><tspan x="825" dy="0">i</tspan></text></g>
+</g>
+</svg>

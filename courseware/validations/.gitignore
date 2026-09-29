@@ -1,0 +1,7 @@
+node_modules/
+test-results/
+playwright-report/
+.playwright/
+
+# Regenerated from db.seed.json on every E2E run (json-server mutates it).
+e2e/fixtures/db.json

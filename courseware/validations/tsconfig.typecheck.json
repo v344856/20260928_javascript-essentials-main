@@ -1,0 +1,15 @@
+{
+  "//": "Used ONLY by the validation harness (tier2-typecheck) to type-check the TS pairs in strict mode; tsx runs them WITHOUT type-checking. `moduleDetection: force` is essential: the .ts files are standalone scripts with no import/export, so without it they'd share one global scope in a single program and collide (duplicate 'Shape', 'shapes', ...). 'force' gives each file its own module scope, so each is checked in isolation.",
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "types": [],
+    "moduleDetection": "force"
+  },
+  "include": ["../demos/*/index.ts", "../activities/*/solution/index.ts"]
+}

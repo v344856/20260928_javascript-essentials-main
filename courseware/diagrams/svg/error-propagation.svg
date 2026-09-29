@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="13ed38c1c2b6f50c"><![CDATA[
+{
+  "version": 1,
+  "title": "Error Propagation",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Error Propagation",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "A throw unwinds the stack until it meets a catch. Frames in between just disappear.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "st1",
+      "kind": "rect",
+      "x": 68.0,
+      "y": 118.0,
+      "w": 360.0,
+      "h": 44.0,
+      "text": "main()   - has try / catch",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "st2",
+      "kind": "rect",
+      "x": 98.0,
+      "y": 180.0,
+      "w": 330.0,
+      "h": 44.0,
+      "text": "loadUser()   - no try",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "st3",
+      "kind": "rect",
+      "x": 128.0,
+      "y": 242.0,
+      "w": 300.0,
+      "h": 44.0,
+      "text": "parseRecord()   - no try",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "st4",
+      "kind": "rect",
+      "x": 158.0,
+      "y": 304.0,
+      "w": 270.0,
+      "h": 44.0,
+      "text": "throw new Error('bad record')",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "unw",
+      "x": 460.0,
+      "y": 196.0,
+      "text": "The two middle frames are\nabandoned. Nothing after the\nthrow in them ever runs.",
+      "w": 200.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "caught",
+      "x": 460.0,
+      "y": 130.0,
+      "text": "caught here",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "fin",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 372.0,
+      "w": 380.0,
+      "h": 34.0,
+      "text": "finally always runs",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "fin2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 412.0,
+      "w": 380.0,
+      "h": 76.0,
+      "text": "On success, on throw, even on an early return.\nUse it to close, unlock, or hide a spinner,\nnot to swallow the error.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "async1",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 118.0,
+      "w": 260.0,
+      "h": 34.0,
+      "text": "Async errors need an async catch",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "async2",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 158.0,
+      "w": 260.0,
+      "h": 60.0,
+      "text": "try { setTimeout(boom, 0) }\ncatch { }   // never fires",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "async3",
+      "x": 700.0,
+      "y": 224.0,
+      "text": "The callback runs later, on an empty\nstack: the try block is long gone.",
+      "w": 260.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "async4",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 268.0,
+      "w": 260.0,
+      "h": 60.0,
+      "text": "try { await work() }\ncatch (err) { }   // works",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "async5",
+      "x": 700.0,
+      "y": 334.0,
+      "text": "await resumes inside the try, so a rejected\npromise throws right there.",
+      "w": 260.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "errobj",
+      "kind": "rect",
+      "x": 460.0,
+      "y": 372.0,
+      "w": 220.0,
+      "h": 34.0,
+      "text": "The Error object",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "errobj2",
+      "kind": "rect",
+      "x": 460.0,
+      "y": 412.0,
+      "w": 220.0,
+      "h": 76.0,
+      "text": "err.name\nerr.message\nerr.stack\nerr.cause",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cause",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 372.0,
+      "w": 260.0,
+      "h": 34.0,
+      "text": "Rethrow with context",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cause2",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 412.0,
+      "w": 260.0,
+      "h": 76.0,
+      "text": "throw new Error('Could not load',\n                { cause: err });",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "rules",
+      "kind": "note",
+      "x": 48.0,
+      "y": 506.0,
+      "w": 912.0,
+      "h": 66.0,
+      "text": "Always throw an Error, never a string; only an Error carries a stack. Catch where you can actually DO something;\nletting it travel up is usually right. And a last line of defense: window.onerror plus window.onunhandledrejection.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "st4",
+      "to": "st1",
+      "from_side": "left",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#c93434",
+        "stroke_width": 2.0,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 2
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn2"><path d="M158 326L52 326L52 140L56 140" fill="none" stroke="#c93434" stroke-width="2"/><path d="M68 140L54.67 145.33L54.67 134.67Z" fill="#c93434"/></g>
+<g id="title"><text x="173.13" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="173.13" dy="0">Error Propagation</tspan></text></g>
+<g id="sub"><text x="327.38" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="327.38" dy="0">A throw unwinds the stack until it meets a catch. Frames in between just disappear.</tspan></text></g>
+<g id="st1"><path d="M68 118H428V162H68Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="248" y="145.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="248" dy="0">main()   - has try / catch</tspan></text></g>
+<g id="st2"><path d="M98 180H428V224H98Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="263" y="207.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="263" dy="0">loadUser()   - no try</tspan></text></g>
+<g id="st3"><path d="M128 242H428V286H128Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="278" y="269.63" font-family="IBM Plex Sans" font-size="15" fill="#1a1a1a" text-anchor="middle"><tspan x="278" dy="0">parseRecord()   - no try</tspan></text></g>
+<g id="st4"><path d="M158 304H428V348H158Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="293" y="330.68" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="293" dy="0">throw new Error('bad record')</tspan></text></g>
+<g id="unw"><text x="460" y="209" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="start"><tspan x="460" dy="0">The two middle frames are</tspan><tspan x="460" dy="16.25">abandoned. Nothing after the</tspan><tspan x="460" dy="16.25">throw in them ever runs.</tspan></text></g>
+<g id="caught"><text x="498.98" y="144" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="498.98" dy="0">caught here</tspan></text></g>
+<g id="fin"><path d="M48 372H428V406H48Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="238" y="394.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#5c4100" text-anchor="middle"><tspan x="238" dy="0">finally always runs</tspan></text></g>
+<g id="fin2"><path d="M48 412H428V488H48Z" fill="#ffffff" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="438.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">On success, on throw, even on an early return.</tspan><tspan x="58" dy="16.25">Use it to close, unlock, or hide a spinner,</tspan><tspan x="58" dy="16.25">not to swallow the error.</tspan></text></g>
+<g id="async1"><path d="M700 118H960V152H700Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="830" y="140.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="830" dy="0">Async errors need an async catch</tspan></text></g>
+<g id="async2"><path d="M700 158H960V218H700Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="710" y="184.82" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="710" dy="0">try { setTimeout(boom, 0) }</tspan><tspan x="710" dy="15">catch { }   // never fires</tspan></text></g>
+<g id="async3"><text x="700" y="236" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="700" dy="0">The callback runs later, on an empty</tspan><tspan x="700" dy="15">stack: the try block is long gone.</tspan></text></g>
+<g id="async4"><path d="M700 268H960V328H700Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="710" y="294.82" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="710" dy="0">try { await work() }</tspan><tspan x="710" dy="15">catch (err) { }   // works</tspan></text></g>
+<g id="async5"><text x="700" y="346" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="start"><tspan x="700" dy="0">await resumes inside the try, so a rejected</tspan><tspan x="700" dy="15">promise throws right there.</tspan></text></g>
+<g id="errobj"><path d="M460 372H680V406H460Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="570" y="394.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="570" dy="0">The Error object</tspan></text></g>
+<g id="errobj2"><path d="M460 412H680V488H460Z" fill="#ffffff" stroke="#4a3aa7" stroke-width="1.5"/><text x="470" y="430.31" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="470" dy="0">err.name</tspan><tspan x="470" dy="16.25">err.message</tspan><tspan x="470" dy="16.25">err.stack</tspan><tspan x="470" dy="16.25">err.cause</tspan></text></g>
+<g id="cause"><path d="M700 372H960V406H700Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="830" y="394.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="830" dy="0">Rethrow with context</tspan></text></g>
+<g id="cause2"><path d="M700 412H960V488H700Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="710" y="446.82" font-family="JetBrains Mono" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="710" dy="0">throw new Error('Could not load',</tspan><tspan x="710" dy="15">                { cause: err });</tspan></text></g>
+<g id="rules"><path d="M48 506L945.48 506L960 520.52L960 572L48 572Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M945.48 506L945.48 520.52L960 520.52" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="535.75" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Always throw an Error, never a string; only an Error carries a stack. Catch where you can actually DO something;</tspan><tspan x="58" dy="16.25">letting it travel up is usually right. And a last line of defense: window.onerror plus window.onunhandledrejection.</tspan></text></g>
+</g>
+</svg>

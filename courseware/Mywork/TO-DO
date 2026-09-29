@@ -1,0 +1,12 @@
+1. SELECT THE PROJECT > package json > Reveal in file explorer
+2. CMD
+3. Launch the command prompt
+4. Execute npm install
+5. Existing command
+    npm run start: Run index.js
+    npm run lint : Run eslint
+    npm run format: Rum prettier
+
+    Note: The dependencies for eslint and prettier to make
+        code easier to read
+          You can run node index.js no need to do the following steps above.

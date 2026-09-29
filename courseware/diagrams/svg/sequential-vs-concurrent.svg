@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="60a70fe764e18edf"><![CDATA[
+{
+  "version": 1,
+  "title": "Sequential vs Concurrent",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Sequential vs Concurrent",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Awaiting in a loop is a queue. Promise.all is a starting gun for tasks that do not depend on each other.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 110.0,
+      "w": 620.0,
+      "h": 34.0,
+      "text": "await one at a time: 3 seconds",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 154.0,
+      "w": 200.0,
+      "h": 40.0,
+      "text": "fetch A  (1s)",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s2",
+      "kind": "rect",
+      "x": 258.0,
+      "y": 154.0,
+      "w": 200.0,
+      "h": 40.0,
+      "text": "fetch B  (1s)",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s3",
+      "kind": "rect",
+      "x": 468.0,
+      "y": 154.0,
+      "w": 200.0,
+      "h": 40.0,
+      "text": "fetch C  (1s)",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c1code",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 206.0,
+      "w": 620.0,
+      "h": 68.0,
+      "text": "for (const url of urls) {\n  results.push(await fetch(url));\n}",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 300.0,
+      "w": 620.0,
+      "h": 34.0,
+      "text": "start them all, then await: 1 second",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 344.0,
+      "w": 200.0,
+      "h": 32.0,
+      "text": "fetch A  (1s)",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 380.0,
+      "w": 200.0,
+      "h": 32.0,
+      "text": "fetch B  (1s)",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "p3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 416.0,
+      "w": 200.0,
+      "h": 32.0,
+      "text": "fetch C  (1s)",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c2code",
+      "kind": "rect",
+      "x": 268.0,
+      "y": 344.0,
+      "w": 400.0,
+      "h": 104.0,
+      "text": "const results = await Promise.all(\n  urls.map((url) => fetch(url))\n);",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hC",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 110.0,
+      "w": 260.0,
+      "h": 34.0,
+      "text": "Which combinator?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cb1",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 154.0,
+      "w": 260.0,
+      "h": 76.0,
+      "text": "Promise.all\nAll must succeed. Rejects as\nsoon as any one rejects.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cb2",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 238.0,
+      "w": 260.0,
+      "h": 76.0,
+      "text": "Promise.allSettled\nNever rejects. Gives you a\nstatus for every one.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cb3",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 322.0,
+      "w": 260.0,
+      "h": 76.0,
+      "text": "Promise.race\nFirst to SETTLE wins, even if\nthat one rejected. Timeouts.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cb4",
+      "kind": "rect",
+      "x": 700.0,
+      "y": 406.0,
+      "w": 260.0,
+      "h": 76.0,
+      "text": "Promise.any\nFirst to SUCCEED wins.\nRejects only if all reject.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "warn",
+      "kind": "note",
+      "x": 48.0,
+      "y": 506.0,
+      "w": 912.0,
+      "h": 66.0,
+      "text": "Only fan out when the tasks are INDEPENDENT. If step B needs step A's result, awaiting in sequence is not a bug; it is\nthe requirement. And Promise.all does not create threads: the waiting overlaps, the JavaScript still runs on one thread.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "t0",
+      "x": 48.0,
+      "y": 458.0,
+      "text": "0s",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "t1",
+      "x": 243.0,
+      "y": 458.0,
+      "text": "1s",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "t2",
+      "x": 453.0,
+      "y": 458.0,
+      "text": "2s",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "t3",
+      "x": 656.0,
+      "y": 458.0,
+      "text": "3s",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "tlab",
+      "x": 320.0,
+      "y": 476.0,
+      "text": "elapsed time",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="title"><text x="226.04" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="226.04" dy="0">Sequential vs Concurrent</tspan></text></g>
+<g id="sub"><text x="385.08" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="385.08" dy="0">Awaiting in a loop is a queue. Promise.all is a starting gun for tasks that do not depend on each other.</tspan></text></g>
+<g id="h1"><path d="M48 110H668V144H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="358" y="133" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="358" dy="0">await one at a time: 3 seconds</tspan></text></g>
+<g id="s1"><path d="M48 154H248V194H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="148" y="179.25" font-family="IBM Plex Sans" font-size="14" fill="#7a1d1d" text-anchor="middle"><tspan x="148" dy="0">fetch A  (1s)</tspan></text></g>
+<g id="s2"><path d="M258 154H458V194H258Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="358" y="179.25" font-family="IBM Plex Sans" font-size="14" fill="#7a1d1d" text-anchor="middle"><tspan x="358" dy="0">fetch B  (1s)</tspan></text></g>
+<g id="s3"><path d="M468 154H668V194H468Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="568" y="179.25" font-family="IBM Plex Sans" font-size="14" fill="#7a1d1d" text-anchor="middle"><tspan x="568" dy="0">fetch C  (1s)</tspan></text></g>
+<g id="c1code"><path d="M48 206H668V274H48Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="58" y="228.43" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">for (const url of urls) {</tspan><tspan x="58" dy="16.25">  results.push(await fetch(url));</tspan><tspan x="58" dy="16.25">}</tspan></text></g>
+<g id="h2"><path d="M48 300H668V334H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="358" y="323" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="358" dy="0">start them all, then await: 1 second</tspan></text></g>
+<g id="p1"><path d="M48 344H248V376H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="148" y="365.25" font-family="IBM Plex Sans" font-size="14" fill="#0a4d36" text-anchor="middle"><tspan x="148" dy="0">fetch A  (1s)</tspan></text></g>
+<g id="p2"><path d="M48 380H248V412H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="148" y="401.25" font-family="IBM Plex Sans" font-size="14" fill="#0a4d36" text-anchor="middle"><tspan x="148" dy="0">fetch B  (1s)</tspan></text></g>
+<g id="p3"><path d="M48 416H248V448H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="148" y="437.25" font-family="IBM Plex Sans" font-size="14" fill="#0a4d36" text-anchor="middle"><tspan x="148" dy="0">fetch C  (1s)</tspan></text></g>
+<g id="c2code"><path d="M268 344H668V448H268Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="278" y="383.75" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="start"><tspan x="278" dy="0">const results = await Promise.all(</tspan><tspan x="278" dy="17.5">  urls.map((url) =&gt; fetch(url))</tspan><tspan x="278" dy="17.5">);</tspan></text></g>
+<g id="hC"><path d="M700 110H960V144H700Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="830" y="133" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="830" dy="0">Which combinator?</tspan></text></g>
+<g id="cb1"><path d="M700 154H960V230H700Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="710" y="180.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="710" dy="0">Promise.all</tspan><tspan x="710" dy="16.25">All must succeed. Rejects as</tspan><tspan x="710" dy="16.25">soon as any one rejects.</tspan></text></g>
+<g id="cb2"><path d="M700 238H960V314H700Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="710" y="264.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="710" dy="0">Promise.allSettled</tspan><tspan x="710" dy="16.25">Never rejects. Gives you a</tspan><tspan x="710" dy="16.25">status for every one.</tspan></text></g>
+<g id="cb3"><path d="M700 322H960V398H700Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="710" y="348.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="710" dy="0">Promise.race</tspan><tspan x="710" dy="16.25">First to SETTLE wins, even if</tspan><tspan x="710" dy="16.25">that one rejected. Timeouts.</tspan></text></g>
+<g id="cb4"><path d="M700 406H960V482H700Z" fill="#ffffff" stroke="#c74d7c" stroke-width="1.5"/><text x="710" y="432.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="710" dy="0">Promise.any</tspan><tspan x="710" dy="16.25">First to SUCCEED wins.</tspan><tspan x="710" dy="16.25">Rejects only if all reject.</tspan></text></g>
+<g id="warn"><path d="M48 506L945.48 506L960 520.52L960 572L48 572Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M945.48 506L945.48 520.52L960 520.52" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="535.5" font-family="IBM Plex Sans" font-size="14" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Only fan out when the tasks are INDEPENDENT. If step B needs step A's result, awaiting in sequence is not a bug; it is</tspan><tspan x="58" dy="17.5">the requirement. And Promise.all does not create threads: the waiting overlaps, the JavaScript still runs on one thread.</tspan></text></g>
+<g id="t0"><text x="54.52" y="470" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="54.52" dy="0">0s</tspan></text></g>
+<g id="t1"><text x="249.52" y="470" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="249.52" dy="0">1s</tspan></text></g>
+<g id="t2"><text x="459.52" y="470" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="459.52" dy="0">2s</tspan></text></g>
+<g id="t3"><text x="662.52" y="470" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="662.52" dy="0">3s</tspan></text></g>
+<g id="tlab"><text x="354.86" y="488" font-family="IBM Plex Sans" font-size="12" fill="#6b6a66" text-anchor="middle"><tspan x="354.86" dy="0">elapsed time</tspan></text></g>
+</g>
+</svg>

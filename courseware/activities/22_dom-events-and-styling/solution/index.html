@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSVP Guest List</title>
+  <style>
+    #guest-list { list-style: none; padding: 0; }
+    #guest-list li { padding: 6px; cursor: pointer; }
+    .arrived { text-decoration: line-through; color: gray; }
+    .rounded { border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Party RSVP</h1>
+  <p>Guests: <span id="count">0</span></p>
+
+  <div id="panel">
+    <ul id="guest-list"></ul>
+  </div>
+
+  <form>
+    <label>
+      Name:
+      <input type="text" name="guest">
+    </label>
+    <button>Add Guest</button>
+  </form>
+
+  <script>
+    // Activity: RSVP Guest List (solution)
+
+    const guestList = document.getElementById('guest-list');
+    const countSpan = document.getElementById('count');
+    const rsvpForm = document.getElementsByTagName('form')[0];
+
+    let nextId = 1;
+
+    // Task 1: Handle the submit event.
+    rsvpForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      // Task 2: Add the guest, stamping an id onto the element with dataset.
+      const guestInput = rsvpForm.elements['guest'];
+      const name = guestInput.value.trim();
+
+      if (name) {
+        const listItem = document.createElement('li');
+        listItem.textContent = name;
+        listItem.dataset.id = nextId++;
+        guestList.appendChild(listItem);
+        guestInput.value = '';
+
+        // Task 3: Update the count.
+        countSpan.textContent = guestList.getElementsByTagName('li').length;
+      }
+    });
+
+    // Task 4: ONE delegated listener on the parent <ul>, so guests added later
+    // are handled too. Guard on the target so only <li> clicks react.
+    guestList.addEventListener('click', (event) => {
+      if (event.target.tagName !== 'LI') {
+        return;
+      }
+
+      const guest = event.target;
+      console.log('target:', event.target.tagName, '| currentTarget:', event.currentTarget.tagName);
+
+      // Task 5: Toggle the arrived class, and add a rounded corner.
+      guest.classList.toggle('arrived');
+      guest.classList.add('rounded');
+      console.log(`Toggled guest ${guest.dataset.id}: ${guest.textContent}`);
+      console.log('has arrived?', guest.classList.contains('arrived'));
+
+      // Task 6: an inline style, then the browser's final computed value.
+      guest.style.backgroundColor = '#f5f5f5';
+      console.log('Inline background:', guest.style.backgroundColor);
+      console.log('Computed padding:', getComputedStyle(guest).padding);
+    });
+  </script>
+</body>
+</html>

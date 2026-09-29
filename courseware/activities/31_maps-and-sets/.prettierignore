@@ -1,0 +1,4 @@
+# The README is hand-wrapped course content, and an activity README's
+# Expected-output blocks are asserted by the test harness. Prettier
+# would reflow both, so it stays out.
+README.md

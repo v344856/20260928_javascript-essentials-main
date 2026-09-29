@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="4879aefa4bbaaa44"><![CDATA[
+{
+  "version": 1,
+  "title": "Destructuring, Rest and Spread",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Destructuring, Rest and Spread",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 28.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 68.0,
+      "text": "The pattern on the left mirrors the shape on the right. Three dots collect on the left, and expand on the right.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ho",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 108.0,
+      "w": 444.0,
+      "h": 32.0,
+      "text": "Object destructuring: matched by NAME",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "o1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 146.0,
+      "w": 444.0,
+      "h": 34.0,
+      "text": "const user = { id: 7, name: 'Ada', city: 'Bath', tz: 'GMT' };",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 11.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "o2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 184.0,
+      "w": 444.0,
+      "h": 34.0,
+      "text": "const { name, city: town, role = 'guest', ...rest } = user;",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 11.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "o3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 226.0,
+      "w": 444.0,
+      "h": 104.0,
+      "text": "name = 'Ada'   →  same key, plucked out\ntown = 'Bath'   →  renamed with a colon\nrole = 'guest'   →  default, the key was missing\nrest = { id: 7, tz: 'GMT' }   →  everything left over",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ha",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 108.0,
+      "w": 444.0,
+      "h": 32.0,
+      "text": "Array destructuring: matched by POSITION",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a1",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 146.0,
+      "w": 444.0,
+      "h": 34.0,
+      "text": "const scores = [90, 80, 70, 60];",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 11.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a2",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 184.0,
+      "w": 444.0,
+      "h": 34.0,
+      "text": "const [first, , third, ...others] = scores;",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 11.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a3",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 226.0,
+      "w": 444.0,
+      "h": 104.0,
+      "text": "first = 90   →  position 0\n(the empty slot skips position 1)\nthird = 70   →  position 2\nothers = [60]   →  rest must come LAST",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hs",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 350.0,
+      "w": 912.0,
+      "h": 32.0,
+      "text": "Same three dots, opposite jobs",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sp1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 394.0,
+      "w": 444.0,
+      "h": 92.0,
+      "text": "REST: on the left of the equals\nGathers what is left into one new value.\nconst [head, ...tail] = list;\nfunction sum(...numbers) { }",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sp2",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 394.0,
+      "w": 444.0,
+      "h": 92.0,
+      "text": "SPREAD: on the right, or in a call\nUnpacks one value into many.\nconst copy = { ...user, city: 'Leeds' };\nconst merged = [...a, ...b];",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 500.0,
+      "w": 912.0,
+      "h": 66.0,
+      "text": "Spreading copies only ONE level deep: a nested object is still shared with the original. Later keys win, which is how\n{ ...defaults, ...options } works. And destructuring a function parameter, function f({ id, name }), gives named arguments.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="title"><text x="254.35" y="60" font-family="IBM Plex Sans" font-size="28" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="254.35" dy="0">Destructuring, Rest and Spread</tspan></text></g>
+<g id="sub"><text x="410.02" y="83" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="410.02" dy="0">The pattern on the left mirrors the shape on the right. Three dots collect on the left, and expand on the right.</tspan></text></g>
+<g id="ho"><path d="M48 108H492V140H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="270" y="129.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="270" dy="0">Object destructuring: matched by NAME</tspan></text></g>
+<g id="o1"><path d="M48 146H492V180H48Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="58" y="166.96" font-family="JetBrains Mono" font-size="11" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">const user = { id: 7, name: 'Ada', city: 'Bath', tz: 'GMT' };</tspan></text></g>
+<g id="o2"><path d="M48 184H492V218H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="58" y="204.96" font-family="JetBrains Mono" font-size="11" fill="#10386b" text-anchor="start"><tspan x="58" dy="0">const { name, city: town, role = 'guest', ...rest } = user;</tspan></text></g>
+<g id="o3"><path d="M48 226H492V330H48Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="58" y="258.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">name = 'Ada'   →  same key, plucked out</tspan><tspan x="58" dy="16.25">town = 'Bath'   →  renamed with a colon</tspan><tspan x="58" dy="16.25">role = 'guest'   →  default, the key was missing</tspan><tspan x="58" dy="16.25">rest = { id: 7, tz: 'GMT' }   →  everything left over</tspan></text></g>
+<g id="ha"><path d="M516 108H960V140H516Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="738" y="129.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="738" dy="0">Array destructuring: matched by POSITION</tspan></text></g>
+<g id="a1"><path d="M516 146H960V180H516Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="526" y="166.96" font-family="JetBrains Mono" font-size="11" fill="#1a1a1a" text-anchor="start"><tspan x="526" dy="0">const scores = [90, 80, 70, 60];</tspan></text></g>
+<g id="a2"><path d="M516 184H960V218H516Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="526" y="204.96" font-family="JetBrains Mono" font-size="11" fill="#7a2f0f" text-anchor="start"><tspan x="526" dy="0">const [first, , third, ...others] = scores;</tspan></text></g>
+<g id="a3"><path d="M516 226H960V330H516Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="526" y="258.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="526" dy="0">first = 90   →  position 0</tspan><tspan x="526" dy="16.25">(the empty slot skips position 1)</tspan><tspan x="526" dy="16.25">third = 70   →  position 2</tspan><tspan x="526" dy="16.25">others = [60]   →  rest must come LAST</tspan></text></g>
+<g id="hs"><path d="M48 350H960V382H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="504" y="371.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="504" dy="0">Same three dots, opposite jobs</tspan></text></g>
+<g id="sp1"><path d="M48 394H492V486H48Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="58" y="420.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">REST: on the left of the equals</tspan><tspan x="58" dy="16.25">Gathers what is left into one new value.</tspan><tspan x="58" dy="16.25">const [head, ...tail] = list;</tspan><tspan x="58" dy="16.25">function sum(...numbers) { }</tspan></text></g>
+<g id="sp2"><path d="M516 394H960V486H516Z" fill="#ffffff" stroke="#c74d7c" stroke-width="1.5"/><text x="526" y="420.5" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="526" dy="0">SPREAD: on the right, or in a call</tspan><tspan x="526" dy="16.25">Unpacks one value into many.</tspan><tspan x="526" dy="16.25">const copy = { ...user, city: 'Leeds' };</tspan><tspan x="526" dy="16.25">const merged = [...a, ...b];</tspan></text></g>
+<g id="note"><path d="M48 500L945.48 500L960 514.52L960 566L48 566Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M945.48 500L945.48 514.52L960 514.52" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="529.75" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Spreading copies only ONE level deep: a nested object is still shared with the original. Later keys win, which is how</tspan><tspan x="58" dy="16.25">{ ...defaults, ...options } works. And destructuring a function parameter, function f({ id, name }), gives named arguments.</tspan></text></g>
+</g>
+</svg>

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="720e81ee71fbb637"><![CDATA[
+{
+  "version": 1,
+  "title": "Promise States",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 34.0,
+      "text": "Promise States",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 72.0,
+      "text": "A promise settles once and stays settled. Every .then returns a NEW promise.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "pend",
+      "kind": "stadium",
+      "x": 60.0,
+      "y": 214.0,
+      "w": 200.0,
+      "h": 56.0,
+      "text": "pending",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ful",
+      "kind": "stadium",
+      "x": 380.0,
+      "y": 142.0,
+      "w": 200.0,
+      "h": 56.0,
+      "text": "fulfilled",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "rej",
+      "kind": "stadium",
+      "x": 380.0,
+      "y": 286.0,
+      "w": 200.0,
+      "h": 56.0,
+      "text": "rejected",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 18.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "pend",
+      "to": "ful",
+      "from_side": "right",
+      "to_side": "left",
+      "label": "resolve(value)",
+      "style": {
+        "fill": null,
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "pend",
+      "to": "rej",
+      "from_side": "right",
+      "to_side": "left",
+      "label": "reject(reason)",
+      "style": {
+        "fill": null,
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "pnote",
+      "x": 60.0,
+      "y": 290.0,
+      "text": "The work has been started\nbut has not finished.",
+      "w": 200.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "settled",
+      "kind": "rect",
+      "x": 348.0,
+      "y": 386.0,
+      "w": 264.0,
+      "h": 44.0,
+      "text": "settled: permanent",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "snote",
+      "x": 280.0,
+      "y": 444.0,
+      "text": "Once settled, a promise can never change state or value again.\nAttaching .then later still fires, with the value it already has.",
+      "w": 400.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "hchain",
+      "kind": "rect",
+      "x": 680.0,
+      "y": 118.0,
+      "w": 280.0,
+      "h": 38.0,
+      "text": "Each link is a new promise",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "k1",
+      "kind": "rect",
+      "x": 680.0,
+      "y": 172.0,
+      "w": 280.0,
+      "h": 40.0,
+      "text": ".then(onFulfilled)",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "k2",
+      "kind": "rect",
+      "x": 680.0,
+      "y": 236.0,
+      "w": 280.0,
+      "h": 40.0,
+      "text": ".catch(onRejected)",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "k3",
+      "kind": "rect",
+      "x": 680.0,
+      "y": 300.0,
+      "w": 280.0,
+      "h": 40.0,
+      "text": ".finally(cleanup)",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "k1",
+      "to": "k2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "k2",
+      "to": "k3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "knote",
+      "x": 680.0,
+      "y": 356.0,
+      "text": "Returning a value fulfills the next promise;\nthrowing rejects it. That is why one .catch at\nthe end covers the whole chain, and why\n.finally passes the result straight through.",
+      "w": 280.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 500.0,
+      "w": 912.0,
+      "h": 74.0,
+      "text": "Callbacks you attach are queued as MICROTASKS, so they always run after the current synchronous code finishes\nand before the next timer or DOM event, even when the promise settled long ago.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn5",
+      "from": "ful",
+      "to": "settled",
+      "from_side": "right",
+      "to_side": "right",
+      "end_arrow": "none",
+      "style": {
+        "fill": null,
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": "dashed",
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn6",
+      "from": "rej",
+      "to": "settled",
+      "from_side": "right",
+      "to_side": "right",
+      "end_arrow": "none",
+      "style": {
+        "fill": null,
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": "dashed",
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 6
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M260 242L320 242L320 170L371 170" fill="none" stroke="#0f8f63" stroke-width="1.5"/><path d="M380 170L370 174L370 166Z" fill="#0f8f63"/><rect x="275.86" y="200.88" width="88.28" height="19.25" rx="2" fill="#ffffff"/><text x="320" y="215.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="320" dy="0">resolve(value)</tspan></text></g>
+<g id="conn2"><path d="M260 242L320 242L320 314L371 314" fill="none" stroke="#c93434" stroke-width="1.5"/><path d="M380 314L370 318L370 310Z" fill="#c93434"/><rect x="276.09" y="263.88" width="87.82" height="19.25" rx="2" fill="#ffffff"/><text x="320" y="278.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="320" dy="0">reject(reason)</tspan></text></g>
+<g id="conn3"><path d="M820 212L820 227" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M820 236L816 226L824 226Z" fill="#2a78d6"/></g>
+<g id="conn4"><path d="M820 276L820 291" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M820 300L816 290L824 290Z" fill="#2a78d6"/></g>
+<g id="conn5"><path d="M580 170L628 170L628 408L612 408" fill="none" stroke="#b07d00" stroke-width="1.5" stroke-dasharray="6 3.75" stroke-linecap="round"/></g>
+<g id="conn6"><path d="M580 314L628 314L628 408L612 408" fill="none" stroke="#b07d00" stroke-width="1.5" stroke-dasharray="6 3.75" stroke-linecap="round"/></g>
+<g id="title"><text x="154.51" y="64" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="154.51" dy="0">Promise States</tspan></text></g>
+<g id="sub"><text x="323.49" y="88" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="323.49" dy="0">A promise settles once and stays settled. Every .then returns a NEW promise.</tspan></text></g>
+<g id="pend"><path d="M88 214H232A28 28 0 0 1 260 242V242A28 28 0 0 1 232 270H88A28 28 0 0 1 60 242V242A28 28 0 0 1 88 214Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="160" y="248.75" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="160" dy="0">pending</tspan></text></g>
+<g id="ful"><path d="M408 142H552A28 28 0 0 1 580 170V170A28 28 0 0 1 552 198H408A28 28 0 0 1 380 170V170A28 28 0 0 1 408 142Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="480" y="176.75" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="480" dy="0">fulfilled</tspan></text></g>
+<g id="rej"><path d="M408 286H552A28 28 0 0 1 580 314V314A28 28 0 0 1 552 342H408A28 28 0 0 1 380 314V314A28 28 0 0 1 408 286Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="480" y="320.75" font-family="IBM Plex Sans" font-size="18" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="480" dy="0">rejected</tspan></text></g>
+<g id="pnote"><text x="160" y="303" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="middle"><tspan x="160" dy="0">The work has been started</tspan><tspan x="160" dy="16.25">but has not finished.</tspan></text></g>
+<g id="settled"><path d="M348 386H612V430H348Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="480" y="414" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#5c4100" text-anchor="middle"><tspan x="480" dy="0">settled: permanent</tspan></text></g>
+<g id="snote"><text x="480" y="457" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="middle"><tspan x="480" dy="0">Once settled, a promise can never change state or value again.</tspan><tspan x="480" dy="16.25">Attaching .then later still fires, with the value it already has.</tspan></text></g>
+<g id="hchain"><path d="M680 118H960V156H680Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="820" y="143" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="820" dy="0">Each link is a new promise</tspan></text></g>
+<g id="k1"><path d="M680 172H960V212H680Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="820" y="197.04" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="820" dy="0">.then(onFulfilled)</tspan></text></g>
+<g id="k2"><path d="M680 236H960V276H680Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="820" y="261.04" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="820" dy="0">.catch(onRejected)</tspan></text></g>
+<g id="k3"><path d="M680 300H960V340H680Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="820" y="325.04" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="820" dy="0">.finally(cleanup)</tspan></text></g>
+<g id="knote"><text x="680" y="369" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="start"><tspan x="680" dy="0">Returning a value fulfills the next promise;</tspan><tspan x="680" dy="16.25">throwing rejects it. That is why one .catch at</tspan><tspan x="680" dy="16.25">the end covers the whole chain, and why</tspan><tspan x="680" dy="16.25">.finally passes the result straight through.</tspan></text></g>
+<g id="note"><path d="M48 500L943.72 500L960 516.28L960 574L48 574Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M943.72 500L943.72 516.28L960 516.28" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="533.5" font-family="IBM Plex Sans" font-size="14" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Callbacks you attach are queued as MICROTASKS, so they always run after the current synchronous code finishes</tspan><tspan x="58" dy="17.5">and before the next timer or DOM event, even when the promise settled long ago.</tspan></text></g>
+</g>
+</svg>

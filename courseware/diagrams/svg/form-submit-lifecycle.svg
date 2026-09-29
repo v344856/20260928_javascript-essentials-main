@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="0b1fdc3ca67468c5"><![CDATA[
+{
+  "version": 1,
+  "title": "The Form Submit Lifecycle",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The Form Submit Lifecycle",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "The browser will navigate away unless you stop it. Everything else hangs off that one decision.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 118.0,
+      "w": 250.0,
+      "h": 42.0,
+      "text": "User presses Submit",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s2",
+      "kind": "diamond",
+      "x": 48.0,
+      "y": 182.0,
+      "w": 250.0,
+      "h": 92.0,
+      "text": "Browser checks\nrequired, type,\npattern, min/max",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "sBad",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 196.0,
+      "w": 300.0,
+      "h": 64.0,
+      "text": "invalid: no submit event fires at all\nThe browser shows its own bubble.",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s3",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 296.0,
+      "w": 250.0,
+      "h": 42.0,
+      "text": "submit event fires",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s4",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 360.0,
+      "w": 250.0,
+      "h": 42.0,
+      "text": "event.preventDefault()",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s5",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 424.0,
+      "w": 250.0,
+      "h": 42.0,
+      "text": "new FormData(form)",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "s6",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 488.0,
+      "w": 250.0,
+      "h": 42.0,
+      "text": "await fetch(...)  then render",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "s1",
+      "to": "s2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "s2",
+      "to": "sBad",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "no",
+      "label_at": 0.35,
+      "style": {
+        "fill": null,
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "s2",
+      "to": "s3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "yes",
+      "style": {
+        "fill": null,
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "s3",
+      "to": "s4",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn5",
+      "from": "s4",
+      "to": "s5",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn6",
+      "from": "s5",
+      "to": "s6",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "nopd",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 296.0,
+      "w": 300.0,
+      "h": 32.0,
+      "text": "Without preventDefault()",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "nopd2",
+      "kind": "rect",
+      "x": 330.0,
+      "y": 332.0,
+      "w": 300.0,
+      "h": 116.0,
+      "text": "The browser serializes the form itself,\nnavigates to the action URL, and your\npage is gone, taking any JavaScript\nstate with it. That is the default, and\nit is the behavior to remember.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "val",
+      "kind": "rect",
+      "x": 662.0,
+      "y": 118.0,
+      "w": 298.0,
+      "h": 32.0,
+      "text": "Two layers of validation",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "val2",
+      "kind": "rect",
+      "x": 662.0,
+      "y": 154.0,
+      "w": 298.0,
+      "h": 156.0,
+      "text": "1. HTML attributes do most of it:\n    required  type=\"email\"  minlength\n    pattern=\"[0-9]{5}\"  min  max\n2. JavaScript for the rest:\n    input.checkValidity()\n    input.setCustomValidity(msg)\n    input.validity.tooShort",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "fd",
+      "kind": "rect",
+      "x": 662.0,
+      "y": 326.0,
+      "w": 298.0,
+      "h": 32.0,
+      "text": "FormData needs a name",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "fd2",
+      "kind": "rect",
+      "x": 662.0,
+      "y": 362.0,
+      "w": 298.0,
+      "h": 116.0,
+      "text": "Only inputs with a name attribute are\nincluded, and a disabled or unchecked\ninput is skipped. Turn it into a plain\nobject with Object.fromEntries(fd), or\npass it straight to fetch as the body.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 330.0,
+      "y": 480.0,
+      "w": 630.0,
+      "h": 84.0,
+      "text": "Listen for submit on the FORM, never for click on the button: only submit\ncatches the Enter key. And client-side checks are for helpfulness, not safety:\nanyone can bypass them, so the server must validate everything again.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 6
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M173 160L173 173" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M173 182L169 172L177 172Z" fill="#5b6672"/></g>
+<g id="conn2"><path d="M298 228L321 228" fill="none" stroke="#c93434" stroke-width="1.5"/><path d="M330 228L320 232L320 224Z" fill="#c93434"/><rect x="296.28" y="219" width="19.54" height="18" rx="2" fill="#ffffff"/><text x="306.05" y="232.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="306.05" dy="0">no</tspan></text></g>
+<g id="conn3"><path d="M173 274L173 287" fill="none" stroke="#0f8f63" stroke-width="1.5"/><path d="M173 296L169 286L177 286Z" fill="#0f8f63"/><rect x="160.82" y="271.5" width="24.36" height="18" rx="2" fill="#ffffff"/><text x="173" y="285" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">yes</tspan></text></g>
+<g id="conn4"><path d="M173 338L173 351" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M173 360L169 350L177 350Z" fill="#d9541f"/></g>
+<g id="conn5"><path d="M173 402L173 415" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M173 424L169 414L177 414Z" fill="#d9541f"/></g>
+<g id="conn6"><path d="M173 466L173 479" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M173 488L169 478L177 478Z" fill="#d9541f"/></g>
+<g id="title"><text x="234.24" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="234.24" dy="0">The Form Submit Lifecycle</tspan></text></g>
+<g id="sub"><text x="362.62" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="362.62" dy="0">The browser will navigate away unless you stop it. Everything else hangs off that one decision.</tspan></text></g>
+<g id="s1"><path d="M48 118H298V160H48Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="173" y="144.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="173" dy="0">User presses Submit</tspan></text></g>
+<g id="s2"><path d="M173 182L298 228L173 274L48 228Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="173" y="216.63" font-family="IBM Plex Sans" font-size="13" fill="#10386b" text-anchor="middle"><tspan x="173" dy="0">Browser checks</tspan><tspan x="173" dy="16.25">required, type,</tspan><tspan x="173" dy="16.25">pattern, min/max</tspan></text></g>
+<g id="sBad"><path d="M330 196H630V260H330Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="480" y="224.75" font-family="IBM Plex Sans" font-size="13" fill="#7a1d1d" text-anchor="middle"><tspan x="480" dy="0">invalid: no submit event fires at all</tspan><tspan x="480" dy="16.25">The browser shows its own bubble.</tspan></text></g>
+<g id="s3"><path d="M48 296H298V338H48Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="173" y="322.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="173" dy="0">submit event fires</tspan></text></g>
+<g id="s4"><path d="M48 360H298V402H48Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="173" y="386.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="173" dy="0">event.preventDefault()</tspan></text></g>
+<g id="s5"><path d="M48 424H298V466H48Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="173" y="450.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">new FormData(form)</tspan></text></g>
+<g id="s6"><path d="M48 488H298V530H48Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="173" y="513.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">await fetch(...)  then render</tspan></text></g>
+<g id="nopd"><path d="M330 296H630V328H330Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="480" y="317.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="480" dy="0">Without preventDefault()</tspan></text></g>
+<g id="nopd2"><path d="M330 332H630V448H330Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="340" y="362.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="340" dy="0">The browser serializes the form itself,</tspan><tspan x="340" dy="16.25">navigates to the action URL, and your</tspan><tspan x="340" dy="16.25">page is gone, taking any JavaScript</tspan><tspan x="340" dy="16.25">state with it. That is the default, and</tspan><tspan x="340" dy="16.25">it is the behavior to remember.</tspan></text></g>
+<g id="val"><path d="M662 118H960V150H662Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="811" y="139.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="811" dy="0">Two layers of validation</tspan></text></g>
+<g id="val2"><path d="M662 154H960V310H662Z" fill="#ffffff" stroke="#4a3aa7" stroke-width="1.5"/><text x="672" y="191.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="672" dy="0">1. HTML attributes do most of it:</tspan><tspan x="672" dy="15">    required  type="email"  minlength</tspan><tspan x="672" dy="15">    pattern="[0-9]{5}"  min  max</tspan><tspan x="672" dy="15">2. JavaScript for the rest:</tspan><tspan x="672" dy="15">    input.checkValidity()</tspan><tspan x="672" dy="15">    input.setCustomValidity(msg)</tspan><tspan x="672" dy="15">    input.validity.tooShort</tspan></text></g>
+<g id="fd"><path d="M662 326H960V358H662Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="811" y="347.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#5c4100" text-anchor="middle"><tspan x="811" dy="0">FormData needs a name</tspan></text></g>
+<g id="fd2"><path d="M662 362H960V478H662Z" fill="#ffffff" stroke="#b07d00" stroke-width="1.5"/><text x="672" y="392.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="672" dy="0">Only inputs with a name attribute are</tspan><tspan x="672" dy="16.25">included, and a disabled or unchecked</tspan><tspan x="672" dy="16.25">input is skipped. Turn it into a plain</tspan><tspan x="672" dy="16.25">object with Object.fromEntries(fd), or</tspan><tspan x="672" dy="16.25">pass it straight to fetch as the body.</tspan></text></g>
+<g id="note"><path d="M330 480L942 480L960 498L960 564L330 564Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 480L942 498L960 498" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="340" y="510.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="340" dy="0">Listen for submit on the FORM, never for click on the button: only submit</tspan><tspan x="340" dy="16.25">catches the Enter key. And client-side checks are for helpfulness, not safety:</tspan><tspan x="340" dy="16.25">anyone can bypass them, so the server must validate everything again.</tspan></text></g>
+</g>
+</svg>

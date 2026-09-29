@@ -1,0 +1,121 @@
+
+// literal object
+const user = {
+    fname: "junjie",
+    salary: "100000.0",
+    county: "Baltimore",
+    position: "CIO",
+    isAdministrator: true
+}
+
+
+
+
+
+
+//destruvcturing, create 5 variable from user
+let {fname:firstname, salary, county, position, isAdministrator} = user
+console.log(`------------`)
+//console.log(fname, salary, county, position, isAdministrator) you get error for fname
+//because fname is gone and becomes firstname
+console.log(`use firstname for display`)
+console.log(firstname)
+
+console.log("common object method")
+console.log(Object.values(user)); 
+console.log(Object.entries(user))
+
+//let [key, value]=  Object.entries(user) 
+const entries = Object.entries(user)
+console.log(`?????`)
+for (const [key, value] of Object.entries(user)){
+    console.log(`${key}: ${value}`)
+}
+console.log(`?????`)
+//Object.freeze(user)
+
+//console.log(user.isFrozen())
+
+console.log(`user is ${user.fname}`)
+console.log(`salary is ${user.salary}`)
+console.log(`county is ${user.county}`)
+console.log(`position is ${user.position}`)
+console.log(`is an administrator : ${user.isAdministrator}`)
+
+// store in a variable
+let nameGiven = user.fname
+let salaryGiven = user.salary
+let countyGiven= user.county
+
+
+// //destruvcturing, create 5 variable from user
+// let {fname, salary, county, position, isAdministrator} = user
+// console.log(`------------`)
+// console.log(fname, salary, county, position, isAdministrator)
+
+
+
+console.log(user)
+
+user.emplyeeID = "11111";  // you can add attribute on the fly
+console.log(user)
+
+console.log (`=============`)
+
+user.county = "PG"
+console.log(user)
+
+//delete user.salary;
+console.log(user)
+
+console.log(`*************`)
+console.log(user.fname)
+
+function displayUser(user) {
+    user.fname = "Carlos"
+    console.log(user.fname)
+
+}
+
+console.log(`*************`)
+let number = 10
+console.log(number)
+
+function change(number) {
+    number++
+    console.log(number)
+}
+
+change(number)
+console.log(number)
+
+
+const users = [ {
+    fname: "Lambert",
+    salary: "20000.0",
+    county: "Baltimore",
+    position: "CSO",
+    isAdministrator: false
+},
+ {
+    fname: "Luke",
+    salary: "50000.0",
+    county: "Mongomery",
+    position: "CSO",
+    isAdministrator: false
+ }
+]
+
+console.log(users[0].fname)
+console.log(users[1].fname)
+
+// use for to replace above
+for (let index = 0; index < users.length; index++){
+    const element = users[index]
+    console.log(element.fname)
+    console.log(element.salary)
+}
+
+
+
+    

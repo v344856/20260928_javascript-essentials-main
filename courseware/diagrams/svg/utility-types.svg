@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="bb51d2df18b9f73c"><![CDATA[
+{
+  "version": 1,
+  "title": "Utility Types as Transforms",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "Utility Types as Transforms",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "One source of truth in, several derived shapes out. Change the interface and every one of them follows.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "src",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 152.0,
+      "w": 232.0,
+      "h": 168.0,
+      "text": "interface User {\n  id: number;\n  name: string;\n  email: string;\n  admin: boolean;\n}",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "srcl",
+      "x": 48.0,
+      "y": 128.0,
+      "text": "the one source of truth",
+      "w": 232.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "center",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u1",
+      "kind": "rect",
+      "x": 340.0,
+      "y": 122.0,
+      "w": 290.0,
+      "h": 30.0,
+      "text": "Partial<User>",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u1b",
+      "kind": "rect",
+      "x": 340.0,
+      "y": 154.0,
+      "w": 290.0,
+      "h": 44.0,
+      "text": "Every field optional. The shape of a\npatch or an edit form.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u2",
+      "kind": "rect",
+      "x": 340.0,
+      "y": 208.0,
+      "w": 290.0,
+      "h": 30.0,
+      "text": "Required<User>",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u2b",
+      "kind": "rect",
+      "x": 340.0,
+      "y": 240.0,
+      "w": 290.0,
+      "h": 30.0,
+      "text": "The opposite: strips every ? off.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u3",
+      "kind": "rect",
+      "x": 340.0,
+      "y": 280.0,
+      "w": 290.0,
+      "h": 30.0,
+      "text": "Readonly<User>",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u3b",
+      "kind": "rect",
+      "x": 340.0,
+      "y": 312.0,
+      "w": 290.0,
+      "h": 44.0,
+      "text": "No field can be reassigned.\nShallow, and compile-time only.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u4",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 122.0,
+      "w": 300.0,
+      "h": 30.0,
+      "text": "Pick<User, 'id' | 'name'>",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u4b",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 154.0,
+      "w": 300.0,
+      "h": 44.0,
+      "text": "Keep only those keys: a summary\nor list-row type.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u5",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 208.0,
+      "w": 300.0,
+      "h": 30.0,
+      "text": "Omit<User, 'id'>",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u5b",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 240.0,
+      "w": 300.0,
+      "h": 44.0,
+      "text": "Drop those keys: exactly what you\nsend when CREATING a record.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u6",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 294.0,
+      "w": 300.0,
+      "h": 30.0,
+      "text": "Record<string, User>",
+      "style": {
+        "fill": "#fbe4ec",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6f2445",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u6b",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 326.0,
+      "w": 300.0,
+      "h": 56.0,
+      "text": "A lookup object: these keys, that\nvalue type. Built from scratch, not\nderived from User.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "src",
+      "to": "u1",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "src",
+      "to": "u2",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "src",
+      "to": "u3",
+      "from_side": "right",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "fn",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 396.0,
+      "w": 582.0,
+      "h": 44.0,
+      "text": "From functions, not interfaces:  ReturnType<typeof fn>  and  Parameters<typeof fn>",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 456.0,
+      "w": 912.0,
+      "h": 108.0,
+      "text": "The point is DERIVATION. Add a field to User and Partial, Pick and Omit all update themselves; hand-written copies drift.\nThey also compose: Partial<Omit<User, 'id'>> is the body of an update request. Note that Pick and Omit accept key names\nas literal types: misspell one and Pick errors, while Omit silently ignores it.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 3
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M280 236L310 236L310 137L331 137" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M340 137L330 141L330 133Z" fill="#2a78d6"/></g>
+<g id="conn2"><path d="M280 236L310 236L310 223L331 223" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M340 223L330 227L330 219Z" fill="#2a78d6"/></g>
+<g id="conn3"><path d="M280 236L310 236L310 295L331 295" fill="none" stroke="#0f8f63" stroke-width="1.5"/><path d="M340 295L330 299L330 291Z" fill="#0f8f63"/></g>
+<g id="title"><text x="238.95" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="238.95" dy="0">Utility Types as Transforms</tspan></text></g>
+<g id="sub"><text x="392.39" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="392.39" dy="0">One source of truth in, several derived shapes out. Change the interface and every one of them follows.</tspan></text></g>
+<g id="src"><path d="M48 152H280V320H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="58" y="197.5" font-family="IBM Plex Sans" font-size="14" fill="#2a2160" text-anchor="start"><tspan x="58" dy="0">interface User {</tspan><tspan x="58" dy="17.5">  id: number;</tspan><tspan x="58" dy="17.5">  name: string;</tspan><tspan x="58" dy="17.5">  email: string;</tspan><tspan x="58" dy="17.5">  admin: boolean;</tspan><tspan x="58" dy="17.5">}</tspan></text></g>
+<g id="srcl"><text x="164" y="141" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#6b6a66" text-anchor="middle"><tspan x="164" dy="0">the one source of truth</tspan></text></g>
+<g id="u1"><path d="M340 122H630V152H340Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="485" y="142.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="485" dy="0">Partial&lt;User&gt;</tspan></text></g>
+<g id="u1b"><path d="M340 154H630V198H340Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="350" y="173" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="350" dy="0">Every field optional. The shape of a</tspan><tspan x="350" dy="15">patch or an edit form.</tspan></text></g>
+<g id="u2"><path d="M340 208H630V238H340Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="485" y="228.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="485" dy="0">Required&lt;User&gt;</tspan></text></g>
+<g id="u2b"><path d="M340 240H630V270H340Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="350" y="259.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="350" dy="0">The opposite: strips every ? off.</tspan></text></g>
+<g id="u3"><path d="M340 280H630V310H340Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="485" y="300.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="485" dy="0">Readonly&lt;User&gt;</tspan></text></g>
+<g id="u3b"><path d="M340 312H630V356H340Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="350" y="331" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="350" dy="0">No field can be reassigned.</tspan><tspan x="350" dy="15">Shallow, and compile-time only.</tspan></text></g>
+<g id="u4"><path d="M660 122H960V152H660Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="810" y="142.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="810" dy="0">Pick&lt;User, 'id' | 'name'&gt;</tspan></text></g>
+<g id="u4b"><path d="M660 154H960V198H660Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="670" y="173" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="670" dy="0">Keep only those keys: a summary</tspan><tspan x="670" dy="15">or list-row type.</tspan></text></g>
+<g id="u5"><path d="M660 208H960V238H660Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="810" y="228.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="810" dy="0">Omit&lt;User, 'id'&gt;</tspan></text></g>
+<g id="u5b"><path d="M660 240H960V284H660Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="670" y="259" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="670" dy="0">Drop those keys: exactly what you</tspan><tspan x="670" dy="15">send when CREATING a record.</tspan></text></g>
+<g id="u6"><path d="M660 294H960V324H660Z" fill="#fbe4ec" stroke="#c74d7c" stroke-width="1.5"/><text x="810" y="314.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#6f2445" text-anchor="middle"><tspan x="810" dy="0">Record&lt;string, User&gt;</tspan></text></g>
+<g id="u6b"><path d="M660 326H960V382H660Z" fill="#ffffff" stroke="#c74d7c" stroke-width="1.5"/><text x="670" y="343.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="start"><tspan x="670" dy="0">A lookup object: these keys, that</tspan><tspan x="670" dy="15">value type. Built from scratch, not</tspan><tspan x="670" dy="15">derived from User.</tspan></text></g>
+<g id="fn"><path d="M48 396H630V440H48Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="339" y="422.88" font-family="IBM Plex Sans" font-size="13" fill="#25303a" text-anchor="middle"><tspan x="339" dy="0">From functions, not interfaces:  ReturnType&lt;typeof fn&gt;  and  Parameters&lt;typeof fn&gt;</tspan></text></g>
+<g id="note"><path d="M48 456L942 456L960 474L960 564L48 564Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 456L942 474L960 474" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="498.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">The point is DERIVATION. Add a field to User and Partial, Pick and Omit all update themselves; hand-written copies drift.</tspan><tspan x="58" dy="16.25">They also compose: Partial&lt;Omit&lt;User, 'id'&gt;&gt; is the body of an update request. Note that Pick and Omit accept key names</tspan><tspan x="58" dy="16.25">as literal types: misspell one and Pick errors, while Omit silently ignores it.</tspan></text></g>
+</g>
+</svg>

@@ -1,0 +1,22 @@
+[package]
+name = "course-export"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.74"
+description = "Export the student-facing course content to a GitHub repository."
+license = "MIT"
+publish = false
+
+[dependencies]
+anyhow = "1"
+base64 = "0.22"
+clap = { version = "4", features = ["derive"] }
+dirs = "5"
+rpassword = "7"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+ureq = { version = "2", features = ["json"] }
+walkdir = "2"
+
+[profile.release]
+strip = true

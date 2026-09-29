@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="a888eb038410071a"><![CDATA[
+{
+  "version": 1,
+  "title": "The JSON Round Trip",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The JSON Round Trip",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "JSON is TEXT. Going out and coming back is not lossless: know what does not survive.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "obj",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 130.0,
+      "w": 260.0,
+      "h": 60.0,
+      "text": "A JavaScript object\nin memory",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "txt",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 130.0,
+      "w": 260.0,
+      "h": 60.0,
+      "text": "A JSON string\njust text",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "obj",
+      "to": "txt",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "JSON.stringify(value)",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "obj2",
+      "kind": "rect",
+      "x": 60.0,
+      "y": 250.0,
+      "w": 260.0,
+      "h": 60.0,
+      "text": "A NEW object, never the one\nyou started with",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "txt",
+      "to": "obj2",
+      "from_side": "bottom",
+      "to_side": "right",
+      "label": "JSON.parse(text)",
+      "label_at": 0.6,
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "hooks",
+      "x": 60.0,
+      "y": 330.0,
+      "text": "Hooks on the way out and back:\nJSON.stringify(v, replacer, 2)  - filter or reshape, and indent\nJSON.parse(text, reviver)       - rebuild values as they load\nA toJSON() method on an object controls its own output.",
+      "w": 560.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "lost",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 218.0,
+      "w": 300.0,
+      "h": 32.0,
+      "text": "What does NOT survive",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "lost2",
+      "kind": "rect",
+      "x": 660.0,
+      "y": 254.0,
+      "w": 300.0,
+      "h": 160.0,
+      "text": "Date  →  an ISO string\nundefined  →  the key vanishes\na function  →  dropped\nMap / Set  →  {}\nNaN, Infinity  →  null\na class instance  →  a plain object\na circular reference  →  TypeError",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "types",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 414.0,
+      "w": 572.0,
+      "h": 90.0,
+      "text": "The only JSON types are object, array, string,\nnumber, true, false and null. No comments, no\ntrailing commas, and keys must be in double\nquotes, which is why valid JavaScript is not\nautomatically valid JSON.",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 512.0,
+      "w": 912.0,
+      "h": 62.0,
+      "text": "So JSON.parse(JSON.stringify(obj)) is a quick deep copy, but only for plain data; use structuredClone() otherwise.\nAlways wrap JSON.parse in try/catch: bad input throws a SyntaxError, and network responses are not always what you expect.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 2
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M320 160L651 160" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M660 160L650 164L650 156Z" fill="#d9541f"/><rect x="411.98" y="149.75" width="147.04" height="20.5" rx="2" fill="#ffffff"/><text x="485.5" y="165.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="485.5" dy="0">JSON.stringify(value)</tspan></text></g>
+<g id="conn2"><path d="M790 190L790 280L329 280" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M320 280L330 276L330 284Z" fill="#2a78d6"/><rect x="489.55" y="269.75" width="119.71" height="20.5" rx="2" fill="#ffffff"/><text x="549.4" y="285.25" font-family="IBM Plex Sans" font-size="14" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="549.4" dy="0">JSON.parse(text)</tspan></text></g>
+<g id="title"><text x="196.96" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="196.96" dy="0">The JSON Round Trip</tspan></text></g>
+<g id="sub"><text x="335.6" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="335.6" dy="0">JSON is TEXT. Going out and coming back is not lossless: know what does not survive.</tspan></text></g>
+<g id="obj"><path d="M60 130H320V190H60Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="190" y="156" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="190" dy="0">A JavaScript object</tspan><tspan x="190" dy="20">in memory</tspan></text></g>
+<g id="txt"><path d="M660 130H920V190H660Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="790" y="156" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="790" dy="0">A JSON string</tspan><tspan x="790" dy="20">just text</tspan></text></g>
+<g id="obj2"><path d="M60 250H320V310H60Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="190" y="276.5" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="190" dy="0">A NEW object, never the one</tspan><tspan x="190" dy="17.5">you started with</tspan></text></g>
+<g id="hooks"><text x="60" y="343" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="start"><tspan x="60" dy="0">Hooks on the way out and back:</tspan><tspan x="60" dy="16.25">JSON.stringify(v, replacer, 2)  - filter or reshape, and indent</tspan><tspan x="60" dy="16.25">JSON.parse(text, reviver)       - rebuild values as they load</tspan><tspan x="60" dy="16.25">A toJSON() method on an object controls its own output.</tspan></text></g>
+<g id="lost"><path d="M660 218H960V250H660Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="810" y="239.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="810" dy="0">What does NOT survive</tspan></text></g>
+<g id="lost2"><path d="M660 254H960V414H660Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="670" y="290.13" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="670" dy="0">Date  →  an ISO string</tspan><tspan x="670" dy="16.25">undefined  →  the key vanishes</tspan><tspan x="670" dy="16.25">a function  →  dropped</tspan><tspan x="670" dy="16.25">Map / Set  →  {}</tspan><tspan x="670" dy="16.25">NaN, Infinity  →  null</tspan><tspan x="670" dy="16.25">a class instance  →  a plain object</tspan><tspan x="670" dy="16.25">a circular reference  →  TypeError</tspan></text></g>
+<g id="types"><path d="M48 414H620V504H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="58" y="431.38" font-family="IBM Plex Sans" font-size="13" fill="#2a2160" text-anchor="start"><tspan x="58" dy="0">The only JSON types are object, array, string,</tspan><tspan x="58" dy="16.25">number, true, false and null. No comments, no</tspan><tspan x="58" dy="16.25">trailing commas, and keys must be in double</tspan><tspan x="58" dy="16.25">quotes, which is why valid JavaScript is not</tspan><tspan x="58" dy="16.25">automatically valid JSON.</tspan></text></g>
+<g id="note"><path d="M48 512L946.36 512L960 525.64L960 574L48 574Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M946.36 512L946.36 525.64L960 525.64" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="539.75" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">So JSON.parse(JSON.stringify(obj)) is a quick deep copy, but only for plain data; use structuredClone() otherwise.</tspan><tspan x="58" dy="16.25">Always wrap JSON.parse in try/catch: bad input throws a SyntaxError, and network responses are not always what you expect.</tspan></text></g>
+</g>
+</svg>

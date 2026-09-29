@@ -1,0 +1,15 @@
+{
+  "//": "Compiler options for `courseware/utils/build.*`. These mirror validations/tsconfig.typecheck.json so a project that builds here also passes the harness; the ONLY differences are that this one emits (no `noEmit`) and carries no `include`, because the build scripts compile one file per tsc invocation and pass the path on the command line. Compiling one standalone script at a time is deliberate: the TS teaching files have no imports/exports, so putting several in one program would make them share a global scope and collide on duplicate identifiers.",
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "types": [],
+    "moduleDetection": "force",
+    "removeComments": false,
+    "sourceMap": true
+  }
+}

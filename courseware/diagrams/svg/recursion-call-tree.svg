@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="6a2365227917520f"><![CDATA[
+{
+  "version": 1,
+  "title": "The Recursion Call Tree",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The Recursion Call Tree",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Calls go DOWN until the base case. Then answers come back UP. Nothing returns until the bottom is reached.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "code",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 116.0,
+      "w": 368.0,
+      "h": 96.0,
+      "text": "function factorial(n) {\n  if (n <= 1) return 1;      // base case\n  return n * factorial(n - 1);  // recursive case\n}",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "sans",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r1",
+      "kind": "rect",
+      "x": 470.0,
+      "y": 116.0,
+      "w": 200.0,
+      "h": 38.0,
+      "text": "factorial(4)",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r2",
+      "kind": "rect",
+      "x": 520.0,
+      "y": 174.0,
+      "w": 200.0,
+      "h": 38.0,
+      "text": "factorial(3)",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r3",
+      "kind": "rect",
+      "x": 570.0,
+      "y": 232.0,
+      "w": 200.0,
+      "h": 38.0,
+      "text": "factorial(2)",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "r4",
+      "kind": "rect",
+      "x": 620.0,
+      "y": 290.0,
+      "w": 200.0,
+      "h": 38.0,
+      "text": "factorial(1)   base case",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "r1",
+      "to": "r2",
+      "from_side": "bottom",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "r2",
+      "to": "r3",
+      "from_side": "bottom",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "r3",
+      "to": "r4",
+      "from_side": "bottom",
+      "to_side": "left",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "dl",
+      "x": 848.0,
+      "y": 130.0,
+      "text": "calls\ngo down",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u4",
+      "kind": "rect",
+      "x": 620.0,
+      "y": 356.0,
+      "w": 200.0,
+      "h": 34.0,
+      "text": "returns 1",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u3",
+      "kind": "rect",
+      "x": 570.0,
+      "y": 400.0,
+      "w": 200.0,
+      "h": 34.0,
+      "text": "2 * 1 = 2",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u2",
+      "kind": "rect",
+      "x": 520.0,
+      "y": 444.0,
+      "w": 200.0,
+      "h": 34.0,
+      "text": "3 * 2 = 6",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "u1",
+      "kind": "rect",
+      "x": 470.0,
+      "y": 488.0,
+      "w": 200.0,
+      "h": 34.0,
+      "text": "4 * 6 = 24",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "u4",
+      "to": "u3",
+      "from_side": "bottom",
+      "to_side": "right",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn5",
+      "from": "u3",
+      "to": "u2",
+      "from_side": "bottom",
+      "to_side": "right",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn6",
+      "from": "u2",
+      "to": "u1",
+      "from_side": "bottom",
+      "to_side": "right",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "ul",
+      "x": 848.0,
+      "y": 400.0,
+      "text": "answers\ncome back up",
+      "w": 112.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "rules",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 240.0,
+      "w": 368.0,
+      "h": 32.0,
+      "text": "Every recursive function needs two things",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "rules2",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 280.0,
+      "w": 368.0,
+      "h": 172.0,
+      "text": "1. A BASE CASE that returns without\n    calling itself again.\n2. A step that moves CLOSER to it:\n    here, n - 1.\nMiss either one and every call adds\nanother frame until the engine gives up:\nRangeError: Maximum call stack size\nexceeded.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 476.0,
+      "w": 368.0,
+      "h": 90.0,
+      "text": "Recursion shines where the DATA is nested: a folder tree, a DOM subtree, a JSON document. For a flat list, a loop is\nsimpler and cannot blow the stack. Each pending call holds a real stack frame, which is why depth, not total work, is the limit.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn7",
+      "from": "r4",
+      "to": "u4",
+      "from_side": "bottom",
+      "to_side": "top",
+      "route": "straight",
+      "label": "turn around",
+      "style": {
+        "fill": null,
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 7
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M570 154L570 193L529 193" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M520 193L530 189L530 197Z" fill="#2a78d6"/></g>
+<g id="conn2"><path d="M620 212L620 251L579 251" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M570 251L580 247L580 255Z" fill="#2a78d6"/></g>
+<g id="conn3"><path d="M670 270L670 309L629 309" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M620 309L630 305L630 313Z" fill="#2a78d6"/></g>
+<g id="conn4"><path d="M720 390L720 417L761 417" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M770 417L760 421L760 413Z" fill="#d9541f"/></g>
+<g id="conn5"><path d="M670 434L670 461L711 461" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M720 461L710 465L710 457Z" fill="#d9541f"/></g>
+<g id="conn6"><path d="M620 478L620 505L661 505" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M670 505L660 509L660 501Z" fill="#d9541f"/></g>
+<g id="conn7"><path d="M720 328L720 347" fill="none" stroke="#0f8f63" stroke-width="1.5"/><path d="M720 356L716 346L724 346Z" fill="#0f8f63"/><rect x="685.43" y="328.5" width="69.14" height="18" rx="2" fill="#ffffff"/><text x="720" y="342" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="720" dy="0">turn around</tspan></text></g>
+<g id="title"><text x="213.27" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="213.27" dy="0">The Recursion Call Tree</tspan></text></g>
+<g id="sub"><text x="413.24" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="413.24" dy="0">Calls go DOWN until the base case. Then answers come back UP. Nothing returns until the bottom is reached.</tspan></text></g>
+<g id="code"><path d="M48 116H416V212H48Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="58" y="143" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">function factorial(n) {</tspan><tspan x="58" dy="17.5">  if (n &lt;= 1) return 1;      // base case</tspan><tspan x="58" dy="17.5">  return n * factorial(n - 1);  // recursive case</tspan><tspan x="58" dy="17.5">}</tspan></text></g>
+<g id="r1"><path d="M470 116H670V154H470Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="570" y="140.04" font-family="JetBrains Mono" font-size="14" fill="#10386b" text-anchor="middle"><tspan x="570" dy="0">factorial(4)</tspan></text></g>
+<g id="r2"><path d="M520 174H720V212H520Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="620" y="198.04" font-family="JetBrains Mono" font-size="14" fill="#10386b" text-anchor="middle"><tspan x="620" dy="0">factorial(3)</tspan></text></g>
+<g id="r3"><path d="M570 232H770V270H570Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="670" y="256.04" font-family="JetBrains Mono" font-size="14" fill="#10386b" text-anchor="middle"><tspan x="670" dy="0">factorial(2)</tspan></text></g>
+<g id="r4"><path d="M620 290H820V328H620Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="720" y="313.88" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="720" dy="0">factorial(1)   base case</tspan></text></g>
+<g id="dl"><text x="848" y="143" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#10386b" text-anchor="start"><tspan x="848" dy="0">calls</tspan><tspan x="848" dy="16.25">go down</tspan></text></g>
+<g id="u4"><path d="M620 356H820V390H620Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="720" y="377.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="720" dy="0">returns 1</tspan></text></g>
+<g id="u3"><path d="M570 400H770V434H570Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="670" y="421.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="670" dy="0">2 * 1 = 2</tspan></text></g>
+<g id="u2"><path d="M520 444H720V478H520Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="620" y="465.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="620" dy="0">3 * 2 = 6</tspan></text></g>
+<g id="u1"><path d="M470 488H670V522H470Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="570" y="509.88" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="570" dy="0">4 * 6 = 24</tspan></text></g>
+<g id="ul"><text x="848" y="413" font-family="IBM Plex Sans" font-size="13" font-weight="700" fill="#7a2f0f" text-anchor="start"><tspan x="848" dy="0">answers</tspan><tspan x="848" dy="16.25">come back up</tspan></text></g>
+<g id="rules"><path d="M48 240H416V272H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="232" y="261.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="232" dy="0">Every recursive function needs two things</tspan></text></g>
+<g id="rules2"><path d="M48 280H416V452H48Z" fill="#ffffff" stroke="#4a3aa7" stroke-width="1.5"/><text x="58" y="314" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">1. A BASE CASE that returns without</tspan><tspan x="58" dy="16.25">    calling itself again.</tspan><tspan x="58" dy="16.25">2. A step that moves CLOSER to it:</tspan><tspan x="58" dy="16.25">    here, n - 1.</tspan><tspan x="58" dy="16.25">Miss either one and every call adds</tspan><tspan x="58" dy="16.25">another frame until the engine gives up:</tspan><tspan x="58" dy="16.25">RangeError: Maximum call stack size</tspan><tspan x="58" dy="16.25">exceeded.</tspan></text></g>
+<g id="note"><path d="M48 476L398 476L416 494L416 566L48 566Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M398 476L398 494L416 494" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="503" font-family="IBM Plex Sans" font-size="12" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">Recursion shines where the DATA is nested: a folder tree, a DOM</tspan><tspan x="58" dy="15">subtree, a JSON document. For a flat list, a loop is</tspan><tspan x="58" dy="15">simpler and cannot blow the stack. Each pending call holds a</tspan><tspan x="58" dy="15">real stack frame, which is why depth, not total work, is the limit.</tspan></text></g>
+</g>
+</svg>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSVP Guest List</title>
+  <style>
+    #guest-list { list-style: none; padding: 0; }
+    #guest-list li { padding: 6px; cursor: pointer; }
+    .arrived { text-decoration: line-through; color: gray; }
+    .rounded { border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Party RSVP</h1>
+  <p>Guests: <span id="count">0</span></p>
+
+  <div id="panel">
+    <ul id="guest-list"></ul>
+  </div>
+
+  <form>
+    <label>
+      Name:
+      <input type="text" name="guest">
+    </label>
+    <button>Add Guest</button>
+  </form>
+
+  <script>
+    // Activity: RSVP Guest List
+
+    const guestList = document.getElementById('guest-list');
+    const countSpan = document.getElementById('count');
+    const rsvpForm = document.getElementsByTagName('form')[0];
+
+    let nextId = 1;
+
+    // TODO Task 1: add a 'submit' listener to rsvpForm and call
+    // event.preventDefault() first so the page does not reload.
+
+    // TODO Task 2: inside the listener, read the field through
+    // rsvpForm.elements['guest'] and trim() it. When it is not empty,
+    // create an <li>, set its textContent, stamp listItem.dataset.id
+    // with nextId++, append it, and clear the input.
+
+    // TODO Task 3: set countSpan.textContent to the number of <li>
+    // elements now in the list.
+
+    // TODO Task 4: add ONE 'click' listener to guestList (not one per
+    // guest). Return early unless event.target.tagName === 'LI', then log
+    // event.target and event.currentTarget side by side.
+
+    // TODO Task 5: toggle the 'arrived' class on the clicked guest, add
+    // 'rounded', and log classList.contains('arrived').
+
+    // TODO Task 6: set guest.style.backgroundColor to '#f5f5f5' (camelCase!)
+    // and log it back, then log getComputedStyle(guest).padding.
+  </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Dependencies and generated artifacts
+node_modules/
+test-results/
+playwright-report/
+package-lock.json
+
+# Regenerated from db.seed.json on every E2E run (json-server mutates it).
+e2e/fixtures/db.json
+
+# Prose is formatted by hand.
+*.md

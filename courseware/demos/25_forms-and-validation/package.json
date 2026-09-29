@@ -1,0 +1,14 @@
+{
+  "name": "forms-and-validation",
+  "version": "1.0.0",
+  "description": "Forms: Validation and FormData: Demo",
+  "scripts": {
+    "start": "http-server -p 8080 -o",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.9.6"
+  },
+  "license": "MIT"
+}

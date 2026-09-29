@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+
+# Build output from courseware/utils/build.sh|ps1 (TypeScript pairs).
+dist/
+
+# Scratch dir the slide container writes preprocessed Marp Markdown into. It has
+# to live inside the mounted volume (so relative image paths resolve), and the
+# entrypoint removes it on a clean run: this catches an interrupted one.
+courseware/slides/.marp-src/
+
+# Each demo and activity is its own npm project, so `npm install` in any of them
+# writes a lock file. Those are per-machine noise, not course content, and the
+# exporter ships anything not denied, so an accidental commit would send 70 lock
+# files to students.
+courseware/demos/*/package-lock.json
+courseware/activities/*/package-lock.json

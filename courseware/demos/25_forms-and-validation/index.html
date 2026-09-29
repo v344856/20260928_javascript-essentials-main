@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms: Validation and FormData</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+    }
+    h1 { color: #2c3e50; }
+    form { display: grid; gap: 4px; }
+    .field { margin-bottom: 14px; }
+    label { font-weight: 600; display: block; margin-bottom: 4px; }
+    input, select {
+      width: 100%;
+      padding: 9px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    input.invalid { border: 2px solid #c0392b; background: #fdecea; }
+    input.valid { border: 2px solid #27ae60; }
+    .inline { display: flex; align-items: center; gap: 8px; font-weight: 400; }
+    .inline input { width: auto; }
+    .error { color: #c0392b; font-size: 0.85rem; min-height: 1.1em; margin-top: 4px; }
+    button {
+      padding: 10px 16px;
+      background: #2c7be5;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover { background: #1a5fc4; }
+    #status { margin-top: 16px; font-weight: 600; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Forms: Validation and FormData</h1>
+  <p>Each field is validated with a regex as you type (the <code>input</code> event) and again when you
+     submit. Invalid submissions are blocked. When everything passes, the handler builds a
+     <code>FormData</code> and shows the body it <em>would</em> POST. Open DevTools (F12) to see each
+     check logged.</p>
+
+  <form id="signup" novalidate>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" aria-describedby="email-error" placeholder="you@example.com">
+      <div class="error" id="email-error" role="alert"></div>
+    </div>
+
+    <div class="field">
+      <label for="phone">US Phone</label>
+      <input type="text" id="phone" name="phone" aria-describedby="phone-error" placeholder="(555) 123-4567">
+      <div class="error" id="phone-error" role="alert"></div>
+    </div>
+
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" aria-describedby="password-error" placeholder="8+ chars, upper, lower, digit">
+      <div class="error" id="password-error" role="alert"></div>
+    </div>
+
+    <div class="field">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="us">United States</option>
+        <option value="ca" selected>Canada</option>
+        <option value="uk">United Kingdom</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>Topics of interest</legend>
+      <label class="inline"><input type="checkbox" name="topics" value="js" checked> JavaScript</label>
+      <label class="inline"><input type="checkbox" name="topics" value="css" checked> CSS</label>
+      <label class="inline"><input type="checkbox" name="topics" value="html"> HTML</label>
+    </fieldset>
+
+    <button type="submit">Create account</button>
+  </form>
+
+  <div id="status"></div>
+
+  <h2>Collected data</h2>
+  <pre id="output">Submit a valid form to see the collected data...</pre>
+
+  <script>
+    const form = document.getElementById('signup');
+    const status = document.getElementById('status');
+    const output = document.getElementById('output');
+
+    // =====================================================================
+    // Part 1: The validation rules: a regex + a message per field
+    // =====================================================================
+
+    const rules = {
+      email: {
+        pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        message: 'Enter a valid email like you@example.com.',
+      },
+      phone: {
+        pattern: /^\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}$/,
+        message: 'Enter a 10-digit US phone number.',
+      },
+      password: {
+        // lookaheads require a lowercase, an uppercase, and a digit; then 8+ chars total
+        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
+        message: 'At least 8 characters with upper, lower, and a number.',
+      },
+    };
+
+    function showError(name, message) {
+      document.getElementById(name + '-error').textContent = message;
+      const input = form.elements[name];
+      input.classList.add('invalid');
+      input.classList.remove('valid');
+      // Color alone is invisible to a screen reader: aria-invalid states it, and
+      // role="alert" on the error div makes the message announce itself.
+      input.setAttribute('aria-invalid', 'true');
+    }
+
+    function clearError(name) {
+      document.getElementById(name + '-error').textContent = '';
+      const input = form.elements[name];
+      input.classList.remove('invalid');
+      input.classList.add('valid');
+      input.removeAttribute('aria-invalid');
+    }
+
+    // Validate one field against its rule. Returns true/false and updates the UI.
+    function validateField(name) {
+      const value = form.elements[name].value.trim();
+      const { pattern, message } = rules[name];
+      const ok = pattern.test(value);
+      console.log(`${name}: ${pattern} .test(${JSON.stringify(value)}) -> ${ok}`);
+      if (ok) {
+        clearError(name);
+      } else {
+        showError(name, message);
+      }
+      return ok;
+    }
+
+    // Live validation: re-check a field on every keystroke.
+    for (const name of Object.keys(rules)) {
+      form.elements[name].addEventListener('input', () => validateField(name));
+    }
+
+    // =====================================================================
+    // Part 2: On submit: sweep every field, then collect with FormData
+    // =====================================================================
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // stay on the page and handle the data ourselves
+
+      // Validate EVERY field (don't short-circuit) so all errors show at once.
+      let valid = true;
+      for (const name of Object.keys(rules)) {
+        if (!validateField(name)) valid = false;
+      }
+
+      if (!valid) {
+        status.textContent = '✗ Please fix the highlighted fields.';
+        status.style.color = '#c0392b';
+        return;
+      }
+
+      status.textContent = '✓ All fields valid, account would be created!';
+      status.style.color = '#27ae60';
+
+      // 1. Build a FormData straight from the form; one call grabs every NAMED field.
+      const data = new FormData(form);
+
+      // 2. Iterate entries(): each is a [key, value] pair. Repeated names
+      //    (the checkbox group "topics") appear multiple times.
+      const lines = ['--- FormData entries() ---'];
+      for (const [key, value] of data.entries()) {
+        // Never log the password in a real app, shown here only to make the
+        // point that FormData collects every named field, including secrets.
+        lines.push(`${key} = ${key === 'password' ? '••••••••' : value}`);
+      }
+
+      // 3. get() returns the FIRST value; getAll() returns every value for a key.
+      lines.push('', '--- get vs getAll ---');
+      lines.push(`get("topics")    -> ${data.get('topics')}`);
+      lines.push(`getAll("topics") -> [${data.getAll('topics').join(', ')}]`);
+
+      // 4. append() adds an extra value that is not a form field.
+      data.append('source', 'web-demo');
+
+      // 5. Convert to a plain object. fromEntries keeps only the LAST value per
+      //    key, so restore the multi-value "topics" with getAll().
+      const obj = Object.fromEntries(data.entries());
+      obj.topics = data.getAll('topics');
+      delete obj.password; // don't put it in the displayed body
+
+      lines.push('', '--- As a plain object ---');
+      lines.push(JSON.stringify(obj, null, 2));
+
+      // 6. How you WOULD send it. Two options:
+      //    (a) multipart: pass the FormData directly (this is what carries files):
+      //        fetch(url, { method: 'POST', body: data });
+      //    (b) JSON: stringify the object and set the header:
+      lines.push('', '--- Would POST as JSON ---');
+      lines.push("fetch('/signup', {");
+      lines.push("  method: 'POST',");
+      lines.push("  headers: { 'Content-Type': 'application/json' },");
+      lines.push('  body: ' + JSON.stringify(JSON.stringify(obj)));
+      lines.push('});');
+
+      output.textContent = lines.join('\n');
+      console.log('Object:', obj);
+
+      form.reset();
+      form.querySelectorAll('input').forEach((i) => i.classList.remove('valid'));
+    });
+  </script>
+</body>
+</html>

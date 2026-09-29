@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="f1459df3be333434"><![CDATA[
+{
+  "version": 1,
+  "title": "The Module Graph",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The Module Graph",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Static imports are resolved before any of your code runs. Dynamic import() happens later, and returns a promise.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 112.0,
+      "w": 452.0,
+      "h": 34.0,
+      "text": "Static: import ... from '...'",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "m0",
+      "kind": "rect",
+      "x": 208.0,
+      "y": 164.0,
+      "w": 132.0,
+      "h": 38.0,
+      "text": "main.js",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "m1",
+      "kind": "rect",
+      "x": 88.0,
+      "y": 244.0,
+      "w": 132.0,
+      "h": 38.0,
+      "text": "cart.js",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "m2",
+      "kind": "rect",
+      "x": 328.0,
+      "y": 244.0,
+      "w": 132.0,
+      "h": 38.0,
+      "text": "format.js",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "m3",
+      "kind": "rect",
+      "x": 208.0,
+      "y": 324.0,
+      "w": 132.0,
+      "h": 38.0,
+      "text": "money.js",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "m0",
+      "to": "m1",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "m0",
+      "to": "m2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "m1",
+      "to": "m3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "m2",
+      "to": "m3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "n1",
+      "x": 48.0,
+      "y": 384.0,
+      "text": "The whole graph is discovered and fetched first. Imports are\nhoisted, so their position in the file does not matter. Each module\nis evaluated exactly ONCE, however many files import it.",
+      "w": 452.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h2",
+      "kind": "rect",
+      "x": 532.0,
+      "y": 112.0,
+      "w": 428.0,
+      "h": 34.0,
+      "text": "Dynamic: await import('...')",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "d1",
+      "kind": "rect",
+      "x": 532.0,
+      "y": 164.0,
+      "w": 428.0,
+      "h": 38.0,
+      "text": "App starts: heavy module NOT loaded",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "d2",
+      "kind": "rect",
+      "x": 532.0,
+      "y": 226.0,
+      "w": 428.0,
+      "h": 38.0,
+      "text": "User clicks something",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "d3",
+      "kind": "rect",
+      "x": 532.0,
+      "y": 288.0,
+      "w": 428.0,
+      "h": 38.0,
+      "text": "const mod = await import('./chart.js')",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "d4",
+      "kind": "rect",
+      "x": 532.0,
+      "y": 350.0,
+      "w": 428.0,
+      "h": 38.0,
+      "text": "Fetched now, then used",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn5",
+      "from": "d1",
+      "to": "d2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn6",
+      "from": "d2",
+      "to": "d3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn7",
+      "from": "d3",
+      "to": "d4",
+      "from_side": "bottom",
+      "to_side": "top",
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "n2",
+      "x": 532.0,
+      "y": 398.0,
+      "text": "A function call, not a declaration, so it can sit inside an if,\ntake a computed path, and be awaited. This is code splitting.",
+      "w": 428.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "cjs",
+      "kind": "note",
+      "x": 48.0,
+      "y": 452.0,
+      "w": 912.0,
+      "h": 112.0,
+      "text": "ESM (import / export) is the standard, and the default everywhere. CommonJS (require / module.exports) is Node's older system:\nrequire is synchronous and runs at the point it appears, which is exactly why import can be analysed ahead of time and require cannot.\nIn Node, .mjs or \"type\": \"module\" selects ESM; in the browser, <script type=\"module\">.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 7
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M274 202L274 223L154 223L154 235" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M154 244L150 234L158 234Z" fill="#2a78d6"/></g>
+<g id="conn2"><path d="M274 202L274 223L394 223L394 235" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M394 244L390 234L398 234Z" fill="#2a78d6"/></g>
+<g id="conn3"><path d="M154 282L154 303L274 303L274 315" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M274 324L270 314L278 314Z" fill="#2a78d6"/></g>
+<g id="conn4"><path d="M394 282L394 303L274 303L274 315" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M274 324L270 314L278 314Z" fill="#2a78d6"/></g>
+<g id="conn5"><path d="M746 202L746 217" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M746 226L742 216L750 216Z" fill="#d9541f"/></g>
+<g id="conn6"><path d="M746 264L746 279" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M746 288L742 278L750 278Z" fill="#d9541f"/></g>
+<g id="conn7"><path d="M746 326L746 341" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M746 350L742 340L750 340Z" fill="#d9541f"/></g>
+<g id="title"><text x="176.22" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="176.22" dy="0">The Module Graph</tspan></text></g>
+<g id="sub"><text x="424.62" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="424.62" dy="0">Static imports are resolved before any of your code runs. Dynamic import() happens later, and returns a promise.</tspan></text></g>
+<g id="h1"><path d="M48 112H500V146H48Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="274" y="135" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="274" dy="0">Static: import ... from '...'</tspan></text></g>
+<g id="m0"><path d="M208 164H340V202H208Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="274" y="188.04" font-family="JetBrains Mono" font-size="14" fill="#10386b" text-anchor="middle"><tspan x="274" dy="0">main.js</tspan></text></g>
+<g id="m1"><path d="M88 244H220V282H88Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="154" y="268.04" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="154" dy="0">cart.js</tspan></text></g>
+<g id="m2"><path d="M328 244H460V282H328Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="394" y="268.04" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="394" dy="0">format.js</tspan></text></g>
+<g id="m3"><path d="M208 324H340V362H208Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="274" y="348.04" font-family="JetBrains Mono" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="274" dy="0">money.js</tspan></text></g>
+<g id="n1"><text x="48" y="397" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="start"><tspan x="48" dy="0">The whole graph is discovered and fetched first. Imports are</tspan><tspan x="48" dy="16.25">hoisted, so their position in the file does not matter. Each module</tspan><tspan x="48" dy="16.25">is evaluated exactly ONCE, however many files import it.</tspan></text></g>
+<g id="h2"><path d="M532 112H960V146H532Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="746" y="135" font-family="IBM Plex Sans" font-size="16" font-weight="700" fill="#7a2f0f" text-anchor="middle"><tspan x="746" dy="0">Dynamic: await import('...')</tspan></text></g>
+<g id="d1"><path d="M532 164H960V202H532Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="746" y="188.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="746" dy="0">App starts: heavy module NOT loaded</tspan></text></g>
+<g id="d2"><path d="M532 226H960V264H532Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="746" y="250.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="746" dy="0">User clicks something</tspan></text></g>
+<g id="d3"><path d="M532 288H960V326H532Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="746" y="311.68" font-family="JetBrains Mono" font-size="13" fill="#7a2f0f" text-anchor="middle"><tspan x="746" dy="0">const mod = await import('./chart.js')</tspan></text></g>
+<g id="d4"><path d="M532 350H960V388H532Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="746" y="374.25" font-family="IBM Plex Sans" font-size="14" fill="#1a1a1a" text-anchor="middle"><tspan x="746" dy="0">Fetched now, then used</tspan></text></g>
+<g id="n2"><text x="532" y="411" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="start"><tspan x="532" dy="0">A function call, not a declaration, so it can sit inside an if,</tspan><tspan x="532" dy="16.25">take a computed path, and be awaited. This is code splitting.</tspan></text></g>
+<g id="cjs"><path d="M48 452L942 452L960 470L960 564L48 564Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M942 452L942 470L960 470" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="496.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">ESM (import / export) is the standard, and the default everywhere. CommonJS (require / module.exports) is Node's older system:</tspan><tspan x="58" dy="16.25">require is synchronous and runs at the point it appears, which is exactly why import can be analysed ahead of time and require cannot.</tspan><tspan x="58" dy="16.25">In Node, .mjs or "type": "module" selects ESM; in the browser, &lt;script type="module"&gt;.</tspan></text></g>
+</g>
+</svg>

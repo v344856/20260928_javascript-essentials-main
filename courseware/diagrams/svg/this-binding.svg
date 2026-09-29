@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="b58abf1566159e7c"><![CDATA[
+{
+  "version": 1,
+  "title": "How this Is Decided",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 36.0,
+      "text": "How this Is Decided",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 74.0,
+      "text": "Ask the call site, not where the function was written. Work down: the first match wins.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "q0",
+      "kind": "stadium",
+      "x": 48.0,
+      "y": 122.0,
+      "w": 250.0,
+      "h": 44.0,
+      "text": "A function is called",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "q1",
+      "kind": "diamond",
+      "x": 48.0,
+      "y": 186.0,
+      "w": 250.0,
+      "h": 70.0,
+      "text": "Arrow function?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "q2",
+      "kind": "diamond",
+      "x": 48.0,
+      "y": 274.0,
+      "w": 250.0,
+      "h": 70.0,
+      "text": "Called with new?",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "q3",
+      "kind": "diamond",
+      "x": 48.0,
+      "y": 362.0,
+      "w": 250.0,
+      "h": 70.0,
+      "text": "call / apply / bind?",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "q4",
+      "kind": "diamond",
+      "x": 48.0,
+      "y": 450.0,
+      "w": 250.0,
+      "h": 70.0,
+      "text": "Called as obj.method()?",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a1",
+      "kind": "rect",
+      "x": 400.0,
+      "y": 182.0,
+      "w": 330.0,
+      "h": 78.0,
+      "text": "Lexical: no own this.\nIt uses whatever the enclosing\nscope had. Cannot be rebound.",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a2",
+      "kind": "rect",
+      "x": 400.0,
+      "y": 274.0,
+      "w": 330.0,
+      "h": 70.0,
+      "text": "The brand-new object.\nnew creates it and binds it.",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a3",
+      "kind": "rect",
+      "x": 400.0,
+      "y": 362.0,
+      "w": 330.0,
+      "h": 70.0,
+      "text": "The object you passed in.\nExplicit wins over implicit.",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a4",
+      "kind": "rect",
+      "x": 400.0,
+      "y": 450.0,
+      "w": 330.0,
+      "h": 70.0,
+      "text": "The object left of the dot.\nDetach the method and it is lost.",
+      "style": {
+        "fill": "#fce6da",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a2f0f",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "a5",
+      "kind": "rect",
+      "x": 782.0,
+      "y": 428.0,
+      "w": 190.0,
+      "h": 100.0,
+      "text": "Default:\nundefined in strict mode\nand in modules;\nglobalThis otherwise.",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 14.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "q0",
+      "to": "q1",
+      "from_side": "bottom",
+      "to_side": "top"
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "q1",
+      "to": "q2",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn3",
+      "from": "q2",
+      "to": "q3",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn4",
+      "from": "q3",
+      "to": "q4",
+      "from_side": "bottom",
+      "to_side": "top",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn5",
+      "from": "q1",
+      "to": "a1",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "yes",
+      "label_at": 0.35,
+      "style": {
+        "fill": null,
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn6",
+      "from": "q2",
+      "to": "a2",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "yes",
+      "label_at": 0.35,
+      "style": {
+        "fill": null,
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn7",
+      "from": "q3",
+      "to": "a3",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "yes",
+      "label_at": 0.35,
+      "style": {
+        "fill": null,
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn8",
+      "from": "q4",
+      "to": "a4",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "yes",
+      "label_at": 0.35,
+      "style": {
+        "fill": null,
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn9",
+      "from": "a4",
+      "to": "a5",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "label": "no",
+      "style": {
+        "fill": null,
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 9
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M173 166L173 177" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M173 186L169 176L177 176Z" fill="#6b6a66"/></g>
+<g id="conn2"><path d="M173 256L173 265" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M173 274L169 264L177 264Z" fill="#6b6a66"/><rect x="162.67" y="250.88" width="20.66" height="19.25" rx="2" fill="#ffffff"/><text x="173" y="265.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">no</tspan></text></g>
+<g id="conn3"><path d="M173 344L173 353" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M173 362L169 352L177 352Z" fill="#6b6a66"/><rect x="162.67" y="338.88" width="20.66" height="19.25" rx="2" fill="#ffffff"/><text x="173" y="353.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">no</tspan></text></g>
+<g id="conn4"><path d="M173 432L173 441" fill="none" stroke="#6b6a66" stroke-width="1.5"/><path d="M173 450L169 440L177 440Z" fill="#6b6a66"/><rect x="162.67" y="426.88" width="20.66" height="19.25" rx="2" fill="#ffffff"/><text x="173" y="441.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="173" dy="0">no</tspan></text></g>
+<g id="conn5"><path d="M298 221L391 221" fill="none" stroke="#4a3aa7" stroke-width="1.5"/><path d="M400 221L390 225L390 217Z" fill="#4a3aa7"/><rect x="317.61" y="211.38" width="25.89" height="19.25" rx="2" fill="#ffffff"/><text x="330.55" y="225.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="330.55" dy="0">yes</tspan></text></g>
+<g id="conn6"><path d="M298 309L391 309" fill="none" stroke="#2a78d6" stroke-width="1.5"/><path d="M400 309L390 313L390 305Z" fill="#2a78d6"/><rect x="317.61" y="299.38" width="25.89" height="19.25" rx="2" fill="#ffffff"/><text x="330.55" y="313.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="330.55" dy="0">yes</tspan></text></g>
+<g id="conn7"><path d="M298 397L391 397" fill="none" stroke="#0f8f63" stroke-width="1.5"/><path d="M400 397L390 401L390 393Z" fill="#0f8f63"/><rect x="317.61" y="387.38" width="25.89" height="19.25" rx="2" fill="#ffffff"/><text x="330.55" y="401.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="330.55" dy="0">yes</tspan></text></g>
+<g id="conn8"><path d="M298 485L391 485" fill="none" stroke="#d9541f" stroke-width="1.5"/><path d="M400 485L390 489L390 481Z" fill="#d9541f"/><rect x="317.61" y="475.38" width="25.89" height="19.25" rx="2" fill="#ffffff"/><text x="330.55" y="489.88" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="330.55" dy="0">yes</tspan></text></g>
+<g id="conn9"><path d="M730 485L773.08 479.2" fill="none" stroke="#c93434" stroke-width="1.5"/><path d="M782 478L772.62 483.3L771.56 475.37Z" fill="#c93434"/><rect x="741.21" y="472.48" width="20.66" height="19.25" rx="2" fill="#ffffff"/><text x="751.54" y="486.98" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="middle"><tspan x="751.54" dy="0">no</tspan></text></g>
+<g id="title"><text x="188.51" y="66" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="188.51" dy="0">How this Is Decided</tspan></text></g>
+<g id="sub"><text x="354.34" y="90" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="354.34" dy="0">Ask the call site, not where the function was written. Work down: the first match wins.</tspan></text></g>
+<g id="q0"><path d="M70 122H276A22 22 0 0 1 298 144V144A22 22 0 0 1 276 166H70A22 22 0 0 1 48 144V144A22 22 0 0 1 70 122Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="173" y="150.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="173" dy="0">A function is called</tspan></text></g>
+<g id="q1"><path d="M173 186L298 221L173 256L48 221Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="173" y="227" font-family="IBM Plex Sans" font-size="16" fill="#2a2160" text-anchor="middle"><tspan x="173" dy="0">Arrow function?</tspan></text></g>
+<g id="q2"><path d="M173 274L298 309L173 344L48 309Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="173" y="315" font-family="IBM Plex Sans" font-size="16" fill="#10386b" text-anchor="middle"><tspan x="173" dy="0">Called with new?</tspan></text></g>
+<g id="q3"><path d="M173 362L298 397L173 432L48 397Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="173" y="393" font-family="IBM Plex Sans" font-size="16" fill="#0a4d36" text-anchor="middle"><tspan x="173" dy="0">call / apply /</tspan><tspan x="173" dy="20">bind?</tspan></text></g>
+<g id="q4"><path d="M173 450L298 485L173 520L48 485Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="173" y="481" font-family="IBM Plex Sans" font-size="16" fill="#7a2f0f" text-anchor="middle"><tspan x="173" dy="0">Called as</tspan><tspan x="173" dy="20">obj.method()?</tspan></text></g>
+<g id="a1"><path d="M400 182H730V260H400Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="565" y="208.75" font-family="IBM Plex Sans" font-size="14" fill="#2a2160" text-anchor="middle"><tspan x="565" dy="0">Lexical: no own this.</tspan><tspan x="565" dy="17.5">It uses whatever the enclosing</tspan><tspan x="565" dy="17.5">scope had. Cannot be rebound.</tspan></text></g>
+<g id="a2"><path d="M400 274H730V344H400Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="565" y="305.5" font-family="IBM Plex Sans" font-size="14" fill="#10386b" text-anchor="middle"><tspan x="565" dy="0">The brand-new object.</tspan><tspan x="565" dy="17.5">new creates it and binds it.</tspan></text></g>
+<g id="a3"><path d="M400 362H730V432H400Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="565" y="393.5" font-family="IBM Plex Sans" font-size="14" fill="#0a4d36" text-anchor="middle"><tspan x="565" dy="0">The object you passed in.</tspan><tspan x="565" dy="17.5">Explicit wins over implicit.</tspan></text></g>
+<g id="a4"><path d="M400 450H730V520H400Z" fill="#fce6da" stroke="#d9541f" stroke-width="1.5"/><text x="565" y="481.5" font-family="IBM Plex Sans" font-size="14" fill="#7a2f0f" text-anchor="middle"><tspan x="565" dy="0">The object left of the dot.</tspan><tspan x="565" dy="17.5">Detach the method and it is lost.</tspan></text></g>
+<g id="a5"><path d="M782 428H972V528H782Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="877" y="457" font-family="IBM Plex Sans" font-size="14" fill="#7a1d1d" text-anchor="middle"><tspan x="877" dy="0">Default:</tspan><tspan x="877" dy="17.5">undefined in strict mode</tspan><tspan x="877" dy="17.5">and in modules;</tspan><tspan x="877" dy="17.5">globalThis otherwise.</tspan></text></g>
+</g>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "name": "ts-narrowing-and-discriminated-unions",
+  "version": "1.0.0",
+  "description": "Narrowing and Discriminated Unions: Activity",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx end/index.ts",
+    "solution": "npx tsx solution/index.ts",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.1",
+    "globals": "^17.9.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.67.0"
+  },
+  "license": "MIT"
+}

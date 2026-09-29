@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reading List Dashboard</title>
+</head>
+<body>
+  <h1>My Reading List</h1>
+  <p>
+    Open DevTools (F12) &rarr; Console. Then add
+    <code>?view=unread&amp;year=2026</code> to the URL and reload so there is a
+    query string to read.
+  </p>
+
+  <div id="status"></div>
+
+  <p>
+    <button id="locate">Find my nearest library</button>
+    <span id="distance"></span>
+  </p>
+
+  <ol id="reading-list">
+    <li class="book finished">The Pragmatic Programmer</li>
+    <li class="book">Clean Code</li>
+    <li class="book">You Don't Know JS</li>
+  </ol>
+
+  <script>
+    // Activity: Reading List Dashboard (solution)
+
+    // Task 1: window reports its own viewport, and a top-level var becomes
+    // a property of it.
+    console.log('Viewport:', window.innerWidth, 'x', window.innerHeight);
+
+    var siteName = 'My Reading List';
+    console.log('window.siteName:', window.siteName);
+
+    // Task 2: localStorage is a property of window that persists strings.
+    window.localStorage.setItem('visitCount', '1');
+    console.log('Visits:', window.localStorage.getItem('visitCount'));
+
+    // Task 3: read the current URL through location, then parse its query
+    // string into key/value pairs with URLSearchParams.
+    console.log('Path:', location.pathname);
+
+    const params = new URLSearchParams(location.search);
+    console.log('View:', params.get('view'));
+    console.log('Has debug flag:', params.has('debug'));
+
+    // Task 4: select the list and count its items.
+    const readingList = document.getElementById('reading-list');
+    console.log('List element:', readingList);
+    console.log('Total books:', document.getElementsByTagName('li').length);
+
+    // Task 5: count the finished books two ways - the classic collection
+    // getter, and a CSS selector with querySelectorAll.
+    console.log('Finished books:', document.getElementsByClassName('finished').length);
+    console.log('Finished (querySelectorAll):', document.querySelectorAll('#reading-list .finished').length);
+
+    // Task 6: create a new <li>, fill it, and append it to the list.
+    const newBook = document.createElement('li');
+    newBook.className = 'book';
+    newBook.textContent = 'Refactoring';
+    readingList.appendChild(newBook);
+    console.log('Books after adding:', document.getElementsByTagName('li').length);
+
+    // Write a summary into the page itself.
+    document.getElementById('status').textContent =
+      `${document.querySelectorAll('#reading-list li').length} books on the list`;
+
+    // Task 7: navigator.geolocation is asynchronous - it must ask the user
+    // first, so it takes success and error callbacks instead of returning.
+    const LIBRARY = { name: 'Central Library', lat: 47.6067, lon: -122.3325 };
+    const distanceEl = document.getElementById('distance');
+
+    // Great-circle distance between two lat/lon points, in km.
+    function kmBetween(lat1, lon1, lat2, lon2) {
+      const toRad = (d) => (d * Math.PI) / 180;
+      const R = 6371;
+      const dLat = toRad(lat2 - lat1);
+      const dLon = toRad(lon2 - lon1);
+      const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+      return 2 * R * Math.asin(Math.sqrt(a));
+    }
+
+    document.getElementById('locate').addEventListener('click', () => {
+      distanceEl.textContent = 'Locating…';
+
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          const km = kmBetween(latitude, longitude, LIBRARY.lat, LIBRARY.lon);
+          console.log('you are at', latitude, longitude);
+          distanceEl.textContent = `${LIBRARY.name} is ${km.toFixed(1)} km away`;
+        },
+        (error) => {
+          // A declined prompt is expected - warn, do not error.
+          console.warn('geolocation failed:', error.message);
+          distanceEl.textContent = `unavailable (${error.message})`;
+        },
+        { timeout: 10000 },
+      );
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "colors": [
+    { "id": "1", "name": "red" },
+    { "id": "2", "name": "green" },
+    { "id": "3", "name": "blue" }
+  ],
+  "books": [
+    { "id": "1", "title": "The Hobbit", "author": "J.R.R. Tolkien" },
+    { "id": "2", "title": "Dune", "author": "Frank Herbert" },
+    { "id": "3", "title": "Neuromancer", "author": "William Gibson" }
+  ]
+}

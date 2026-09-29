@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<script>
+
+class ColorsData {
+
+  #baseUrl
+
+  constructor(baseUrl) {
+    this.#baseUrl = baseUrl;
+  }
+
+  async all() {
+    const res = await fetch(`${this.#baseUrl}/colors`);
+    const colors = await res.json();
+    return colors;
+  }
+
+  async create(color) {
+    const res = await fetch(`${this.#baseUrl}/colors`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(color)
+    });
+    const newColor = await res.json();
+    return newColor;
+  }
+}
+
+const colorsData = new ColorsData('http://localhost:3000');
+colorsData.all().then(colors => {
+  console.log(colors);
+}).then(() => {
+  return colorsData.create({ name: 'Purple', hex: '#800080' });
+}).then(newColor => {
+  console.log('Created new color:', newColor);
+}).then(() => {
+  return colorsData.all();
+}).then(colors => {
+  console.log('Updated colors list:', colors);
+}).catch(error => {
+  console.error('Error:', error);
+});
+
+</script>

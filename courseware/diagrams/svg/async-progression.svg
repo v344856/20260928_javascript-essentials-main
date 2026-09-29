@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="05f4bdd0c79211eb"><![CDATA[
+{
+  "version": 1,
+  "title": "The Async Progression",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 34.0,
+      "text": "The Async Progression",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 72.0,
+      "text": "The same three dependent steps, written three ways. Only the shape of the code changes.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 116.0,
+      "w": 290.0,
+      "h": 38.0,
+      "text": "1. Callbacks",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c1a",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 166.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "stepOne(function (a) {",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c1b",
+      "kind": "rect",
+      "x": 76.0,
+      "y": 204.0,
+      "w": 262.0,
+      "h": 34.0,
+      "text": "stepTwo(a, function (b) {",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c1c",
+      "kind": "rect",
+      "x": 104.0,
+      "y": 242.0,
+      "w": 234.0,
+      "h": 34.0,
+      "text": "stepThree(b, done);",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "n1",
+      "x": 48.0,
+      "y": 292.0,
+      "text": "Nesting grows with every step.\nEach level needs its own error check.",
+      "w": 290.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h2",
+      "kind": "rect",
+      "x": 359.0,
+      "y": 116.0,
+      "w": 290.0,
+      "h": 38.0,
+      "text": "2. Promise chain",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c2a",
+      "kind": "rect",
+      "x": 359.0,
+      "y": 166.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "stepOne()",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c2b",
+      "kind": "rect",
+      "x": 359.0,
+      "y": 204.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "  .then(stepTwo)",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c2c",
+      "kind": "rect",
+      "x": 359.0,
+      "y": 242.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "  .then(stepThree)",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c2d",
+      "kind": "rect",
+      "x": 359.0,
+      "y": 280.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "  .catch(handle);",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "n2",
+      "x": 359.0,
+      "y": 330.0,
+      "text": "Flat, not nested.\nOne .catch covers the whole chain.",
+      "w": 290.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "h3",
+      "kind": "rect",
+      "x": 670.0,
+      "y": 116.0,
+      "w": 290.0,
+      "h": 38.0,
+      "text": "3. async / await",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 17.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c3a",
+      "kind": "rect",
+      "x": 670.0,
+      "y": 166.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "try {",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c3b",
+      "kind": "rect",
+      "x": 670.0,
+      "y": 204.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "  const a = await stepOne();",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c3c",
+      "kind": "rect",
+      "x": 670.0,
+      "y": 242.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "  const b = await stepTwo(a);",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c3d",
+      "kind": "rect",
+      "x": 670.0,
+      "y": 280.0,
+      "w": 290.0,
+      "h": 34.0,
+      "text": "} catch (err) { handle(err) }",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "n3",
+      "x": 670.0,
+      "y": 330.0,
+      "text": "Reads top to bottom, like sync code.\nOrdinary try/catch works again.",
+      "w": 290.0,
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn1",
+      "from": "h1",
+      "to": "h2",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "connector",
+      "id": "conn2",
+      "from": "h2",
+      "to": "h3",
+      "from_side": "right",
+      "to_side": "left",
+      "route": "straight",
+      "style": {
+        "fill": null,
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": null,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 420.0,
+      "w": 912.0,
+      "h": 76.0,
+      "text": "All three do the same work on the same event loop. async/await is not a new mechanism: an async function\nreturns a promise, and every await is a .then() the engine writes for you.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 16.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "center",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {
+    "conn": 2
+  }
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="conn1"><path d="M338 135L350 135" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M359 135L349 139L349 131Z" fill="#5b6672"/></g>
+<g id="conn2"><path d="M649 135L661 135" fill="none" stroke="#5b6672" stroke-width="1.5"/><path d="M670 135L660 139L660 131Z" fill="#5b6672"/></g>
+<g id="title"><text x="207.15" y="64" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="207.15" dy="0">The Async Progression</tspan></text></g>
+<g id="sub"><text x="370.07" y="88" font-family="IBM Plex Sans" font-size="16" fill="#6b6a66" text-anchor="middle"><tspan x="370.07" dy="0">The same three dependent steps, written three ways. Only the shape of the code changes.</tspan></text></g>
+<g id="h1"><path d="M48 116H338V154H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="193" y="141.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="193" dy="0">1. Callbacks</tspan></text></g>
+<g id="c1a"><path d="M48 166H338V200H48Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="58" y="187.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="58" dy="0">stepOne(function (a) {</tspan></text></g>
+<g id="c1b"><path d="M76 204H338V238H76Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="86" y="225.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="86" dy="0">stepTwo(a, function (b) {</tspan></text></g>
+<g id="c1c"><path d="M104 242H338V276H104Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="114" y="263.68" font-family="JetBrains Mono" font-size="13" fill="#7a1d1d" text-anchor="start"><tspan x="114" dy="0">stepThree(b, done);</tspan></text></g>
+<g id="n1"><text x="193" y="305" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="middle"><tspan x="193" dy="0">Nesting grows with every step.</tspan><tspan x="193" dy="16.25">Each level needs its own error check.</tspan></text></g>
+<g id="h2"><path d="M359 116H649V154H359Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="504" y="141.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="504" dy="0">2. Promise chain</tspan></text></g>
+<g id="c2a"><path d="M359 166H649V200H359Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="369" y="187.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="369" dy="0">stepOne()</tspan></text></g>
+<g id="c2b"><path d="M359 204H649V238H359Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="369" y="225.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="369" dy="0">  .then(stepTwo)</tspan></text></g>
+<g id="c2c"><path d="M359 242H649V276H359Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="369" y="263.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="369" dy="0">  .then(stepThree)</tspan></text></g>
+<g id="c2d"><path d="M359 280H649V314H359Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="369" y="301.68" font-family="JetBrains Mono" font-size="13" fill="#10386b" text-anchor="start"><tspan x="369" dy="0">  .catch(handle);</tspan></text></g>
+<g id="n2"><text x="504" y="343" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="middle"><tspan x="504" dy="0">Flat, not nested.</tspan><tspan x="504" dy="16.25">One .catch covers the whole chain.</tspan></text></g>
+<g id="h3"><path d="M670 116H960V154H670Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="815" y="141.38" font-family="IBM Plex Sans" font-size="17" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="815" dy="0">3. async / await</tspan></text></g>
+<g id="c3a"><path d="M670 166H960V200H670Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="680" y="187.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="680" dy="0">try {</tspan></text></g>
+<g id="c3b"><path d="M670 204H960V238H670Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="680" y="225.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="680" dy="0">  const a = await stepOne();</tspan></text></g>
+<g id="c3c"><path d="M670 242H960V276H670Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="680" y="263.68" font-family="JetBrains Mono" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="680" dy="0">  const b = await stepTwo(a);</tspan></text></g>
+<g id="c3d"><path d="M670 280H960V314H670Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="680" y="301.68" font-family="JetBrains Mono" font-size="13" fill="#0a4d36" text-anchor="start"><tspan x="680" dy="0">} catch (err) { handle(err) }</tspan></text></g>
+<g id="n3"><text x="815" y="343" font-family="IBM Plex Sans" font-size="13" fill="#6b6a66" text-anchor="middle"><tspan x="815" dy="0">Reads top to bottom, like sync code.</tspan><tspan x="815" dy="16.25">Ordinary try/catch works again.</tspan></text></g>
+<g id="note"><path d="M48 420L943.28 420L960 436.72L960 496L48 496Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M943.28 420L943.28 436.72L960 436.72" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="504" y="454" font-family="IBM Plex Sans" font-size="16" fill="#5c4100" text-anchor="middle"><tspan x="504" dy="0">All three do the same work on the same event loop. async/await is not a new mechanism: an async function</tspan><tspan x="504" dy="20">returns a promise, and every await is a .then() the engine writes for you.</tspan></text></g>
+</g>
+</svg>

@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:db="https://cloudcontraptions.com/ns/diagram-builder/1" width="1008pt" height="612pt" viewBox="0 0 1008 612" db:version="1">
+<metadata>
+<db:model version="1" generator="diagram-builder 0.1.0" body-hash="47ecd5058e9be800"><![CDATA[
+{
+  "version": 1,
+  "title": "The TypeScript Type Space",
+  "page": {
+    "width": 1008.0,
+    "height": 612.0,
+    "margin": 36.0,
+    "background": "#ffffff"
+  },
+  "elements": [
+    {
+      "type": "label",
+      "id": "title",
+      "x": 48.0,
+      "y": 32.0,
+      "text": "The TypeScript Type Space",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 30.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "label",
+      "id": "sub",
+      "x": 48.0,
+      "y": 70.0,
+      "text": "Think of a type as the SET of values it allows. Unions widen that set; intersections narrow it.",
+      "style": {
+        "fill": null,
+        "stroke": null,
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#6b6a66",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "wh",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 116.0,
+      "w": 440.0,
+      "h": 32.0,
+      "text": "How wide is the set?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w1",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 156.0,
+      "w": 440.0,
+      "h": 32.0,
+      "text": "any",
+      "style": {
+        "fill": "#fbe3e3",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#7a1d1d",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w1b",
+      "kind": "rect",
+      "x": 48.0,
+      "y": 190.0,
+      "w": 440.0,
+      "h": 28.0,
+      "text": "Every value, and it switches checking OFF. Avoid it.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#c93434",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w2",
+      "kind": "rect",
+      "x": 78.0,
+      "y": 226.0,
+      "w": 410.0,
+      "h": 32.0,
+      "text": "unknown",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w2b",
+      "kind": "rect",
+      "x": 78.0,
+      "y": 260.0,
+      "w": 410.0,
+      "h": 28.0,
+      "text": "Every value too, but you must narrow before using it. The safe any.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w3",
+      "kind": "rect",
+      "x": 108.0,
+      "y": 296.0,
+      "w": 380.0,
+      "h": 32.0,
+      "text": "string",
+      "style": {
+        "fill": "#e3edfb",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#10386b",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w3b",
+      "kind": "rect",
+      "x": 108.0,
+      "y": 330.0,
+      "w": 380.0,
+      "h": 28.0,
+      "text": "Every string. A normal, useful type.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w4",
+      "kind": "rect",
+      "x": 138.0,
+      "y": 366.0,
+      "w": 350.0,
+      "h": 32.0,
+      "text": "'small' | 'large'",
+      "style": {
+        "fill": "#d9f2e9",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#0a4d36",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w4b",
+      "kind": "rect",
+      "x": 138.0,
+      "y": 400.0,
+      "w": 350.0,
+      "h": 28.0,
+      "text": "Exactly two values. Precise and self-documenting.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#0f8f63",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w5",
+      "kind": "rect",
+      "x": 168.0,
+      "y": 436.0,
+      "w": 320.0,
+      "h": 32.0,
+      "text": "never",
+      "style": {
+        "fill": "#eceef1",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": "mono",
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#25303a",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "w5b",
+      "kind": "rect",
+      "x": 168.0,
+      "y": 470.0,
+      "w": 320.0,
+      "h": 28.0,
+      "text": "No value at all. The empty set.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#5b6672",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 12.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "ch",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 116.0,
+      "w": 444.0,
+      "h": 32.0,
+      "text": "Combining types",
+      "style": {
+        "fill": "#fbe4ec",
+        "stroke": "#c74d7c",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#6f2445",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c1",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 156.0,
+      "w": 444.0,
+      "h": 78.0,
+      "text": "Union  -  A | B  -  either one\nstring | number accepts both, so you may only\nuse what they have in COMMON until you narrow.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#2a78d6",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "c2",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 244.0,
+      "w": 444.0,
+      "h": 78.0,
+      "text": "Intersection  -  A & B  -  both at once\nHasId & HasName demands every member of each.\nFewer values qualify, but each has MORE properties.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#d9541f",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "th",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 336.0,
+      "w": 444.0,
+      "h": 32.0,
+      "text": "type or interface?",
+      "style": {
+        "fill": "#e6e4f6",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 15.0,
+        "font_weight": 700,
+        "italic": null,
+        "text_color": "#2a2160",
+        "align": null,
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "t1",
+      "kind": "rect",
+      "x": 516.0,
+      "y": 376.0,
+      "w": 444.0,
+      "h": 122.0,
+      "text": "interface - object shapes you may want to extend.\n    It can be reopened and merged by a later declaration.\ntype - everything else: unions, tuples, primitives,\n    mapped and conditional types. Cannot be reopened.\nFor a plain object shape either is fine; be consistent.",
+      "style": {
+        "fill": "#ffffff",
+        "stroke": "#4a3aa7",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": null,
+        "align": "left",
+        "padding": null
+      }
+    },
+    {
+      "type": "shape",
+      "id": "note",
+      "kind": "note",
+      "x": 48.0,
+      "y": 512.0,
+      "w": 912.0,
+      "h": 62.0,
+      "text": "TypeScript is STRUCTURAL: two types match when their shapes match, whatever they are called; nothing needs to declare\nthat it implements an interface. And prefer inference: write the annotation where a value ENTERS your code (parameters,\nreturn types, external data) and let TypeScript work out the rest.",
+      "style": {
+        "fill": "#fbeecf",
+        "stroke": "#b07d00",
+        "stroke_width": null,
+        "dash": null,
+        "opacity": null,
+        "corner_radius": null,
+        "font": null,
+        "font_size": 13.0,
+        "font_weight": null,
+        "italic": null,
+        "text_color": "#5c4100",
+        "align": "left",
+        "padding": null
+      }
+    }
+  ],
+  "next_id": {}
+}
+]]></db:model>
+</metadata>
+<!-- GENERATED BY diagram-builder. The <metadata> block above is the source of truth.
+       Edits made below this line are DISCARDED on the next diagram-builder command. -->
+<g id="db-body">
+<rect x="0" y="0" width="1008" height="612" fill="#ffffff"/>
+<g id="title"><text x="237.71" y="62" font-family="IBM Plex Sans" font-size="30" font-weight="700" fill="#1a1a1a" text-anchor="middle"><tspan x="237.71" dy="0">The TypeScript Type Space</tspan></text></g>
+<g id="sub"><text x="354.04" y="85" font-family="IBM Plex Sans" font-size="15" fill="#6b6a66" text-anchor="middle"><tspan x="354.04" dy="0">Think of a type as the SET of values it allows. Unions widen that set; intersections narrow it.</tspan></text></g>
+<g id="wh"><path d="M48 116H488V148H48Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="268" y="137.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="268" dy="0">How wide is the set?</tspan></text></g>
+<g id="w1"><path d="M48 156H488V188H48Z" fill="#fbe3e3" stroke="#c93434" stroke-width="1.5"/><text x="268" y="177.4" font-family="JetBrains Mono" font-size="15" font-weight="700" fill="#7a1d1d" text-anchor="middle"><tspan x="268" dy="0">any</tspan></text></g>
+<g id="w1b"><path d="M48 190H488V218H48Z" fill="#ffffff" stroke="#c93434" stroke-width="1.5"/><text x="268" y="208.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="268" dy="0">Every value, and it switches checking OFF. Avoid it.</tspan></text></g>
+<g id="w2"><path d="M78 226H488V258H78Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><text x="283" y="247.4" font-family="JetBrains Mono" font-size="15" font-weight="700" fill="#5c4100" text-anchor="middle"><tspan x="283" dy="0">unknown</tspan></text></g>
+<g id="w2b"><path d="M78 260H488V288H78Z" fill="#ffffff" stroke="#b07d00" stroke-width="1.5"/><text x="283" y="278.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="283" dy="0">Every value too, but you must narrow before using it. The safe any.</tspan></text></g>
+<g id="w3"><path d="M108 296H488V328H108Z" fill="#e3edfb" stroke="#2a78d6" stroke-width="1.5"/><text x="298" y="317.4" font-family="JetBrains Mono" font-size="15" font-weight="700" fill="#10386b" text-anchor="middle"><tspan x="298" dy="0">string</tspan></text></g>
+<g id="w3b"><path d="M108 330H488V358H108Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="298" y="348.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="298" dy="0">Every string. A normal, useful type.</tspan></text></g>
+<g id="w4"><path d="M138 366H488V398H138Z" fill="#d9f2e9" stroke="#0f8f63" stroke-width="1.5"/><text x="313" y="387.4" font-family="JetBrains Mono" font-size="15" font-weight="700" fill="#0a4d36" text-anchor="middle"><tspan x="313" dy="0">'small' | 'large'</tspan></text></g>
+<g id="w4b"><path d="M138 400H488V428H138Z" fill="#ffffff" stroke="#0f8f63" stroke-width="1.5"/><text x="313" y="418.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="313" dy="0">Exactly two values. Precise and self-documenting.</tspan></text></g>
+<g id="w5"><path d="M168 436H488V468H168Z" fill="#eceef1" stroke="#5b6672" stroke-width="1.5"/><text x="328" y="457.4" font-family="JetBrains Mono" font-size="15" font-weight="700" fill="#25303a" text-anchor="middle"><tspan x="328" dy="0">never</tspan></text></g>
+<g id="w5b"><path d="M168 470H488V498H168Z" fill="#ffffff" stroke="#5b6672" stroke-width="1.5"/><text x="328" y="488.5" font-family="IBM Plex Sans" font-size="12" fill="#1a1a1a" text-anchor="middle"><tspan x="328" dy="0">No value at all. The empty set.</tspan></text></g>
+<g id="ch"><path d="M516 116H960V148H516Z" fill="#fbe4ec" stroke="#c74d7c" stroke-width="1.5"/><text x="738" y="137.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#6f2445" text-anchor="middle"><tspan x="738" dy="0">Combining types</tspan></text></g>
+<g id="c1"><path d="M516 156H960V234H516Z" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/><text x="526" y="183.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="526" dy="0">Union  -  A | B  -  either one</tspan><tspan x="526" dy="16.25">string | number accepts both, so you may only</tspan><tspan x="526" dy="16.25">use what they have in COMMON until you narrow.</tspan></text></g>
+<g id="c2"><path d="M516 244H960V322H516Z" fill="#ffffff" stroke="#d9541f" stroke-width="1.5"/><text x="526" y="271.63" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="526" dy="0">Intersection  -  A &amp; B  -  both at once</tspan><tspan x="526" dy="16.25">HasId &amp; HasName demands every member of each.</tspan><tspan x="526" dy="16.25">Fewer values qualify, but each has MORE properties.</tspan></text></g>
+<g id="th"><path d="M516 336H960V368H516Z" fill="#e6e4f6" stroke="#4a3aa7" stroke-width="1.5"/><text x="738" y="357.63" font-family="IBM Plex Sans" font-size="15" font-weight="700" fill="#2a2160" text-anchor="middle"><tspan x="738" dy="0">type or interface?</tspan></text></g>
+<g id="t1"><path d="M516 376H960V498H516Z" fill="#ffffff" stroke="#4a3aa7" stroke-width="1.5"/><text x="526" y="409.38" font-family="IBM Plex Sans" font-size="13" fill="#1a1a1a" text-anchor="start"><tspan x="526" dy="0">interface - object shapes you may want to extend.</tspan><tspan x="526" dy="16.25">    It can be reopened and merged by a later declaration.</tspan><tspan x="526" dy="16.25">type - everything else: unions, tuples, primitives,</tspan><tspan x="526" dy="16.25">    mapped and conditional types. Cannot be reopened.</tspan><tspan x="526" dy="16.25">For a plain object shape either is fine; be consistent.</tspan></text></g>
+<g id="note"><path d="M48 512L946.36 512L960 525.64L960 574L48 574Z" fill="#fbeecf" stroke="#b07d00" stroke-width="1.5"/><path d="M946.36 512L946.36 525.64L960 525.64" fill="none" stroke="#b07d00" stroke-width="1.5"/><text x="58" y="531.63" font-family="IBM Plex Sans" font-size="13" fill="#5c4100" text-anchor="start"><tspan x="58" dy="0">TypeScript is STRUCTURAL: two types match when their shapes match, whatever they are called; nothing needs to declare</tspan><tspan x="58" dy="16.25">that it implements an interface. And prefer inference: write the annotation where a value ENTERS your code (parameters,</tspan><tspan x="58" dy="16.25">return types, external data) and let TypeScript work out the rest.</tspan></text></g>
+</g>
+</svg>

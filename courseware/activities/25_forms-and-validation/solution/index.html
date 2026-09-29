@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Form Validation Activity</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+    }
+    h1 { color: #2c3e50; }
+    form { display: grid; gap: 4px; }
+    .field { margin-bottom: 14px; }
+    label { font-weight: 600; display: block; margin-bottom: 4px; }
+    input, select {
+      width: 100%;
+      padding: 9px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    input.invalid { border: 2px solid #c0392b; background: #fdecea; }
+    input.valid { border: 2px solid #27ae60; }
+    .inline { display: flex; align-items: center; gap: 8px; font-weight: 400; }
+    .inline input { width: auto; }
+    .error { color: #c0392b; font-size: 0.85rem; min-height: 1.1em; margin-top: 4px; }
+    button {
+      padding: 10px 16px;
+      background: #2c7be5;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover { background: #1a5fc4; }
+    #status { margin-top: 16px; font-weight: 600; }
+    pre {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Create Your Profile</h1>
+  <p>Each field is validated with a regex as you type (the <code>input</code> event) and again when you
+     submit. Invalid submissions are blocked. Open DevTools (F12) to see each check logged.</p>
+
+  <form id="profile" novalidate>
+    <div class="field">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="3-16 letters, digits, or _">
+      <div class="error" id="username-error"></div>
+    </div>
+
+    <div class="field">
+      <label for="zip">US ZIP Code</label>
+      <input type="text" id="zip" name="zip" placeholder="98101 or 98101-1234">
+      <div class="error" id="zip-error"></div>
+    </div>
+
+    <div class="field">
+      <label for="color">Favorite Color (hex)</label>
+      <input type="text" id="color" name="color" placeholder="#1a2b3c">
+      <div class="error" id="color-error"></div>
+    </div>
+
+    <div class="field">
+      <label for="plan">Plan</label>
+      <select id="plan" name="plan">
+        <option value="free">Free</option>
+        <option value="pro" selected>Pro</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>Languages</legend>
+      <label class="inline"><input type="checkbox" name="languages" value="js" checked> JavaScript</label>
+      <label class="inline"><input type="checkbox" name="languages" value="ts" checked> TypeScript</label>
+      <label class="inline"><input type="checkbox" name="languages" value="py"> Python</label>
+    </fieldset>
+
+    <button type="submit">Save profile</button>
+  </form>
+
+  <div id="status"></div>
+
+  <h2>Collected data</h2>
+  <pre id="output">Submit a valid form to see the collected data...</pre>
+
+  <script>
+    // Activity: Profile Form Validation and FormData (solution)
+
+    const form = document.getElementById('profile');
+    const status = document.getElementById('status');
+    const output = document.getElementById('output');
+
+    // --- The validation rules: a regex + a message per field. ---
+    const rules = {
+      username: {
+        // Task 1: 3-16 chars, letters/digits/underscore only (\w = [A-Za-z0-9_]).
+        pattern: /^\w{3,16}$/,
+        message: 'Use 3-16 letters, digits, or underscores.',
+      },
+      zip: {
+        // Task 1: 5 digits, optionally a dash and 4 more digits.
+        pattern: /^\d{5}(-\d{4})?$/,
+        message: 'Enter a US ZIP like 98101 or 98101-1234.',
+      },
+      color: {
+        // Task 1: a # followed by exactly 6 hex digits.
+        pattern: /^#[0-9a-fA-F]{6}$/,
+        message: 'Enter a hex color like #1a2b3c.',
+      },
+    };
+
+    function showError(name, message) {
+      document.getElementById(name + '-error').textContent = message;
+      const input = form.elements[name];
+      input.classList.add('invalid');
+      input.classList.remove('valid');
+    }
+
+    function clearError(name) {
+      document.getElementById(name + '-error').textContent = '';
+      const input = form.elements[name];
+      input.classList.remove('invalid');
+      input.classList.add('valid');
+    }
+
+    // Validate one field against its rule. Returns true/false and updates the UI.
+    function validateField(name) {
+      const value = form.elements[name].value.trim();
+      const { pattern, message } = rules[name];
+
+      // Task 2: test the value against the pattern.
+      const ok = pattern.test(value);
+
+      console.log(`${name}: ${pattern} .test(${JSON.stringify(value)}) -> ${ok}`);
+      if (ok) {
+        clearError(name);
+      } else {
+        showError(name, message);
+      }
+      return ok;
+    }
+
+    // Live validation: re-check a field on every keystroke.
+    for (const name of Object.keys(rules)) {
+      form.elements[name].addEventListener('input', () => validateField(name));
+    }
+
+    // Full sweep on submit; block if anything fails.
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      let valid = true;
+      for (const name of Object.keys(rules)) {
+        if (!validateField(name)) valid = false;
+      }
+
+      if (!valid) {
+        status.textContent = 'Please fix the highlighted fields.';
+        status.style.color = '#c0392b';
+        return;
+      }
+
+      status.textContent = 'All fields valid, profile saved!';
+      status.style.color = '#27ae60';
+
+      // Task 4: build a FormData from the form and list its entries.
+      const data = new FormData(form);
+
+      const lines = ['--- FormData entries() ---'];
+      for (const [key, value] of data.entries()) {
+        lines.push(`${key} = ${value}`);
+      }
+
+      // Task 5: get() returns the first value, getAll() returns every value.
+      lines.push('', '--- get vs getAll ---');
+      lines.push(`get("languages")    -> ${data.get('languages')}`);
+      lines.push(`getAll("languages") -> [${data.getAll('languages').join(', ')}]`);
+
+      // Task 6: append an extra field, then convert to a plain object.
+      // fromEntries keeps only the LAST value per key, so restore the
+      // multi-value "languages" with getAll().
+      data.append('source', 'profile-form');
+      const obj = Object.fromEntries(data.entries());
+      obj.languages = data.getAll('languages');
+
+      lines.push('', '--- As a plain object ---');
+      lines.push(JSON.stringify(obj, null, 2));
+
+      output.textContent = lines.join('\n');
+      console.log('Saving...', obj);
+
+      form.reset();
+      form.querySelectorAll('input').forEach((i) => i.classList.remove('valid'));
+    });
+  </script>
+</body>
+</html>
