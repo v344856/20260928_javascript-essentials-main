@@ -1,2 +1,2 @@
-import log from ".,/library/logger.js";
+import log from "../library/logger.js";
 log("Hello Stefan");

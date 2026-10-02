@@ -143,7 +143,7 @@ export default function log(message) {
 #### Importing default export
 
 ```javascript
-import log from ".,/library/logger.js";
+import log from "../library/logger.js";
 
 log("Hello Stefan");
 ```

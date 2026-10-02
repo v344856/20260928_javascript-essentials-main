@@ -1,0 +1,25 @@
+function once() {
+  let called = false;  // private
+  let result;  // private
+  return () => {
+    if (!called) {
+      called = true;
+      console.log(" I am called")
+      //result = fn(...args);
+    }
+    return result;
+  };
+}
+
+const setup = once() ;
+
+console.log(setup()); // Setting up... then ready
+console.log(setup()); // ready (setup does not run again)
+
+
+// const setup = once(() => {
+//   console.log("Setting up...");
+//   return "ready";
+// });
+// console.log(setup()); // Setting up... then ready
+// console.log(setup()); // ready (setup does not run again)

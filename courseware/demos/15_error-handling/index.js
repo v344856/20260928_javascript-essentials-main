@@ -8,8 +8,9 @@ function divide(a, b) {
 }
 
 try {
+   console.log(divide(10, 0)); // This will throw an error
   console.log(divide(10, 2)); // Output: 5
-  console.log(divide(10, 0)); // This will throw an error
+  //console.log(divide(10, 0)); // This will throw an error
 } catch (error) {
   console.error("Error:", error.message);
 } finally {

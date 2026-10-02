@@ -6,7 +6,40 @@
 // new Promise. After `ms` it rejects with new Error(name + " failed") when
 // shouldFail is true, and resolves with `name` otherwise.
 
+function step(name, ms, shouldFail = false) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (shouldFail) {
+        reject(new Error(` error= ${name} failed`));
+      } else {
+        resolve(name);
+      }
+    }, ms);
+  });
+}
+
 console.log("Preparing launch...");
+
+step("3...", 100) 
+  .then((result) => {
+    console.log(result);
+    return step("2...", 100);
+  })
+  .then((result) => {
+    console.log(result);
+    return step("1...", 100);
+  })
+  .then((result) => {
+    console.log(result);
+    console.log("Liftoff!");
+  })
+  .catch((err) => {
+    console.log("caught:", err.message);
+  })
+  .finally(() => {
+    console.log("finally: systems safed");
+  });
+    
 
 // TODO Task 2: call step("3...", 100) and chain .then() handlers that log
 // each result and RETURN the next step(...). The return is what makes the

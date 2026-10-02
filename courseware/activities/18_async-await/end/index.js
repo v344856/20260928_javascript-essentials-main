@@ -17,12 +17,29 @@ function resolveAfter(value, ms, shouldFail = false) {
 
 // TODO Task 1: make loadSteps an async function that awaits "step 1",
 // "step 2", "step 3" (50ms each) one after another, logging each result.
-function loadSteps() {}
+async function loadSteps() {
+  const first = await resolveAfter("step 1", 50);
+  console.log(first);
+  const second = await resolveAfter("step 2", 50);
+  console.log(second);
+  const third = await resolveAfter("step 3", 50);
+  console.log(third);
+
+}
+
+loadSteps();
 
 // TODO Task 2: in loadOptional, await resolveAfter("bonus", 20, true) -
 // which rejects. Wrap it in try/catch, log "caught:" with err.message,
 // and add a finally logging "finally: done trying".
-function loadOptional() {}
+async function loadOptional() {
+  try {
+    const extra = await resolveAfter("bonus", 20, true);
+    console.log("never runs:", extra);
+  } catch (error) { console.log("caught:", error.message);   
+  } finally { console.log("finally: done trying"); }
+}
+loadOptional()
 
 // TODO Task 3: write `async function getTotal()` that returns 60.
 

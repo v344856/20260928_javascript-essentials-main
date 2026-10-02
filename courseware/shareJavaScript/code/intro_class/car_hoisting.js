@@ -13,3 +13,6 @@ class Car {
   }
 }
 
+// above will get error
+// class must be defined firstg before you use it.
+// however, funcation and var can be defined any where.

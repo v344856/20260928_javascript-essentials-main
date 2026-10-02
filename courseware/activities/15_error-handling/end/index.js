@@ -3,8 +3,12 @@
 // TODO Task 1: Finish checkAge(age).
 //   - if age is under 18, throw new Error("Must be 18 or older")
 //   - otherwise return the string "Access granted for age <age>"
-function checkAge(age) {
   // your code here
+  function checkAge(age) {
+  if (age < 18) {
+    throw new Error("Must be 18 or older");
+  }
+  return `Access granted for age ${age}`;
 }
 
 const ages = [25, 15];
@@ -13,5 +17,11 @@ const ages = [25, 15];
 //   - in catch, log "Error: <message>"
 //   - in finally, log "Finished checking age <age>."
 for (const age of ages) {
-  // your try / catch / finally here
+  try {
+    console.log(checkAge(age));
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+  } finally {
+    console.log(`Finished checking age ${age}.`);
+  }
 }

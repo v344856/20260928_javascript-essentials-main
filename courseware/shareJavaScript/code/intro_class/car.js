@@ -2,7 +2,7 @@
 
 class Car {
   constructor(brand) {
-    this.carname = brand;
+    this.carname = brand;  // "this" means current object
   }
 
   present() {
