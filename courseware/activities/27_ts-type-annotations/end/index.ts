@@ -4,7 +4,7 @@
 // --- Task 1: annotate the variables ---
 // TODO Task 1: add a type annotation (: string, : number, : boolean) to each.
 const city: string = "Reykjavik";
-const distanceKm: nu = 4200;
+const distanceKm: number = 4200;
 const isCapital: boolean = true;
 
 console.log(`${city} is ${distanceKm} km away (capital: ${isCapital})`);

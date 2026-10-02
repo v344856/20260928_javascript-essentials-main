@@ -6,6 +6,9 @@
 // optional `subtitle?: string`.
 interface Book {
   // ...
+  readonly id: number;
+  title: string;
+  subtitle?: string;
 }
 
 const dune: Book = { id: 1, title: "Dune" };
@@ -18,8 +21,8 @@ console.log(`${effective.title}: ${effective.subtitle ?? "(no subtitle)"}`);
 // TODO Task 2: make ISBN an alias for string, Genre a union of
 // "fiction" | "science" | "history", and Shelf the tuple [Genre, number].
 type ISBN = string;
-type Genre = string;
-type Shelf = [Genre, number];
+type Genre = "fiction" | "science" | "history";
+type Self = [Genre, number];
 
 const isbn: ISBN = "978-0441013593";
 const shelf: Shelf = ["science", 3];
@@ -28,7 +31,7 @@ console.log(`ISBN ${isbn} | shelf ${shelf[0]} #${shelf[1]}`);
 
 // --- Task 3: extend an interface, and intersect aliases ---
 // TODO Task 3a: make Ebook extend Book (add `extends Book`) so it inherits id/title.
-interface Ebook {
+interface Ebook extends Book {
   fileSizeMb: number;
 }
 
